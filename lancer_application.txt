@@ -1,0 +1,5 @@
+Installation du packet json:
+npm install
+
+Pour faire tourner l'application :
+npm run start
