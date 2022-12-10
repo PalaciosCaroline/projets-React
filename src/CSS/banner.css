@@ -1,0 +1,23 @@
+
+.img_banner{
+  
+    background-image: url("../../public/assets/IMG_site.png");
+    filter : brightness(60%); 
+    height: 225px;
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-left: 7%;
+    padding-right: 7%; */
+    background-repeat: no-repeat;
+    background-clip: border-box; 
+    object-fit: cover;
+display: flex;
+justify-content: center;
+align-content: center;
+}
+
+.titre_banner{
+    color: rgba(255, 255, 255, 1);
+
+}

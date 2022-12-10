@@ -1,10 +1,12 @@
 .menu {
     font-size: 1.2em;
-    padding-left: 40px;
-    padding-right: 80px;
+    /* padding-left: 40px;
+    padding-right: 80px; */
     margin-top: 20px;
     display : flex;
     justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 ul{
