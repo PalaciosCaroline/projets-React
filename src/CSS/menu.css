@@ -2,21 +2,27 @@
     font-size: 1.2em;
     padding-left: 40px;
     padding-right: 80px;
+    margin-top: 20px;
+    display : flex;
+    justify-content: space-between;
 }
+
 ul{
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 a{
     text-decoration: none;
-    color: black;
+    color: rgba(255, 96, 96, 1);
+    padding : 24px;
+    font-weight: bold;
 }
 
 .activeLink{
-    font-weight: bold;
-    color:#07c5fa;
+    /* border-bottom : 2px solid rgba(255, 96, 96, 1); */
+    text-decoration: underline;
 }
 
