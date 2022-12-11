@@ -1,0 +1,43 @@
+.banner_apropos{
+    position: relative;
+}
+
+.apropos{
+    margin-left: 7%;
+    margin-right: 7%; 
+}
+.banner_apropos .img_apropos{
+    filter : brightness(70%);
+    height: 225px;
+    width: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.apropos button{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1.4rem ;
+    background-color: rgba(255, 96, 96, 1);
+    color: #fff;
+}
+.apropos .box{
+    margin-left: 11%;
+    margin-right: 11%;
+    margin-bottom: 20px;
+    padding-bottom:10px;
+    background-color: rgba(246, 246, 246, 1);
+}
+
+.box .div_text{
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom: 5px;
+    color: rgba(255, 96, 96, 1);   
+}
+
+.box_btn Fabeer{
+    color: #fff;
+}

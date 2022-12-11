@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 // import { BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import Apropos from './pages/Apropos';
@@ -16,9 +16,10 @@ function App() {
     <>
       
       <Routes>  
-        <Route path='*' element={<Home />}/>
-        <Route path="/ " element={<Home/>}/>
-        <Route path="/list" element={<Apropos/>}/>
+        <Route index element={<Home />} />
+        <Route path='*' element={<Erreur404/>}/>
+        <Route path="/ " element={<Home/>} errorElement={<Erreur404/>}/>
+        <Route path="/list" element={<Apropos/>} errorElement={<Erreur404/>}/>
         <Route render={() => <Erreur404/>}/>
       </Routes>
       
@@ -27,3 +28,4 @@ function App() {
 }
 
 export default App;
+
