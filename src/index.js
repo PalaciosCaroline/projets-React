@@ -4,12 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import Footer from './components/Footer';
+import Menu from './components/Menu';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <Menu />
     <App />
+    <Footer />
     </BrowserRouter>
   </React.StrictMode>
 );
