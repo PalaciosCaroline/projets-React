@@ -1,4 +1,4 @@
-import img_banner from "./../img_banner.png";
+import img_banner from "./../img_bannerred.png";
 
 export default function Banner(){
     

@@ -2,11 +2,9 @@
     font-size: 1.2em;
     /* padding-left: 40px;
     padding-right: 80px; */
-    margin-top: 20px;
+    margin: 20px 7% 20px 7%;
     display : flex;
     justify-content: space-between;
-    margin-left: 7%;
-    margin-right: 7%;
 }
 
 ul{
@@ -31,4 +29,3 @@ li:nth-child(1){
     /* border-bottom : 2px solid rgba(255, 96, 96, 1); */
     text-decoration: underline;
 }
-
