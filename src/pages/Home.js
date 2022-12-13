@@ -1,11 +1,11 @@
-import Banner from '../components/Banner_Home';
+import BannerHome from '../components/Banner_Home';
+import Boxcards from '../components/Boxcards';
 
 export default function Home(){
     return (
         <div className="box_home">
-           {<Banner/>}
-        <h1>Box à cards à faire</h1>
-      
+            <BannerHome/>
+            <Boxcards/>
         </div>
         )
 }

@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
-import Cardlogement from './components/Cardlogement'
+import Cardlogement from './Cardlogement';
 
-function Datalogements() {
+function Boxcards() {
   const [logements,setlogements]=useState([]);
   const getlogements=()=>{
     fetch('data.json'
@@ -13,11 +13,9 @@ function Datalogements() {
     }
     )
       .then(function(response){
-        console.log(response)
         return response.json();
       })
       .then(function(myJson) {
-        console.log(myJson);
         setlogements(myJson)
       });
   }
@@ -26,13 +24,12 @@ function Datalogements() {
   },[])
 
   return (
-    <div className="logements">
+    <div className="boxcards">
      {
-       logements && logements.length>0 && logements.map((location) => {return (<Cardlogement key={location.id} location={location}/>)})
-     
+       logements && logements.length>0 && logements.map((logement) => (<Cardlogement key={logement.id} logement={logement}/>))
      }
     </div>
   );
 }
 
-export default Datalogements;
+export default Boxcards;
