@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <Routes>  
-        <Route index element={<Home />} />
+        <Route index element={<Home/>} />
         <Route path='*' element={<Erreur404/>}/>
         <Route path="/Home" element={<Home />} errorElement={<Erreur404/>}/>
         <Route path="/Apropos" element={<Apropos/>} errorElement={<Erreur404/>}/>

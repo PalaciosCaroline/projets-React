@@ -28,7 +28,7 @@ function Datalogements() {
   return (
     <div className="logements">
      {
-       logements && logements.length>0 && logements.map((location) => {return (<Cardlogement key={location.id} location={location}/>)})
+       logements && logements.length>0 && logements.map((logement) => {return (<Cardlogement key={logement.id} location={logement}/>)})
      
      }
     </div>
