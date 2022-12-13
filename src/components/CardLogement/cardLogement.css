@@ -1,0 +1,16 @@
+.card_logement {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+} 
+
+.logement_title {
+    color: rgba(255, 255, 255, 1);
+    padding-left: 20px;
+    font-size: 1.1rem;
+    padding-bottom:10px;
+}

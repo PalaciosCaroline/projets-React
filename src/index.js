@@ -1,20 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import Router from './Router';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import Footer from './components/Footer';
-import Menu from './components/Menu';
+import Footer from './components/Footer_module/Footer';
+import Menu from './components/Menu_module/Menu';
+import './index.css';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <Menu />
-    <App />
-    <Footer />
+      <Menu />
+      <Router />
+      <Footer />
     </BrowserRouter>
   </React.StrictMode>
 );

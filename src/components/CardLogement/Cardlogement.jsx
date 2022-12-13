@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-
+import './cardLogement.css'
 
 export default function Cardlogement(props) {
 

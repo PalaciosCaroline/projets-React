@@ -1,4 +1,5 @@
-import img_apropos from "./../img_apropos.png";
+import img_apropos from "./img_apropos.png";
+import './bannerApropos.css'
 
 export default function Banner_apropos(){
     return(

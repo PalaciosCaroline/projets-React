@@ -1,0 +1,14 @@
+.banner_apropos{
+    position: relative;
+}
+
+.banner_apropos .img_apropos{
+    filter : brightness(70%);
+    height: 225px;
+    width: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    object-position: 50% bottom;
+}
+

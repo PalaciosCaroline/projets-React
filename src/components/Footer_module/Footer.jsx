@@ -1,4 +1,5 @@
-import logo_blanc from "./../logo_blanc.svg";
+import logo_blanc from "./logo_blanc.svg";
+import './footer.css'
 
 export default function Footer(){
     

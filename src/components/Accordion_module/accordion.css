@@ -1,0 +1,31 @@
+button{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem ;
+    background-color:  #FF6060;
+    color: #fff;
+    height: 47px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 15px;
+}
+
+.box{
+    margin: 0 11% 20px 11%;
+}
+
+.box .div_text{
+    padding: 20px 15px 15px 15px;
+    color: rgba(255, 96, 96, 1);  
+    background-color: rgba(246, 246, 246, 1);
+}
+
+.div_text{
+    display: flex;
+}
+
+.icon{
+    display:flex;
+}
