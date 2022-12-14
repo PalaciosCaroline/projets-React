@@ -33,7 +33,7 @@ export default function Apropos() {
         <Accordion
           title={elt.title}
           content={elt.content}
-          key={`accordion-${index}`}
+          key={`${elt.title}-${index}`}
         />
       ))}
     </div>

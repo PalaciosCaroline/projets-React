@@ -16,7 +16,7 @@ return(
             <button className="btn" onClick={toggleChevron}><span>{title}</span>
             { setActive ? <FaAngleUp className="icon"/> : <FaAngleDown className="icon"/>}
             </button>
-            { setActive ? <div className="div_text"><span>{content}</span></div> : null }
+            { setActive && <div className="div_text"><span>{content}</span></div> }
         </div>
     </>
     )

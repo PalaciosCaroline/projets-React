@@ -7,10 +7,11 @@ export default function Logement(props){
 
     let { id } = useParams();
 
+
     return (
         <div className="logement">
          
-        <h1>Titre du logement</h1>
+        <h1>{ id }</h1>
         
       
         </div>
