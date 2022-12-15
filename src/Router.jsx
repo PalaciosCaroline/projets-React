@@ -11,12 +11,12 @@ import { useLocalStorage } from "./hooks/useLocaleStorage";
 
 // import Datalogements from './getData';
 
-export default function Router() {
+export default function Router(props) {
   
   return (
     <>
       <Routes>
-        <Route index element={<Home />} />
+        <Route index element={<Home logements={props.logements}/>} />
         <Route path="*" element={<Erreur404 />} />
         <Route
           path="/Apropos"
@@ -25,7 +25,7 @@ export default function Router() {
         />
         <Route
           path="/logement/:id"
-          element={<Logement />}
+          element={<Logement logements={props.logements}/>}
           errorElement={<Erreur404 />}
         />
         <Route render={() => <Erreur404 />} />

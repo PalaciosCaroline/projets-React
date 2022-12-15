@@ -6,14 +6,15 @@ export default function Accordion({title, content}) {
 
     const [setActive, setActiveState] = useState("");
  
-    function toggleChevron() {
+    function toggleChevron(e) {
+        e.preventDefault()
        setActiveState(setActive === "" ? "active" : "");
     }
  
 return(
     <>
         <div className={`box ${setActive}`}>
-            <button className="btn" onClick={toggleChevron}><span>{title}</span>
+            <button className="btn_accordion" onClick={toggleChevron}><span>{title}</span>
             { setActive ? <FaAngleUp className="icon"/> : <FaAngleDown className="icon"/>}
             </button>
             { setActive && <div className="div_text"><span>{content}</span></div> }

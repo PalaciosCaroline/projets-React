@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import './menu.css'
 
 
-export default function Menu(){
+export default function Menu(props){
     
     return(
         <>
