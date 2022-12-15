@@ -5,7 +5,7 @@ import './Modalslide.css'
 export default function Modalslide(props) {
     const [ImgIndex, setImgIndex] = useState(0);
    
-    const previousImg = () => {
+    const nextImg = () => {
         if(ImgIndex === props.imgs.length - 1){
             setImgIndex(0)
         } else {
@@ -13,7 +13,7 @@ export default function Modalslide(props) {
         }
     }
 
-    const nextImg = () => {
+    const previousImg = () => {
         if(ImgIndex === 0){
             setImgIndex(props.imgs.length - 1)
         } else {
@@ -23,15 +23,13 @@ export default function Modalslide(props) {
 
 
     let imgsnew = [...props.imgs];
-    console.log(props.imgs)
-    console.log(props.imgs[0])
+    // console.log(props.imgs)
+    // console.log(props.imgs[0])
  
 return(
     <>
         <div className="box_ModalImg">
-            <div className="box_slide">
                 <img className="img_show" src={imgsnew[`${ImgIndex}`]} key={imgsnew[`${ImgIndex}`]} alt=""/>
-            </div>
             <button className="btn_previous" onClick={previousImg}>
             <FaAngleLeft className="icon_previous" />
              </button>

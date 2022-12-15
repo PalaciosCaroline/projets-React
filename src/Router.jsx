@@ -9,8 +9,6 @@ import Logement from "./pages/Logement_module/Logement";
 import { v4 as uuidv4 } from "uuid";
 import { useLocalStorage } from "./hooks/useLocaleStorage";
 
-// import Datalogements from './getData';
-
 export default function Router(props) {
   
   return (
