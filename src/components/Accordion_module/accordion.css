@@ -22,10 +22,38 @@
     background-color: rgba(246, 246, 246, 1);
 }
 
-.div_text{
+/* .div_text{
     display: flex;
-}
+} */
 
 .icon{
     display:flex;
+
+}
+
+@media screen and (max-width: 800px) {
+   .accordion_title{
+        font-size: 1.3rem;
+    }
+
+    .box{
+        margin: 20px 0;
+    }
+
+    .box .div_text{
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .accordion_title{
+        font-size: 0.9rem;
+    }
+    .box .div_text{
+        font-size: 0.8rem;
+    }
+    .btn_accordion{
+        height: 30px;
+    }
 }

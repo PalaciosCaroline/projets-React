@@ -5,16 +5,23 @@ import './menu.css'
 
 export default function Menu(props){
     
+    // const nav = {
+    //     home: "home",
+    //     apropos: "A propos"
+    // }
+
     return(
         <>
             <header className="menu">
+                <div className='box_logo'>
                     <img className="header_logo" src={logo} alt="logo de Kasa" />
-                <menu>
+                </div>
+                <nav className="box_nav">
                     <ul>
-                        <li><NavLink to="/" end className={({ isActive }) => (isActive ? "activeLink" : undefined)}>Home</NavLink></li>
+                        <li><NavLink to="/" end className={({ isActive }) => (isActive ? "activeLink" : undefined)}>Accueil</NavLink></li>
                         <li><NavLink to="/Apropos" className={({ isActive }) => (isActive ? "activeLink" : undefined)}>A propos</NavLink></li>
                     </ul>
-                </menu>
+                </nav>
             </header>
         </>
     )

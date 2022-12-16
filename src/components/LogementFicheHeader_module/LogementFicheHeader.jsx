@@ -28,7 +28,7 @@ return(
                         {star.map((number) => (
                     <FaStar
                         className={`${
-                        (number <= numberOfRating ? "star_colorred" : "star_empty")}`}
+                        (number <= numberOfRating ? "icon_star star_colorred" : "icon_star star_empty")}`}
                         key={`star-${number}`} aria-hidden="true"
                     ></FaStar>
                     ))}

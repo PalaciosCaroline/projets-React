@@ -1,7 +1,5 @@
 .banner{
     position: relative;
-    /* margin-left: 7%;
-    margin-right: 7%;  */
     margin-bottom: 30px;
 }
 
@@ -16,7 +14,42 @@
 .titre_banner{
     color: rgba(255, 255, 255, 1);
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1200px) {
+    .titre_banner{
+        font-size: 2rem;
+        top: 40%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .img_banner{
+        height: 160px;
+        border-radius: 10px;
+    }
+
+    .titre_banner{
+        font-size: 1.8rem;
+        font-weight: 500;
+        left: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .img_banner{
+        height: 111px;
+    }
+
+    .titre_banner{
+        font-size: 1.4rem;
+        font-weight: 500;
+        left: 40%;
+        top:35%;
+    }
 }

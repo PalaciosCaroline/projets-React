@@ -1,6 +1,7 @@
 .LogementFiche_boxArticles{
     display: flex;
     justify-content: space-between;
+    height: auto;
 }
 
 .boxArticle{
@@ -11,4 +12,44 @@
 .LogementFiche_boxArticles .box{
     margin:0;
     width: 48%;
+    height: auto;
+}
+.LogementFiche_boxArticles .box .div_text{
+    min-height: 180px;
+    font-size: 1.2rem;
+}
+
+.LogementFiche_boxArticles ul{
+   margin: 0;
+   padding: 0;
+}
+
+.LogementFiche_boxArticles li{
+    line-height: 25px;
+}
+
+@media screen and (max-width: 900px) {
+    .LogementFiche_boxArticles{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .LogementFiche_boxArticles .box{
+        margin:0;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .LogementFiche_boxArticles .box .div_text{
+        min-height: auto;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .LogementFiche_boxArticles .box .div_text{
+        font-size: 0.8rem;
+    }
 }

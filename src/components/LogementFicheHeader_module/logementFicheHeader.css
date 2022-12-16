@@ -63,12 +63,59 @@
     margin-right: 15px;
 }
 
+.icon_star{
+    margin-right:3px;
+    font-size: 1.6rem;
+}
+
 .star_colorred{
     color: rgba(255, 96, 96, 1);
-    font-size: 1.6rem;
 }
 
 .star_empty{
     color: rgba(227, 227, 227, 1);
-    font-size: 1.6rem;
+}
+
+@media screen and (max-width: 800px) {
+    .logementFiche_title{
+        font-size: 1.5rem;
+    }
+    .logementFiche_sstitle{
+        font-size: 1rem;
+    }
+    .logementFiche_header{
+        flex-direction: column;
+    }
+    .logementFiche_boxHost {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-top:10px;
+    }
+    
+    .icon_star{
+        font-size: 1.2rem;
+        margin-right: 2px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .logementFiche_title{
+        font-size: 1.2rem;
+    }
+    .logementFiche_sstitle{
+        font-size: 0.9rem;
+    }
+    .logementFiche_tags{
+        font-size: 0.6rem;
+        width: 84px;
+        padding: 0 5px 0 5px;
+    }
+    .box_logementFicheTags{
+        margin-top:10px;
+    }
+    .icon_star{
+        font-size: 0.9rem;
+        margin-right: 2px;
+    }
 }

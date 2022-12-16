@@ -4,7 +4,6 @@
     height: 415px;
     border-radius: 25px;
     overflow: hidden;
-    
 }
 
 .img_show{
@@ -24,12 +23,12 @@
 
 .btn_previous{
     top:45%;
-    left: 20px;
+    left: 10px;
 }
 
 .btn_next{
     top:45%;
-    right: 20px;
+    right: 10px;
 }
 
 .numberImgOfImgs{
@@ -39,4 +38,36 @@
     left: 48%;
     bottom:20px;
     color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+    .box_ModalImg{
+        height: 300px;
+        border-radius: 15px;   
+    }
+    .btn_previous, .btn_next{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .box_ModalImg{
+        height: 255px;
+        border-radius: 10px;   
+    }
+
+    .icon_previous, .icon_next{
+        /* font-size: 20px; */
+        height: 25px;
+    }
+    .btn_previous{
+        left: 5px;
+    }
+    
+    .btn_next{
+        right: 5px;
+    }
+    .numberImgOfImgs{
+        font-size: 0.8rem;
+    }
 }

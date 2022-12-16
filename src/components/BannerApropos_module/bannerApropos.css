@@ -12,3 +12,9 @@
     object-position: 50% bottom;
 }
 
+@media screen and (max-width: 500px) {
+    .banner_apropos .img_apropos{
+        margin-bottom: 0;
+    }
+}
+
