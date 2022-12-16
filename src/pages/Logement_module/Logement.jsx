@@ -1,40 +1,46 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import Modalslide from '../../components/Modalslide_module/Modalslide';
+import Modalslide from '../../components/Modalslide_module/Modalslide'
+// import Accordion from '../../components/Accordion_module/Accordion';
 import { useParams } from "react-router-dom";
-import { FaStar,  } from 'react-icons/fa';
 import LogementFicheHeader from '../../components/LogementFicheHeader_module/LogementFicheHeader';
+import LogementFicheMain from '../../components/LogementFicheMain_module/LogementFicheMain';
 import './logement.css'
 
 export default function Logement(props){
-    const [logement, setlogement] = useState({tags:[], equipments:[], pictures:[], rating:'', host:{'name':'', 'picture':''}});
+const [logement, setlogement] = useState({tags:[], equipments:[], pictures:[], rating:'', host:{'name':'', 'picture':''}});
 
     let { id } = useParams();
-   
+  
+    // let logementNew = props.logements.find((item) => item.id === id)
+// setlogement(logementNew)
     useEffect (function (){
-        for (let i=0; i<props.logements.length; i++){
-            if (props.logements[i].id === id){
-                setlogement(props.logements[i])
-            }
-        }
-        // setlogement(props.logements.filter((item) => item.id === {id}))
+        let logementNew = [{}];
+    logementNew = props.logements.find((item) => item.id === id)
+    if (logementNew){
+        setlogement(logementNew)
+    }
     },[]);
    
-    // console.log(logement)
-    // let numberOfRating = logement.rating;
-    // numberOfRating = parseInt(numberOfRating)
-
-    // let star = [1,2,3,4,5]
-
     return (
-
-        <div className="box_logementFiche" >
-    
-          <Modalslide imgs={logement.pictures}/>
-            <main>
+        <div className="box_logementFiche">
+             <main>
+                <Modalslide imgs={logement.pictures}/>
                 <LogementFicheHeader logement={logement}/>
-                
+                <LogementFicheMain logement={logement}/>
             </main>
-        </div>
+    </div> 
     )
 }
+
+
+// {props.logements.filter((logement) => logement.id === id).map((logement) =>
+//     <div className="box_logementFiche" key={`box-${logement.id}`}>
+
+//       <Modalslide imgs={logement.pictures}/>
+//         <main>
+//             <LogementFicheHeader logement={logement}/>
+            
+//         </main>
+//     </div>
+//     )}

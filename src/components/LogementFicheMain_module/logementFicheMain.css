@@ -1,0 +1,14 @@
+.LogementFiche_boxArticles{
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxArticle{
+    width: 97%;
+    margin:0;
+}
+
+.LogementFiche_boxArticles .box{
+    margin:0;
+    width: 48%;
+}
