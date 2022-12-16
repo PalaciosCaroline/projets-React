@@ -1,27 +1,28 @@
 .footer {
     width: 100%;
-    padding: 20px 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: #000000;
-    height: 140px;
+    height: 200px;
     position: relative;
     bottom: 0; 
     margin-top:20px;
 }
   
 .footer .footer_logo{
-    margin: 1.5rem 0 1rem 0;
-    color: white;
+    margin:50px 0 20px 0;
+    width: 130px;
 }
-  
+
   .footer p {
     color: #ffff;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   
   @media screen and (max-width: 800px) {
-    .footer img {
-      height: 2rem;
+    .footer .footer_logo{
+      margin-bottom: 20px;
     }
   
     .footer p {
@@ -29,3 +30,8 @@
     }
   }
   
+  @media screen and (max-width: 500px) {
+    .footer p {
+      font-size: 0.8rem;
+    }
+  }
