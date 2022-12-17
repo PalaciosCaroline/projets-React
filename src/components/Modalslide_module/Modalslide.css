@@ -11,24 +11,45 @@
     width: 100%;
     object-fit: cover;
     object-position: center;
+    animation : slideEffect 0.5s ease;
+    opacity:1;
+    filter: brightness(1.1)
 }
 
 .btn_previous, .btn_next{
     background-color: transparent;
     font-size: 50px;
     position: absolute;
-    border: none;
     color: #fff;
+    border: none;
 }
+
+@keyframes slideEffect {  
+    0%{opacity: 0.2;filter: brightness(1) }
+    50%{opacity: 0.5; }
+    80%{opacity: 0.7; }
+    100% {opacity: 1; filter: brightness(1.1)}
+} 
+
+/* @keyframes slideEffect {  
+    0%{transform: translate(75%, -100%);
+        opacity: 0.2;}
+    50%{opacity: 0.5}
+    80%{opacity: 0.7}
+    100% {transform: translate(0, 0);
+        opacity: 1;}
+}  */
 
 .btn_previous{
     top:45%;
     left: 10px;
+    transition : 0.1s;    
 }
 
 .btn_next{
     top:45%;
     right: 10px;
+    transition : 0.1s; 
 }
 
 .numberImgOfImgs{
@@ -38,6 +59,11 @@
     left: 48%;
     bottom:20px;
     color: #fff;
+}
+
+.icon_previous, .icon_next{
+   background-color: rgba(245, 239, 239, 0.1);
+   
 }
 
 @media screen and (max-width: 800px) {

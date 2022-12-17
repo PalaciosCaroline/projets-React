@@ -27,15 +27,17 @@ export default function Apropos() {
   ];
 
   return (
-    <div className="apropos">
+    <div className="apropos_page">
       <Bannerapropos />
-      {data.map((elt, index) => (
-        <Accordion
-          title={elt.title}
-          content={elt.content}
-          key={`${elt.title}-${index}`}
-        />
-      ))}
+      <div className="apropos_boxText">
+        {data.map((elt, index) => (
+          <Accordion
+            title={elt.title}
+            content={elt.content}
+            key={`${elt.title}-${index}`}
+          />
+        ))}
+      </div>
     </div>
   );
 }

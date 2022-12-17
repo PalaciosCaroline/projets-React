@@ -3,7 +3,12 @@
   "name": "Kasa, la location d'appartements entre particuliers",
   "icons": [
     {
-      "src": "Vector-_3_.ico",
+      "src": "kasa.svg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/svg"
+    },
+    {
+      "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },

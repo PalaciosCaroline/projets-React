@@ -5,11 +5,6 @@ import './menu.css'
 
 export default function Menu(props){
     
-    // const nav = {
-    //     home: "home",
-    //     apropos: "A propos"
-    // }
-
     return(
         <>
             <header className="menu">

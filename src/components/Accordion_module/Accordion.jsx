@@ -17,7 +17,7 @@ return(
             <button className="btn_accordion" onClick={toggleChevron}><span className='accordion_title'>{title}</span>
             { setActive ? <FaAngleUp className="icon"/> : <FaAngleDown className="icon"/>}
             </button>
-            { setActive && <div className="div_text">{content}</div> }
+            <div className={ setActive ? "div_text open" : "div_text"}>{content}</div>
         </div>
     </>
     )
