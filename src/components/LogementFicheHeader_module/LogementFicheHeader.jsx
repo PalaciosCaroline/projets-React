@@ -7,12 +7,11 @@ let logement = props.logement
     let numberOfRating = logement.rating;
     numberOfRating = parseInt(numberOfRating)
 
-    let star = [1,2,3,4,5]
+    let starTotal = [1,2,3,4,5]
 
     const nameAndSurname = logement.host.name.split(" ");
 
 return(
-    <>
         <header className='logementFiche_header'>
                     <div className='box_logementFicheTitle'>
                         <h1 className='logementFiche_title'>{logement.title}</h1>
@@ -23,14 +22,14 @@ return(
                     </div>
                     <div className="logementFiche_boxHost">
                         <div className='boxHost'>
-                            <div className='nameAndSurname'>
+                            <div className='nameAndSurname' aria-label="nom du propriétaire">
                             <h3>{nameAndSurname[0]}</h3>
                             <h3>{nameAndSurname[1]}</h3>
                             </div>
                             <img src={logement.host.picture} alt=""/>
                         </div>
-                        <div className="star" aria-label="{logement.rating} star" >
-                        {star.map((number) => (
+                        <div className="star" aria-label="avis {logement.rating} étoiles sur 5" >
+                        {starTotal.map((number) => (
                     <FaStar
                         className={`${
                         (number <= numberOfRating ? "icon_star star_colorred" : "icon_star star_empty")}`}
@@ -40,7 +39,6 @@ return(
                         </div>
                     </div>
             </header>
-        </>
     )
 
 }

@@ -12,7 +12,6 @@ import { useLocalStorage } from "./hooks/useLocaleStorage";
 export default function Router(props) {
   
   return (
-    <>
       <Routes>
         <Route index element={<Home logements={props.logements}/>} />
         <Route path="*" element={<Erreur404 />} />
@@ -28,6 +27,5 @@ export default function Router(props) {
         />
         <Route render={() => <Erreur404 />} />
       </Routes>
-    </>
   );
 }

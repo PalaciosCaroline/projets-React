@@ -32,13 +32,11 @@ const [logement, setlogement] = useState({tags:[], equipments:[], pictures:[], r
         },[]);
    
     return (
-        <div className="box_logementFiche">
-             <main>
+        <main className="box_logementFiche">
                 <Modalslide imgs={logement.pictures}/>
                 <LogementFicheHeader logement={logement}/>
                 <LogementFicheMain logement={logement}/>
-            </main>
-    </div> 
+        </main>
     )
 }
 

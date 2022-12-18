@@ -18,9 +18,9 @@ export default function Home(props) {
     }, []);
 
   return (
-    <div className="box_home">
+    <main className="box_home">
       <BannerHome />
       <Boxcards logements={logements}/>
-    </div>
+    </main>
   );
 }
