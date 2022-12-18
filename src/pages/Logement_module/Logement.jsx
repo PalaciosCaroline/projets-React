@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import Modalslide from '../../components/Modalslide_module/Modalslide'
-// import Accordion from '../../components/Accordion_module/Accordion';
 import { useParams } from "react-router-dom";
 import LogementFicheHeader from '../../components/LogementFicheHeader_module/LogementFicheHeader';
 import LogementFicheMain from '../../components/LogementFicheMain_module/LogementFicheMain';
@@ -11,16 +10,26 @@ export default function Logement(props){
 const [logement, setlogement] = useState({tags:[], equipments:[], pictures:[], rating:'', host:{'name':'', 'picture':''}});
 
     let { id } = useParams();
-  
-    // let logementNew = props.logements.find((item) => item.id === id)
-// setlogement(logementNew)
+
     useEffect (function (){
-        let logementNew = [{}];
-    logementNew = props.logements.find((item) => item.id === id)
-    if (logementNew){
-        setlogement(logementNew)
-    }
-    },[]);
+        // if (window.location.reload){
+        fetch('/data.json')
+        .then((response) => {
+            return response.json()
+        })
+        .then((data) => {
+            let logementNew = [{}];
+            logementNew = data.find((item) => item.id === id)
+            setlogement(logementNew)
+        })
+        // } else {
+        //     let logementNew = [{}];
+        //     logementNew = props.logements.find((item) => item.id === id)
+        //     if (logementNew){
+        //     setlogement(logementNew)
+        //     }
+        // }
+        },[]);
    
     return (
         <div className="box_logementFiche">
