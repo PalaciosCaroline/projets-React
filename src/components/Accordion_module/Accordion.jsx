@@ -12,9 +12,9 @@ export default function Accordion({title, content}) {
     }
  
 return(
-        <div className={`box_accordion`}>
+        <div className="box_accordion">
             <button className="btn_accordion" onClick={toggleChevron}><span className='accordion_title'>{title}</span>
-                <FaAngleDown className= { setActive ? "icon_accordion open" : "icon_accordion"}/>
+                <FaAngleDown className={ setActive ? "icon_accordion open" : "icon_accordion"}/>
             </button>
             <div className={ setActive ? "div_text open" : "div_text"}>{content}</div>
         </div>
