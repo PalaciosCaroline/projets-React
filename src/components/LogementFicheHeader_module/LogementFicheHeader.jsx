@@ -9,6 +9,8 @@ let logement = props.logement
 
     let star = [1,2,3,4,5]
 
+    const nameAndSurname = logement.host.name.split(" ");
+
 return(
     <>
         <header className='logementFiche_header'>
@@ -21,7 +23,10 @@ return(
                     </div>
                     <div className="logementFiche_boxHost">
                         <div className='boxHost'>
-                            <h3>{logement.host.name}</h3>
+                            <div className='nameAndSurname'>
+                            <h3>{nameAndSurname[0]}</h3>
+                            <h3>{nameAndSurname[1]}</h3>
+                            </div>
                             <img src={logement.host.picture} alt=""/>
                         </div>
                         <div className="star" aria-label="{logement.rating} star" >

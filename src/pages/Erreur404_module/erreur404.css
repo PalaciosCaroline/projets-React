@@ -4,6 +4,10 @@
     margin: 10%
   }
   
+  .erreur404 .erreur_small{
+  display: none;
+  }
+
   .erreur404 h1 {
     margin: 3rem 0 4rem 0;
     font-size: 18rem;
@@ -24,7 +28,11 @@
   
   @media screen and (max-width: 800px) {
     .erreur404 {
-      margin: 20%
+      margin: 10%
+    }
+
+    .erreur404 .erreur_small{
+      display: flex;
     }
     
     .erreur404 h1 {

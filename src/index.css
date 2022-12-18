@@ -11,6 +11,10 @@ code {
     monospace;
 }
 
+a, button {
+  cursor: pointer;
+}
+
 ul{
   list-style: none;
 }

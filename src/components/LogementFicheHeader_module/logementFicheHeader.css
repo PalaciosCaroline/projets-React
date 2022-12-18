@@ -30,9 +30,15 @@
     justify-content: space-between;
     text-align: right
 }
+.nameAndSurname{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .logementFiche_boxHost h3 {
-    text-align: right
+    text-align: right;
+    margin:0;
 }
 
 .logementFiche_boxHost img{
@@ -52,9 +58,9 @@
 .logementFiche_tags{
     background-color: rgba(255, 96, 96, 1);
     border-radius: 10px;
-    padding: 0 10px 0 10px;
+    padding: 5px 10px 5px 10px;
     height: 25px;
-    width: 115px;
+    min-width: 115px;
     font-size: 0.8rem;
     align-items: center;
     justify-content: center;

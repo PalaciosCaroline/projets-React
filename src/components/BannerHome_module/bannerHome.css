@@ -1,6 +1,8 @@
-.banner{
+.bannerHome{
     position: relative;
     margin-bottom: 30px;
+    text-align: center;
+  padding-right: 15px;
 }
 
 .img_banner{
@@ -16,10 +18,13 @@
     color: rgba(255, 255, 255, 1);
     position: absolute;
     top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0, -50%); 
     font-size: 3rem;
+    width: 100%;
     font-weight: 500;
+}
+.small_banner{
+    display: none;
 }
 
 @media screen and (max-width: 1200px) {
@@ -38,19 +43,31 @@
     .titre_banner{
         font-size: 1.8rem;
         font-weight: 500;
-        left: 50%;
+        width: 80%;
+        text-align: center;
     }
 }
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 680px) {
+    .titre_banner{
+        width: 80%;
+        text-align: left;
+        left: 10%;
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width: 530px) {
     .img_banner{
         height: 111px;
     }
 
+    .small_banner{
+        display: flex;
+    }
     .titre_banner{
-        font-size: 1.4rem;
         font-weight: 500;
-        left: 40%;
+        text-align: left;
+        left:10%;
         top:35%;
+        width: 80%;
     }
 }
