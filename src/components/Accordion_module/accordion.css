@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.4rem ;
+    font-size: 1.2rem ;
     background-color:  #FF6060;
     color: #fff;
     height: 47px;
@@ -19,10 +19,12 @@
 
 .box_accordion .div_text.open{
     padding: 20px 15px 15px 15px;
-    color: rgba(255, 96, 96, 1);  
     background-color: rgba(246, 246, 246, 1);
     transform: scaleY(1);
     opacity: 1;
+    font-size: 1.1rem ;
+    line-height: 26px;
+    font-weight: 400;
 }
 
 .box_accordion .div_text{
@@ -40,40 +42,41 @@
 .box_accordion .icon_accordion{
     display:flex;
     transition: transform 0.2s ease;
+    width: 26px;
+    height: auto;
 }
 
 .box_accordion .icon_accordion.open{
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
     transition: transform 0.2s ease;
 }
 
 @media screen and (max-width: 800px) {
-   .accordion_title{
-        font-size: 1.3rem;
-    }
-
     .box_accordion{
         margin: 20px 0;
     }
-
-    .box_accordion .div_text{
-        font-size: 1.2rem;
-    }
-
 }
 
 @media screen and (max-width: 500px) {
     .accordion_title{
         font-size: 0.9rem;
     }
+
     .box_accordion .div_text{
         font-size: 0.8rem;
     }
+
     .btn_accordion{
         height: 30px;
+    }
+
+    .box_accordion .icon_accordion{
+        width: 16px;
+        height: auto;
     }
 
     .box_accordion .div_text.open{
         padding: 20px 15px 25px 15px;
     }
+
 }

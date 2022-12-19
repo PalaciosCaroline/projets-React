@@ -20,7 +20,6 @@
 .LogementFiche_boxArticles .div_text.open{
     min-height: 160px;
     height: auto;
-    font-size: 1.2rem;
 }
 
 .LogementFiche_boxArticles ul{

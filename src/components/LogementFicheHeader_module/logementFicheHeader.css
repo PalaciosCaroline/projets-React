@@ -15,12 +15,12 @@
 }
 
 .logementFiche_title{
-    font-size: 2rem;
-    margin-top:0;
+    font-size: 2.2rem;
+    margin-top:5px;
     margin-bottom: 0;
 }
 .logementFiche_sstitle{
-    font-size: 1rem;   
+    font-size: 1.1rem;   
     margin-top: 5px;
 }
 
@@ -28,12 +28,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-align: right
+    text-align: right;
+    min-width: 200px;
+}
+.logementFiche_boxHost .boxHost{
+    align-self: flex-end;
 }
 .nameAndSurname{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .logementFiche_boxHost h3 {
@@ -41,7 +45,7 @@
     margin:0;
 }
 
-.logementFiche_boxHost img{
+.logementFiche_boxHost .host_picture{
     border-radius: 50%;
     width: 64px;
     height: 64px;
@@ -58,27 +62,42 @@
 .logementFiche_tags{
     background-color: rgba(255, 96, 96, 1);
     border-radius: 10px;
-    padding: 5px 10px 5px 10px;
+    padding: 0 10px 0 10px;
     height: 25px;
-    min-width: 115px;
-    font-size: 0.8rem;
+    min-width: 95px;
+    font-size: 0.9rem;
     align-items: center;
     justify-content: center;
     display: flex;
     margin-right: 15px;
 }
 
-.icon_star{
-    margin-right:3px;
-    font-size: 1.6rem;
+.star{
+    display: flex;
 }
 
-.star_colorred{
-    color: rgba(255, 96, 96, 1);
+.icon_star {
+    margin-left:5px;
+    margin-bottom: 12px;
 }
 
-.star_empty{
-    color: rgba(227, 227, 227, 1);
+p:after {
+    width: 30px;
+    height: 30px;
+    display: block;
+    content: '';
+    -webkit-mask: url(./star.svg) no-repeat 50% 50%;
+    mask: url(./star.svg) no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+}
+
+.star_colorred:after{
+    background-color:rgba(255, 96, 96, 1);
+}
+
+.star_empty:after{
+    background-color: rgba(227, 227, 227, 1);
 }
 
 @media screen and (max-width: 800px) {
@@ -113,11 +132,15 @@
     }
     .logementFiche_tags{
         font-size: 0.6rem;
-        width: 84px;
+        min-width: 75px;
+        height: 18px;
         padding: 0 5px 0 5px;
+        text-align: center;
+        margin-right: 8px;
     }
     .box_logementFicheTags{
         margin-top:10px;
+       
     }
     .icon_star{
         font-size: 0.9rem;

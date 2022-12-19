@@ -1,12 +1,12 @@
-import img_banner from "./img_banner.png";
+import img_bannerHome from "./img_banner.png";
 import './bannerHome.css'
 
 export default function Banner(){
     
     return(
         <header className="bannerHome" >
-            <img className="img_banner" src={img_banner} alt="" />
-            <h1 className="titre_banner">Chez vous, <br className="small_banner"/>partout et ailleurs</h1>
+            <img className="img_bannerHome" src={img_bannerHome} alt="" />
+            <h1 className="title_bannerHome">Chez vous, <br className="small_bannerHome"/>partout et ailleurs</h1>
         </header>
     )
 }
