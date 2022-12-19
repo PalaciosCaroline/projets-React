@@ -12,7 +12,7 @@ export default function Accordion({title, content}) {
     }
  
 return(
-        <div className="box_accordion">
+        <div className={`box_accordion ${ setActive && " open"}`}>
             <button className="btn_accordion" onClick={toggleChevron}><span className='accordion_title'>{title}</span>
                 <img src={arrowDown} className={`icon_accordion ${ setActive && " open"}`} aria-hidden="true" alt=""/>
             </button>
