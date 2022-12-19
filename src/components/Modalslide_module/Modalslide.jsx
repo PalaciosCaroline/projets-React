@@ -21,7 +21,6 @@ export default function Modalslide(props) {
         }
     }
 
-
     let imgsnew = [...props.imgs];
     // console.log(props.imgs)
     // console.log(props.imgs[0])

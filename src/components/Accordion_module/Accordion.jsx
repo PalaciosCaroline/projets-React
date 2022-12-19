@@ -4,19 +4,18 @@ import './accordion.css'
 
 export default function Accordion({title, content}) {
 
-    const [setActive, setActiveState] = useState("");
+    const [setActive, setActiveState] = useState(false);
  
-    function toggleChevron(e) {
-        e.preventDefault()
-       setActiveState(setActive === "" ? "active" : "");
+    function toggleChevron() {
+        setActiveState(!setActive ? true : false);
     }
  
 return(
         <div className="box_accordion">
             <button className="btn_accordion" onClick={toggleChevron}><span className='accordion_title'>{title}</span>
-                <FaAngleDown className={ setActive ? "icon_accordion open" : "icon_accordion"} aria-hidden="true"/>
+                <FaAngleDown className={`icon_accordion ${ setActive ? " open" : ""}`} aria-hidden="true"/>
             </button>
-            <div className={ setActive ? "div_text open" : "div_text"}>{content}</div>
+            <div className={`div_text ${ setActive ? " open" : ""}`}>{content}</div>
         </div>
     )
 }
