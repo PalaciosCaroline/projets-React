@@ -1,0 +1,16 @@
+.apropos_page{
+    @include marge-page ;
+    
+}
+
+.apropos_boxText .div_text.open{
+        height: auto;
+}
+
+
+.box_accordion .div_text{
+        @include devices (mobile){        
+            padding: 20px 15px 25px 15px;
+        }
+        
+}

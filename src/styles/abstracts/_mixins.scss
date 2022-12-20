@@ -1,0 +1,47 @@
+@mixin devices ($breakpoint) { //the name of the mixin is devices
+    @if $breakpoint == small-mobile {
+      @media only screen and (max-width: 360px) {
+        @content;
+      }
+    }
+    @if $breakpoint == mobile {
+      @media only screen and (max-width: 550px) {
+        @content;
+      }
+    }
+    @if $breakpoint == tablet {    
+      @media only screen and (max-width: 680px) {
+        @content;
+      }
+    } 
+    @if $breakpoint == small-pc {
+      @media only screen and (max-width: 800px) {
+        @content;
+      }
+    }
+    @if $breakpoint == pc {
+      @media only screen and (max-width: 1200px) {
+        @content;
+      }
+    }
+    @if $breakpoint == big-pc {
+      @media only screen and (max-width: 1800px) {
+        @content;
+      }
+    }
+    @if $breakpoint == maxi-pc {
+      @media only screen and (min-width: 2300px) {
+        @content;
+      }
+    }
+  }
+
+@mixin marge-page{
+    margin-right: 7%;
+    margin-left: 7%;
+}
+
+@mixin padding-box{
+  padding-right: 3%;
+  padding-left: 3%;
+}

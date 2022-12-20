@@ -1,0 +1,55 @@
+.bannerHome{
+    text-align: center;
+    @include devices (tablet){  
+        text-align: left;
+    }
+    img{
+        @include devices (mobile){  
+            height: 111px;
+        }
+        @include devices (small-pc){  
+            height: 160px;
+            border-radius: 10px;
+        }
+    }
+    h1 {
+        color: rgba(255, 255, 255, 1);
+        position: absolute;
+        top: 40%;
+        left:50%;
+        transform: translate(-50%, -50%); 
+        font-size: 3rem;
+        width: 100%;
+        font-weight: 500;
+        @include devices (mobile){  
+            font-weight: 500;
+            top:35%;
+            width: 80%;
+        }
+        @include devices (tablet){  
+            width: 80%;
+            left: 10%;
+            font-size: 1.2rem;
+            transform: translate(0%, -50%); 
+        }
+        @include devices (small-pc){  
+            font-size: 1.8rem;
+            font-weight: 500;
+            width: 80%;
+        }
+        @include devices (pc){  
+            font-size: 2rem;
+            top: 40%;
+        }
+  
+        br {
+            display: none;
+            @include devices (tablet){  
+                display: flex;
+            }   
+        }
+    }
+}
+
+
+

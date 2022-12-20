@@ -1,6 +1,6 @@
 import Router from './Router';
-import Footer from './components/Footer_module/Footer';
-import Menu from './components/Menu_module/Menu';
+import Footer from './components/Footer';
+import Menu from './components/Menu';
 
 export default function App(){
 
