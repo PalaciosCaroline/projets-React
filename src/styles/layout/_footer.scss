@@ -19,9 +19,8 @@
             mask-size: cover;
             background-color: $bg-logoFooter;
         }
-        margin:50px 0 20px 0;
         @include devices(pc-mobile) {
-            margin-bottom: 20px;
+            margin:30px 0 20px 0;
         }
     }
     .pCopy {
