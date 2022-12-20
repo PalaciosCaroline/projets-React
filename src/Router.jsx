@@ -13,18 +13,15 @@ export default function Router(props) {
   return (
     <Routes>
       <Route index element={<Home logements={props.logements} />} />
-      <Route path="*" element={<Erreur404 />} />
       <Route
         path="/Apropos"
         element={<Apropos />}
-        errorElement={<Erreur404 />}
       />
       <Route
         path="/logement/:id"
-        element={<Logement logements={props.logements} />}
-        errorElement={<Erreur404 />}
+        element={<Logement />}
       />
-      <Route render={() => <Erreur404 />} />
+      <Route path="*" element={<Erreur404 />} />
     </Routes>
   );
 }

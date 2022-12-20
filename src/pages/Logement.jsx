@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Modalslide from "../components/Modalslide";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import LogementFicheHeader from "../components/LogementFicheHeader";
 import LogementFicheMain from "../components/LogementFicheMain";
 
@@ -16,25 +16,21 @@ export default function Logement(props) {
   });
 
   let { id } = useParams();
+  let navigate = useNavigate();
 
   useEffect(function () {
-    // if (window.location.reload){
     fetch("/data.json")
       .then((response) => {
         return response.json();
       })
       .then((data) => {
-        let logementNew = [{}];
-        logementNew = data.find((item) => item.id === id);
-        setlogement(logementNew);
+        let logementNew = data.find((item) => item.id === id);
+        if(logementNew !== undefined)
+          setlogement(logementNew);
+        else {
+          navigate("/error")
+        }
       });
-    // } else {
-    //     let logementNew = [{}];
-    //     logementNew = props.logements.find((item) => item.id === id)
-    //     if (logementNew){
-    //     setlogement(logementNew)
-    //     }
-    // }
   }, []);
 
   return (

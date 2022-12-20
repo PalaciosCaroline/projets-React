@@ -27,6 +27,8 @@ export default function Modalslide(props) {
 return(
         <div className="box_ModalImg">
                 <img src={imgsNew[`${ImgIndex}`]} key={imgsNew[`${ImgIndex}`]} alt=""/>
+          { imgsNew.length > 1 ? 
+           ( <>
             <button className="btn_previous" onClick={previousImg} aria-label="image précédente">
                 <div>
                     <p aria-hidden="true"></p>
@@ -37,6 +39,8 @@ return(
                     <p aria-hidden="true"></p>
                 </div>
             </button>
+            </>) : ""
+          }
             <div className="numberImgOfImgs" >{ImgIndex + 1} / {imgsNew.length}</div>
         </div>
     )

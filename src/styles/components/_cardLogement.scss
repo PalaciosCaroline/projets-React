@@ -7,8 +7,22 @@
     background-position: center;
     border-radius: 10px;
     box-shadow: $box-shadow-card;
+    position: relative;
+    .card_filter{
+        position: absolute;
+        border-radius: 10px;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+        &:hover{
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
+        }
+    }
     h2 {
     color: $color-secondary;
+    z-index:2;
     font-size: 1.1rem;
     margin-left: 20px;
     margin-right: 20px;

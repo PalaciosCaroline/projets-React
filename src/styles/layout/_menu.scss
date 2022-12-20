@@ -32,6 +32,7 @@
         text-decoration: underline;
     }
     .box_logo{
+        display: block;
         @include devices (small-pc){  
         width: 160px; 
         height: auto;
