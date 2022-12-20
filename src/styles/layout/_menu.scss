@@ -1,15 +1,14 @@
 .menu {
     font-size: 1.2em;
-    margin: 20px 7% 10px 7%;
+    margin: 10px 7% 0 7%;
     display : flex;
     justify-content: space-between;
     align-items: center;
     @include devices (small-pc){  
         font-size: 0.8rem;
-        margin: 20px 7% 20px 7%;
+        margin: 15px 7% 20px 7%;
         text-transform: uppercase;
     }
-    
     ul{
     display: flex;
     flex-direction: row;
@@ -47,7 +46,7 @@
                 mask: url(./../../assets/logo.svg) no-repeat 50% 50%;
                 -webkit-mask-size: cover;
                 mask-size: cover;
-                background-color: $background-logoMenu;
+                background-color: $bg-logoMenu;
                 @include devices (small-mobile){  
                     transform: scale(0.8);
                     text-align: left;

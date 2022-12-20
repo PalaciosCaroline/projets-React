@@ -9,6 +9,11 @@
   'base/fonts';
 
 @import
+  'components/cardLogement',
+  'components/banner',
+  'components/accordion';
+
+@import
   'layout/menu',
   'layout/footer',
   'layout/logementFicheHeader',
@@ -17,12 +22,6 @@
   'layout/bannerApropos',
   'layout/modalSlide',
   'layout/boxCards';
- 
-
-@import
-  'components/cardLogement',
-  'components/banner',
-  'components/accordion';
 
 @import
   'pages/home',

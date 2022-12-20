@@ -1,0 +1,63 @@
+.LogementFiche_boxArticles{
+    display: flex;
+    justify-content: space-between;
+    @include devices(900-pc) {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .box_accordion{
+        width: 48%;
+        margin:0;
+        @include devices(900-pc) {
+            margin:0;
+            width: 100%;
+            margin-bottom: 40px;
+            &.open{
+                height: auto;
+                min-height: 0;
+                font-size: 1rem;
+                transition: all 0.3s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+            }
+        }
+        @include devices(mobile) {
+            margin-bottom: 20px;
+            max-height: 50px;
+            &.open{
+                max-height: none;
+            }
+        }
+        &:nth-child(2){
+            @include devices(mobile) {
+                margin-bottom: 50px;
+            }
+            &.open{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .div_text{
+        min-height: 70px;
+        @include devices(900-pc) {
+            min-height: 0;
+        }
+        &.open{
+            min-height: 220px;
+            height: auto;
+            @include devices(mobile) {
+                font-size: 0.8rem;
+                min-height: 160px;
+            }
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            line-height: 25px;
+        }
+    }
+}

@@ -19,6 +19,11 @@
         @content;
       }
     }
+    @if $breakpoint == 900-pc {
+      @media only screen and (max-width: 900px) {
+        @content;
+      }
+    }
     @if $breakpoint == pc {
       @media only screen and (max-width: 1200px) {
         @content;
@@ -44,4 +49,15 @@
 @mixin padding-box{
   padding-right: 3%;
   padding-left: 3%;
+}
+
+@mixin allCenter{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+@mixin alignCenter{
+  align-items: center;
+  display: flex;
 }

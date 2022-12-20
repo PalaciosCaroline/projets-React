@@ -6,7 +6,17 @@
     margin-bottom: 30px;
     .boxHost{
         display: flex;
+        align-self: flex-end;
     }
+    @include devices(small-pc) {
+        flex-direction: column;
+    }
+    @include devices(mobile) {
+        margin-bottom: 20px;
+    }
+}
+
+.box_logementFicheTitle{
     h1, h2{
         font-weight: 500;  
     }
@@ -14,18 +24,53 @@
         font-size: 2.2rem;
         margin-top:5px;
         margin-bottom: 0;
+        @include devices(small-pc) {
+            font-size: 1.5rem;
+        }
+        @include devices(mobile) {
+            font-size: 1.2rem;
+        }
     }
     h2{
         font-size: 1.1rem;   
         margin-top: 5px;
+        @include devices(small-pc) {
+            font-size: 1rem;
+        }
+        @include devices(mobile) {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
     }
-    
-    h3 {
-        text-align: right;
-        margin:0;
+    .boxTags{
+        display: flex;
+        color: #fff;
+        margin-top: 30px;
+        @include devices(mobile) {
+            flex-wrap: wrap;
+            margin-top: 0;
+        }
+        .tags{
+            background-color: rgba(255, 96, 96, 1);
+            border-radius: 10px;
+            margin-top:10px;
+            padding: 0 10px 0 10px;
+            height: 25px;
+            min-width: 95px;
+            font-size: 0.9rem;
+            @include allCenter ; 
+            margin-right: 15px;
+            @include devices(mobile) {
+                font-size: 0.6rem;
+                min-width: 75px;
+                min-height: 18px;
+                padding: 0 5px 0 5px;
+                text-align: center;
+                margin-right: 8px;
+            } 
+        }
     }
 }
-
 
 .logementFiche_boxHost{
     display: flex;
@@ -33,115 +78,67 @@
     justify-content: space-between;
     text-align: right;
     min-width: 200px;
-    .boxHost{
-        align-self: flex-end;
-        .nameAndSurname{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-        }
+    @include devices(small-pc) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-top: 15px;
     }
-    .host_picture{
+    @include devices(mobile) {
+        margin-top: 10px;
+    }
+    .nameAndSurname{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    h3 {
+            text-align: right;
+            margin:0;
+            @include devices(mobile) {
+               font-size: 0.8rem;
+            } 
+    }
+    img{
         border-radius: 50%;
         width: 64px;
         height: 64px;
         background-color: rgba(196, 196, 196, 1);
         margin-left: 10px; 
     }
-}
-
-
-.box_logementFicheTags{
-    display: flex;
-    color: #fff;
-    margin-top: 30px;
-}
-
-.logementFiche_tags{
-    background-color: rgba(255, 96, 96, 1);
-    border-radius: 10px;
-    padding: 0 10px 0 10px;
-    height: 25px;
-    min-width: 95px;
-    font-size: 0.9rem;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-right: 15px;
-}
-
-.star{
-    display: flex;
-}
-
-.icon_star {
-    margin-left:5px;
-    margin-bottom: 12px;
-}
-
-p:after {
-    width: 30px;
-    height: 30px;
-    display: block;
-    content: '';
-    -webkit-mask: url(./../../assets/star.svg) no-repeat 50% 50%;
-    mask: url(./../../assets/star.svg) no-repeat 50% 50%;
-    -webkit-mask-size: cover;
-    mask-size: cover;
-}
-
-.star_colorred:after{
-    background-color:rgba(255, 96, 96, 1);
-}
-
-.star_empty:after{
-    background-color: rgba(227, 227, 227, 1);
-}
-
-@media screen and (max-width: 800px) {
-    .logementFiche_title{
-        font-size: 1.5rem;
-    }
-    .logementFiche_sstitle{
-        font-size: 1rem;
-    }
-    .logementFiche_header{
-        flex-direction: column;
-    }
-    .logementFiche_boxHost {
+    .star{
         display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        margin-top: 15px;
-    }
-    
-    .icon_star{
-        font-size: 1.2rem;
-        margin-right: 2px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .logementFiche_title{
-        font-size: 1.2rem;
-    }
-    .logementFiche_sstitle{
-        font-size: 0.9rem;
-    }
-    .logementFiche_tags{
-        font-size: 0.6rem;
-        min-width: 75px;
-        height: 18px;
-        padding: 0 5px 0 5px;
-        text-align: center;
-        margin-right: 8px;
-    }
-    .box_logementFicheTags{
-        margin-top:10px;
-       
-    }
-    .icon_star{
-        font-size: 0.9rem;
-        margin-right: 2px;
-    }
+        p {
+            margin-left:5px;
+            margin-bottom: 12px;
+            &:after {
+                width: 30px;
+                height: 30px;
+                display: block;
+                content: '';
+                -webkit-mask: url(./../../assets/star.svg) no-repeat 50% 50%;
+                mask: url(./../../assets/star.svg) no-repeat 50% 50%;
+                -webkit-mask-size: cover;
+                mask-size: cover;
+                @include devices(mobile) {
+                    width: 15px;
+                    height: 15px;
+                    margin-right: 0px;  
+                }
+            }
+            &.star_colorred:after{
+                background-color:$bg-starColorred;
+            }
+            &.star_empty:after{
+                background-color: $bg-starEmpty;
+            }
+            @include devices(small-pc) {
+                font-size: 1.2rem;
+                margin-right: 2px;  
+            }
+            @include devices(mobile) {
+                font-size: 0.9rem;
+            }
+        }
+    } 
 }

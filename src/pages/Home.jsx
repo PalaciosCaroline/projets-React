@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BannerHome from "./../components/Banner_Home";
-import Boxcards from "../components/Boxcards_module/Boxcards";
+import Boxcards from "../components/Boxcards";
 
 
 export default function Home(props) {

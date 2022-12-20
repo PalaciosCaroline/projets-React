@@ -1,6 +1,7 @@
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+// import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import React, {useState} from 'react';
-import './Modalslide.css'
+// import arrowDown from './../../assets/arrowDown.svg'
+
 
 export default function Modalslide(props) {
     const [ImgIndex, setImgIndex] = useState(0);
@@ -25,12 +26,16 @@ export default function Modalslide(props) {
  
 return(
         <div className="box_ModalImg">
-                <img className="img_show" src={imgsNew[`${ImgIndex}`]} key={imgsNew[`${ImgIndex}`]} alt=""/>
-            <button className="btn_previous" onClick={previousImg}>
-            <FaAngleLeft className="icon_previous" />
+                <img src={imgsNew[`${ImgIndex}`]} key={imgsNew[`${ImgIndex}`]} alt=""/>
+            <button className="btn_previous" onClick={previousImg} aria-label="image précédente">
+                <div>
+                    <p aria-hidden="true"></p>
+                </div>
              </button>
-            <button className="btn_next" onClick={nextImg}>
-           <FaAngleRight className="icon_previous" />
+            <button className="btn_next" onClick={nextImg} aria-label="image suivante">
+                <div>
+                    <p aria-hidden="true"></p>
+                </div>
             </button>
             <div className="numberImgOfImgs" >{ImgIndex + 1} / {imgsNew.length}</div>
         </div>

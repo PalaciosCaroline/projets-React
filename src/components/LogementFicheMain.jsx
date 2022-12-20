@@ -1,5 +1,4 @@
-import Accordion from "../Accordion";
-import "./logementFicheMain.css";
+import Accordion from "./Accordion";
 
 export default function LogementFicheMain(props) {
   let logement = props.logement;
@@ -7,13 +6,11 @@ export default function LogementFicheMain(props) {
   return (
     <div className="LogementFiche_boxArticles">
       <Accordion
-        className="boxArticle"
         title="Description"
         content={logement.description}
         key={`${logement.title}-${logement.id}`}
       />
       <Accordion
-        className="boxArticle"
         title="Equipements"
         content={
           <ul className="equipement_list">

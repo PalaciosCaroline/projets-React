@@ -1,9 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Modalslide from "../components/Modalslide_module/Modalslide";
+import Modalslide from "../components/Modalslide";
 import { useParams } from "react-router-dom";
-import LogementFicheHeader from "../components/LogementFicheHeader_module/LogementFicheHeader";
-import LogementFicheMain from "../components/LogementFicheMain_module/LogementFicheMain";
+import LogementFicheHeader from "../components/LogementFicheHeader";
+import LogementFicheMain from "../components/LogementFicheMain";
 
 
 export default function Logement(props) {
