@@ -25,20 +25,18 @@ export default function Modalslide(props) {
     }
  
 return(
-        <div className="box_ModalImg">
+        <div className="slideShow">
                 <img src={imgsNew[`${ImgIndex}`]} className="img_modal" key={imgsNew[`${ImgIndex}`]} alt=""/>
           { imgsNew.length > 1 ? 
            ( <>
             <button className="btn_previous" onClick={previousImg} aria-label="image précédente">
                 <div>
                 <img src={arrowDown} className="icon_previous" aria-hidden="true" alt=""/>
-                    {/* <p aria-hidden="true"></p> */}
                 </div>
              </button>
             <button className="btn_next" onClick={nextImg} aria-label="image suivante">
                 <div>
                 <img src={arrowDown} className="icon_next" aria-hidden="true" alt=""/>
-                    {/* <p aria-hidden="true"></p> */}
                 </div>
             </button>
             </>) : ""

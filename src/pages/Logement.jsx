@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Modalslide from "../components/Modalslide";
+import SlideShow from "../components/SlideShow";
 import { useParams, useNavigate } from "react-router-dom";
 import LogementFicheHeader from "../components/LogementFicheHeader";
 import LogementFicheMain from "../components/LogementFicheMain";
@@ -35,20 +35,9 @@ export default function Logement(props) {
 
   return (
     <main className="box_logementFiche">
-      <Modalslide imgs={logement.pictures} />
+      <SlideShow imgs={logement.pictures} />
       <LogementFicheHeader logement={logement} />
       <LogementFicheMain logement={logement} />
     </main>
   );
 }
-
-// {props.logements.filter((logement) => logement.id === id).map((logement) =>
-//     <div className="box_logementFiche" key={`box-${logement.id}`}>
-
-//       <Modalslide imgs={logement.pictures}/>
-//         <main>
-//             <LogementFicheHeader logement={logement}/>
-
-//         </main>
-//     </div>
-//     )}

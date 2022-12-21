@@ -1,4 +1,4 @@
-.box_ModalImg{
+.slideShow{
     position: relative;
     width: 100%;
     height: 415px;
@@ -40,8 +40,8 @@
                 height: 100px;
             }
             img{
-                height: 50px;
-                width: 80px;
+                height: 30px;
+                width: 70px;
                 @include devices (small-pc){  
                     width: 40px;
                     height: 20px;
