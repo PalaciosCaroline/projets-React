@@ -1,7 +1,6 @@
 // import { FaStar} from 'react-icons/fa';
 
-export default function LogementFicheHeader(props) {
-    let logement = props.logement
+export default function LogementFicheHeader({logement}) {
    
     let firstNameAndLastName = logement.host.name.split(" ");
     let firstName = firstNameAndLastName[0];

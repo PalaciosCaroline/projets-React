@@ -3,7 +3,7 @@ import Banner from "./../components/Banner";
 import Boxcards from "../components/Boxcards";
 
 
-export default function Home(props) {
+export default function Home() {
   const [logements, setlogements] = useState([]);
 
   useEffect(() => {

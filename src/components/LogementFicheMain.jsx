@@ -1,7 +1,6 @@
 import Accordion from "./Accordion";
 
-export default function LogementFicheMain(props) {
-  let logement = props.logement;
+export default function LogementFicheMain({logement}) {
 
   return (
     <div className="LogementFiche_boxArticles">

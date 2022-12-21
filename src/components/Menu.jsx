@@ -1,6 +1,6 @@
 import {NavLink} from 'react-router-dom';
 
-export default function Menu(props){
+export default function Menu({logements}){
     
     return(
         <>
