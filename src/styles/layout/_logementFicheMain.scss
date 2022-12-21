@@ -1,6 +1,5 @@
 .LogementFiche_boxArticles{
-    display: flex;
-    justify-content: space-between;
+    @include justifyBetween;
     @include devices(900-pc) {
         display: flex;
         flex-direction: column;

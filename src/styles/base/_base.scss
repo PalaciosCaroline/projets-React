@@ -14,3 +14,16 @@ ul{
   list-style: none;
 }
 
+//marge
+.box_logementFiche{
+  @include marge-page ;
+}
+
+.box_home{
+  @include marge-page ;
+  @include devices (small-pc){        
+      padding-bottom:10px;
+  }
+}
+
+

@@ -1,8 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import SlideShow from "../components/SlideShow";
 import { useParams, useNavigate } from "react-router-dom";
-import LogementFicheHeader from "../components/LogementFicheHeader";
+import SlideShow from "../components/SlideShow";
+import LogementFicheHost from "../components/LogementFicheHost";
+import LogementFicheTitle from "../components/LogementFicheTitle";
 import LogementFicheMain from "../components/LogementFicheMain";
 
 
@@ -36,7 +37,10 @@ export default function Logement() {
   return (
     <main className="box_logementFiche">
       <SlideShow imgs={logement.pictures} />
-      <LogementFicheHeader logement={logement} />
+      <header className='logementFiche_header'>
+            <LogementFicheTitle logement={logement} />
+            <LogementFicheHost logement={logement} />
+      </header>
       <LogementFicheMain logement={logement} />
     </main>
   );

@@ -1,6 +1,5 @@
 .logementFiche_header{
-    display:flex;
-    justify-content: space-between;
+    @include justifyBetween;
     margin-top:20px;
     color: rgba(255, 96, 96, 1);
     margin-bottom: 30px;

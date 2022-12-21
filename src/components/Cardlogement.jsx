@@ -1,13 +1,13 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-export default function Cardlogement(props) {
+export default function Cardlogement({logement}) {
 
     return(
-        <NavLink to={"/logement/"+props.logement.id} className="link_logement" aria-label="lien vers la page du logement">
-            <div className="card_logement" style={{backgroundImage:`url(${props.logement.pictures[0]})`}}>
+        <NavLink to={"/logement/"+logement.id} className="link_logement" aria-label="lien vers la page du logement">
+            <div className="card_logement" style={{backgroundImage:`url(${logement.pictures[0]})`}}>
                 <div className='card_filter'></div>
-                <h2>{props.logement.title}</h2>
+                <h2>{logement.title}</h2>
             </div>
         </NavLink>
         )

@@ -61,3 +61,16 @@
   align-items: center;
   display: flex;
 }
+
+@mixin justifyBetween{
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin filterPosition{
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

@@ -1,7 +1,6 @@
 .boxcards {
-    display: flex;
+    @include justifyBetween;
     flex-wrap: wrap;
-    justify-content: space-between;
     padding: 30px 3% 20px 3%;
     border-radius: 25px;
     background: $bg-boxCards;
@@ -11,7 +10,6 @@
     }
     .link_logement {
         text-decoration: none;
-        text-decoration-line: none;
     }
     a{
         width: 31%;

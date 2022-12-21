@@ -1,8 +1,7 @@
 .menu {
     font-size: 1.2em;
     margin: 10px 7% 0 7%;
-    display : flex;
-    justify-content: space-between;
+    @include justifyBetween;
     align-items: center;
     @include devices (small-pc){  
         font-size: 0.8rem;
