@@ -26,7 +26,7 @@ export default function Apropos() {
   ];
 
   return (
-    <div className="apropos_page">
+    <main className="apropos_page">
       <Banner />
       <div className="apropos_boxText">
         {data.map((elt, index) => (
@@ -37,6 +37,6 @@ export default function Apropos() {
           />
         ))}
       </div>
-    </div>
+    </main>
   );
 }

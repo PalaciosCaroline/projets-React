@@ -16,7 +16,7 @@
         @include devices (mobile){        
             max-height: 30px;
         }
-        &.open{
+        &.active{
             @include devices (mobile){
             max-height: none;
             }
@@ -24,7 +24,7 @@
         &:nth-child(4){
             margin-bottom: 140px;
         }
-        &:nth-child(4).open{
+        &:nth-child(4).active{
             margin-bottom: 10px;
         }
     }
