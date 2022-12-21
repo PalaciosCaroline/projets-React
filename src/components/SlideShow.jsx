@@ -30,13 +30,14 @@ export default function Modalslide(props) {
             <img src={arrowDown} className="icon_next" aria-hidden="true" alt=""/>
             </div>
         </button>
+        <div className="numberImgOfImgs" >{ImgIndex + 1} / {imgsNew.length}</div>
         </>) : "";
  
 return(
         <div className="slideShow">
                 <img src={imgsNew[`${ImgIndex}`]} className="img_modal" key={imgsNew[`${ImgIndex}`]} alt=""/>
           {btnSlideShow}
-            <div className="numberImgOfImgs" >{ImgIndex + 1} / {imgsNew.length}</div>
+           
         </div>
     )
 
