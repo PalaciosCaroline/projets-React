@@ -1,12 +1,12 @@
 import Cardlogement from "./Cardlogement";
 
-function Boxcards(props) {
+function Boxcards({logements}) {
 
   return (
     <div className="boxcards">
-      {props.logements &&
-        props.logements.length > 0 &&
-        props.logements.map((logement) => (
+      {logements &&
+        logements.length > 0 &&
+        logements.map((logement) => (
           <Cardlogement key={logement.id} logement={logement} />
         ))}
     </div>
