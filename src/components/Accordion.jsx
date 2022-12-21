@@ -4,18 +4,18 @@ import arrowDown from './../assets/arrowDown.svg'
 
 export default function Accordion({title, content}) {
 
-    const [setActive, setActiveState] = useState(false);
+    const [setActive, setActiveState] = useState("");
  
     function toggleChevron() {
-        setActiveState(!setActive ? true : false);
+        setActiveState(!setActive ? "active" : "");
     }
  
 return(
-        <div className={`box_accordion ${ setActive ? " open" : ""}`}>
+        <div className={`box_accordion ${setActive}`}>
             <button className="btn_accordion" onClick={toggleChevron}><span className='accordion_title'>{title}</span>
-                <img src={arrowDown} className={ setActive ? "open" : ""} aria-hidden="true" alt=""/>
+                <img src={arrowDown} className={setActive} aria-hidden="true" alt=""/>
             </button>
-            <div className={`div_text ${ setActive ? " open" : ""}`}>{content}</div>
+            <div className={`div_text ${setActive}`}>{content}</div>
         </div>
     )
 }

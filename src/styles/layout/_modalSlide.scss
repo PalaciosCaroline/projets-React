@@ -12,7 +12,7 @@
         height: 255px;
         border-radius: 10px;     
     }
-    img{
+    .img_modal{
         height: 100%;
         width: 100%;
         object-fit: cover;
@@ -26,47 +26,48 @@
         position: absolute;
         border:none;
         height: 100%;
-        width: 50px;
         div {
             @include allCenter ; 
-        }
-        p{
-            width: 40px;
-            height: 20px;
+            width: 60px;
+            height: 100px;
             margin:0;
-            display: block;
+            @include devices (small-pc){  
+                width: 40px;
+                height: 50px;
+            }
             @include devices (mobile){  
                 width: 30px;
-                height: 15px;
+                height: 100px;
             }
-            &:after {
-                width: 100%;
-                height: 100%;
-                display: block;
-                content: '';
-                -webkit-mask: url(./../../assets/arrowDown.svg) no-repeat 50% 50%;
-                mask: url(./../../assets/arrowDown.svg) no-repeat 50% 50%;
-                -webkit-mask-size: cover;
-                mask-size: cover;
-                background-color: $color-secondary;   
+            img{
+                height: 50px;
+                width: 80px;
+                @include devices (small-pc){  
+                    width: 40px;
+                    height: 20px;
+                }
+                @include devices (mobile){  
+                    width: 20px;
+                    height: 12px;
+                }
             }
         }
     }
     .btn_previous{    
         left: 10px; 
-        @include devices (mobile){  
+        @include devices (small-pc){  
             left:0;
         }
-        p{
+        img{
             transform: rotate(90deg);
         }
     }
     .btn_next{
         right: 10px;
-        @include devices (mobile){  
+        @include devices (small-pc){  
            right: 0;
         }
-        p{
+        img{
             transform: rotate(-90deg);
         }
     }

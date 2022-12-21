@@ -1,6 +1,6 @@
 // import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import React, {useState} from 'react';
-// import arrowDown from './../../assets/arrowDown.svg'
+import arrowDown from './../assets/arrowDown.svg'
 
 
 export default function Modalslide(props) {
@@ -26,17 +26,19 @@ export default function Modalslide(props) {
  
 return(
         <div className="box_ModalImg">
-                <img src={imgsNew[`${ImgIndex}`]} key={imgsNew[`${ImgIndex}`]} alt=""/>
+                <img src={imgsNew[`${ImgIndex}`]} className="img_modal" key={imgsNew[`${ImgIndex}`]} alt=""/>
           { imgsNew.length > 1 ? 
            ( <>
             <button className="btn_previous" onClick={previousImg} aria-label="image précédente">
                 <div>
-                    <p aria-hidden="true"></p>
+                <img src={arrowDown} className="icon_previous" aria-hidden="true" alt=""/>
+                    {/* <p aria-hidden="true"></p> */}
                 </div>
              </button>
             <button className="btn_next" onClick={nextImg} aria-label="image suivante">
                 <div>
-                    <p aria-hidden="true"></p>
+                <img src={arrowDown} className="icon_next" aria-hidden="true" alt=""/>
+                    {/* <p aria-hidden="true"></p> */}
                 </div>
             </button>
             </>) : ""

@@ -1,5 +1,13 @@
 .apropos_page{
     @include marge-page ; 
+    .banner{
+        background-image: url('./../../assets/img_apropos.png');
+        background-position: 70% center;
+        margin-bottom: 30px;
+        @include devices (mobile){  
+            margin-bottom: 20px;
+        }  
+    }
     .box_accordion{
         margin:0 10% 35px 10%;
         @include devices(small-pc) {
@@ -24,7 +32,7 @@
         @include devices (mobile){        
             padding: 20px 15px 25px 15px;
         } 
-        &.open{
+        &.active{
         height: auto;
         @include devices (mobile){        
             font-size: 0.8rem;

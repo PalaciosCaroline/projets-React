@@ -1,4 +1,4 @@
-import Bannerapropos from "./../components/Banner_apropos";
+import Banner from "./../components/Banner";
 import Accordion from "../components/Accordion.jsx";
 
 export default function Apropos() {
@@ -27,7 +27,7 @@ export default function Apropos() {
 
   return (
     <div className="apropos_page">
-      <Bannerapropos />
+      <Banner />
       <div className="apropos_boxText">
         {data.map((elt, index) => (
           <Accordion

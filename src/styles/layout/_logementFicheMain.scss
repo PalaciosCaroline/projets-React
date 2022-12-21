@@ -13,7 +13,7 @@
             margin:0;
             width: 100%;
             margin-bottom: 40px;
-            &.open{
+            &.active{
                 height: auto;
                 min-height: 0;
                 font-size: 1rem;
@@ -26,7 +26,7 @@
         @include devices(mobile) {
             margin-bottom: 20px;
             max-height: 50px;
-            &.open{
+            &.active{
                 max-height: none;
             }
         }
@@ -34,7 +34,7 @@
             @include devices(mobile) {
                 margin-bottom: 50px;
             }
-            &.open{
+            &.active{
                 margin-bottom: 20px;
             }
         }
@@ -44,7 +44,7 @@
         @include devices(900-pc) {
             min-height: 0;
         }
-        &.open{
+        &.active{
             min-height: 220px;
             height: auto;
             @include devices(mobile) {
