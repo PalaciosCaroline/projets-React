@@ -8,10 +8,10 @@ import Logement from "./pages/Logement";
 import { v4 as uuidv4 } from "uuid";
 import { useLocalStorage } from "./hooks/useLocaleStorage";
 
-export default function Router({logements}) {
+export default function Router() {
   return (
     <Routes>
-      <Route index element={<Home logements={logements} />} />
+      <Route index element={<Home />} />
       <Route
         path="/Apropos"
         element={<Apropos />}

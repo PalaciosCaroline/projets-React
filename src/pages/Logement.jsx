@@ -6,7 +6,7 @@ import LogementFicheHeader from "../components/LogementFicheHeader";
 import LogementFicheMain from "../components/LogementFicheMain";
 
 
-export default function Logement(props) {
+export default function Logement() {
   const [logement, setlogement] = useState({
     tags: [],
     equipments: [],

@@ -7,7 +7,7 @@ export default function App(){
 return(
     <>
         <Menu />
-        <Router/>
+        <Router />
         <Footer />
     </>
     )
