@@ -1,5 +1,5 @@
 import Banner from "./../components/Banner";
-import Accordion from "../components/Accordion.jsx";
+import Collapse from "../components/Collapse.jsx";
 
 export default function Apropos() {
   const data = [
@@ -30,7 +30,7 @@ export default function Apropos() {
       <Banner />
       <div className="apropos_boxText">
         {data.map((elt, index) => (
-          <Accordion
+          <Collapse
             title={elt.title}
             content={elt.content}
             key={`${elt.title}-${index}`}

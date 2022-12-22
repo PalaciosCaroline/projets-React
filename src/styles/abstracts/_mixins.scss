@@ -74,3 +74,14 @@
   left: 0;
   right: 0;
 }
+
+@mixin logo{
+  width: 160px;
+  height: 50px;
+  display: block;
+  content: '';
+  -webkit-mask: url(./../../assets/logo.svg) no-repeat 50% 50%;
+  mask: url(./../../assets/logo.svg) no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}

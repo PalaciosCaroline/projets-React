@@ -36,7 +36,7 @@ export default function Logement() {
 
   return (
     <main className="box_logementFiche">
-      <SlideShow imgs={logement.pictures} />
+      <SlideShow imgsLogement={logement.pictures} />
       <header className='logementFiche_header'>
             <LogementFicheTitle logement={logement} />
             <LogementFicheHost logement={logement} />

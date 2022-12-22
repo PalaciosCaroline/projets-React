@@ -8,7 +8,7 @@
             margin-bottom: 20px;
         }  
     }
-    .box_accordion{
+    .box_collapse{
         margin:0 10% 35px 10%;
         @include devices(small-pc) {
             margin: 20px 0;
@@ -32,11 +32,10 @@
         @include devices (mobile){        
             padding: 20px 15px 25px 15px;
         } 
-        &.active{
-        height: auto;
+       
         @include devices (mobile){        
             font-size: 0.8rem;
         }
-        }
+        
     }
 }

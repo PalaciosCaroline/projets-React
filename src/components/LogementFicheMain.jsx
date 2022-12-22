@@ -1,15 +1,15 @@
-import Accordion from "./Accordion";
+import Collapse from "./Collapse";
 
 export default function LogementFicheMain({logement}) {
 
   return (
     <div className="LogementFiche_boxArticles">
-      <Accordion
+      <Collapse
         title="Description"
         content={logement.description}
         key={`${logement.title}-${logement.id}`}
       />
-      <Accordion
+      <Collapse
         title="Equipements"
         content={
           <ul className="equipement_list">

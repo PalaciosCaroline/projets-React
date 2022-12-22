@@ -1,6 +1,6 @@
 import Cardlogement from "./Cardlogement";
 
-function Boxcards({logements}) {
+export default function Boxcards({logements}) {
 
   return (
     <div className="boxcards">
@@ -13,4 +13,4 @@ function Boxcards({logements}) {
   );
 }
 
-export default Boxcards;
+

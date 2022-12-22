@@ -5,52 +5,51 @@
         flex-direction: column;
         margin-top: 30px;
     }
-    .box_accordion{
+    .box_collapse{
         width: 48%;
-        margin:0;
+        margin-bottom: 120px;
+        
         @include devices(900-pc) {
-            margin:0;
+            margin-bottom:30px;
             width: 100%;
-            margin-bottom: 40px;
-            &.active{
-                height: auto;
-                min-height: 0;
-                font-size: 1rem;
-                transition: all 0.3s ease-in-out;
-                -webkit-transition: all 0.3s ease-in-out;
-                -moz-transition: all 0.3s ease-in-out;
-                -o-transition: all 0.3s ease-in-out;
-            }
+            font-size: 1rem;
         }
         @include devices(mobile) {
             margin-bottom: 20px;
-            max-height: 50px;
-            &.active{
-                max-height: none;
-            }
+           
         }
         &:nth-child(2){
+            @include devices(900-pc) {
+                margin-bottom: 70px;
+            }
             @include devices(mobile) {
-                margin-bottom: 50px;
+                margin-bottom: 60px;
             }
             &.active{
                 margin-bottom: 20px;
             }
         }
-    }
-    .div_text{
-        min-height: 70px;
-        @include devices(900-pc) {
-            min-height: 0;
-        }
         &.active{
-            min-height: 220px;
-            height: auto;
-            @include devices(mobile) {
-                font-size: 0.8rem;
-                min-height: 160px;
-            }
+            margin-bottom: 30px;
+            .collapseWrapper{
+                    @include devices(mobile) {
+                        font-size: 0.8rem;  
+                    }
+                }
+                .div_text{
+                    min-height: 180px;
+                    @include devices(small-pc) {
+                        min-height: 160px;
+                    }
+                    @include devices(mobile) {
+                        min-height: none;
+                    }
+                    
+                }
+            
         }
+    }
+    .collapseWrapper{
         ul{
             margin: 0;
             padding: 0;
