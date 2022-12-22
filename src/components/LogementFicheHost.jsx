@@ -21,7 +21,7 @@ export default function LogementFicheHost({logement}) {
             </div>
             <div className="star" aria-label="avis de {logement.rating} étoiles sur 5" >
                 {starTotal.map((starItem) => (
-                <p className={(starItem <= numberOfRating ?  "star_colorred" : "star_empty")} key={`star-${starItem}`}  aria-hidden="true"/>
+                <p className={(starItem <= numberOfRating ? "star_colorred" : "star_empty")} key={`star-${starItem}`}  aria-hidden="true"/>
                 ))}
             </div>
         </div>)

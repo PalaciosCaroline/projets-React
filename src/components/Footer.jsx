@@ -1,4 +1,3 @@
-// import logo_blanc from "./../assets/logo_blanc.svg";
 
 export default function Footer(){
     

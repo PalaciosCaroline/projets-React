@@ -33,12 +33,9 @@ export default function Modalslide({imgsLogement}) {
  
     return(
         <div className="slideShow">
-                <img src={imgsLogement[`${ImgIndex}`]} className="img_modal" key={imgsLogement[`${ImgIndex}`]} alt=""/>
-          {btnSlideShow}
+            <img src={imgsLogement[`${ImgIndex}`]} className="img_modal" key={imgsLogement[`${ImgIndex}`]} alt=""/>             
+            {btnSlideShow}
         </div>
     )
 }
-
-
-// {imgsLogement.map((img,index) => < img className={slideIndex === index + 1 ? "box_img imgModal" : "box_img"} src={img} key={img}alt="" />)}
 
