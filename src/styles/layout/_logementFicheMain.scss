@@ -32,21 +32,20 @@
         &.active{
             margin-bottom: 30px;
             .collapseWrapper{
-                    @include devices(mobile) {
-                        font-size: 0.8rem;  
-                    }
+                @include devices(mobile) {
+                    font-size: 0.8rem;  
                 }
-                .div_text{
-                    min-height: 180px;
-                    @include devices(small-pc) {
-                        min-height: 160px;
-                    }
-                    @include devices(mobile) {
-                        min-height: none;
-                    }
-                    
+            }
+            .div_text{
+                min-height: 180px;
+                @include devices(small-pc) {
+                    min-height: 160px;
                 }
-            
+                @include devices(mobile) {
+                    min-height: none;
+                }
+                
+            }
         }
     }
     .collapseWrapper{

@@ -9,9 +9,9 @@
         text-transform: uppercase;
     }
     ul{
-    display: flex;
-    flex-direction: row;
-    padding:0 0 0 0;
+        display: flex;
+        flex-direction: row;
+        padding:0 0 0 0;
         @include devices (small-pc){  
             margin:0;
         }
@@ -27,7 +27,6 @@
         }
     }
     .activeLink{
-    /* border-bottom : 2px solid rgba(255, 96, 96, 1); */
         text-decoration: underline;
     }
     .box_logo{
