@@ -11,10 +11,11 @@
     .box_collapse{
         margin:0 10% 35px 10%;
         @include devices(small-pc) {
-            margin: 20px 0;
+            margin: 30px 0;
         }
         @include devices (mobile){        
             max-height: 30px;
+            margin: 20px 0;
         }
         &.active{
             @include devices (mobile){
@@ -22,7 +23,7 @@
             }
         }
         &:nth-child(4){
-            margin-bottom: 140px;
+            margin-bottom: 120px;
         }
         &:nth-child(4).active{
             margin-bottom: 10px;
