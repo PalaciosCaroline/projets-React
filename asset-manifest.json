@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.0226828e.css",
-    "main.js": "/react-gh-pages/static/js/main.e0d11256.js",
-    "static/js/787.28cb0dcd.chunk.js": "/react-gh-pages/static/js/787.28cb0dcd.chunk.js",
-    "static/media/img_home.png": "/react-gh-pages/static/media/img_home.daf18a4428f04736e785.png",
-    "static/media/img_apropos.png": "/react-gh-pages/static/media/img_apropos.316205ece8417bed82ff.png",
-    "static/media/logo.svg": "/react-gh-pages/static/media/logo.a8a215eb72524f5985d2.svg",
-    "index.html": "/react-gh-pages/index.html",
-    "static/media/arrowDown.svg": "/react-gh-pages/static/media/arrowDown.16b912f87ce2849e129df0379fac8d0e.svg",
-    "static/media/star.svg": "/react-gh-pages/static/media/star.ccb8a92aa73de4e0c553.svg",
-    "main.0226828e.css.map": "/react-gh-pages/static/css/main.0226828e.css.map",
-    "main.e0d11256.js.map": "/react-gh-pages/static/js/main.e0d11256.js.map",
-    "787.28cb0dcd.chunk.js.map": "/react-gh-pages/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/static/css/main.ff4e8d0d.css",
+    "main.js": "/static/js/main.e63eedbc.js",
+    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/img_home.png": "/static/media/img_home.daf18a4428f04736e785.png",
+    "static/media/img_apropos.png": "/static/media/img_apropos.316205ece8417bed82ff.png",
+    "static/media/logo.svg": "/static/media/logo.a8a215eb72524f5985d2.svg",
+    "index.html": "/index.html",
+    "static/media/arrowDown.svg": "/static/media/arrowDown.16b912f87ce2849e129df0379fac8d0e.svg",
+    "static/media/star.svg": "/static/media/star.ccb8a92aa73de4e0c553.svg",
+    "main.ff4e8d0d.css.map": "/static/css/main.ff4e8d0d.css.map",
+    "main.e63eedbc.js.map": "/static/js/main.e63eedbc.js.map",
+    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0226828e.css",
-    "static/js/main.e0d11256.js"
+    "static/css/main.ff4e8d0d.css",
+    "static/js/main.e63eedbc.js"
   ]
 }
