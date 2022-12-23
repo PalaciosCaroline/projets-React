@@ -35,6 +35,9 @@
         border:none;
         height: 100%;
         z-index:10;
+        &:active{
+            background-color: transparent;
+        }
         div {
             @include allCenter ; 
             width: 60px;
