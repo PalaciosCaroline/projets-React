@@ -35,8 +35,9 @@
         border:none;
         height: 100%;
         z-index:10;
-        &:active{
+        &:active, &:focus{
             background-color: transparent;
+            outline: 0;
         }
         div {
             @include allCenter ; 
