@@ -41,7 +41,7 @@
         }
         &:focus{
             background-color: transparent;
-            outline: none;
+            outline: 0;
         }
         div {
             @include allCenter ; 
