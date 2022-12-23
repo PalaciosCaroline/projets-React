@@ -31,11 +31,20 @@ export default function Modalslide({imgsLogement}) {
         <div className="numberImgOfImgs" >{ImgIndex + 1} / {imgsLogement.length}</div>
         </>) : "";
  
+
+
     return(
         <div className="slideShow">
-            <img src={imgsLogement[`${ImgIndex}`]} className="img_modal" key={imgsLogement[`${ImgIndex}`]} alt=""/>             
+                {
+                    imgsLogement.map((image,index) => { return(
+                        <div className={`box_img ${ImgIndex === index ? "isVisible" : ""}`} key={image}>
+                        <img src={image} alt=""/>        
+                        </div>
+                    )})
+                }
             {btnSlideShow}
         </div>
     )
 }
 
+{/* <img src={imgsLogement[`${ImgIndex}`]} className="img_modal" key={imgsLogement[`${ImgIndex}`]} alt=""/>        */}

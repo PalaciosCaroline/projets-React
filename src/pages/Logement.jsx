@@ -9,11 +9,15 @@ import LogementFicheMain from "../components/LogementFicheMain";
 
 export default function Logement() {
   const [logement, setlogement] = useState({
-    tags: [],
-    equipments: [],
-    pictures: [],
-    rating: "",
-    host: { name: "", picture: "" },
+      id:"",
+      title:"",
+      cover:"",
+      pictures: [],
+      host: { name: "", picture: "" },
+      rating:"",
+      location: "",
+      equipments: [],
+      tags: [],
   });
 
   let { id } = useParams();

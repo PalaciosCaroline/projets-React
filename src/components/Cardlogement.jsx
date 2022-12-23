@@ -5,7 +5,7 @@ export default function Cardlogement({logement}) {
 
     return(
         <NavLink to={"/logement/"+logement.id} className="link_logement" aria-label="lien vers la page du logement">
-            <div className="card_logement" style={{backgroundImage:`url(${logement.pictures[0]})`}}>
+            <div className="card_logement" style={{backgroundImage:`url(${logement.cover})`}}>
                 <div className='card_filter'></div>
                 <h2>{logement.title}</h2>
             </div>

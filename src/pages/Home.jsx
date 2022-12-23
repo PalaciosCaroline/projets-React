@@ -1,10 +1,21 @@
 import React, { useState, useEffect } from "react";
+// import data from "./../data";
 import Banner from "./../components/Banner";
 import Boxcards from "../components/Boxcards";
 
 
 export default function Home() {
   const [logements, setlogements] = useState([]);
+  // const [isMounted, setIsMounted] = useState(false);
+
+  // useEffect(() => {
+  //   !isMounted &&
+  //     data.getlogements().then((json) => {
+  //       setlogements(json);
+  //       setIsMounted(true);
+  //     });
+  // }, [isMounted]);
+
 
   useEffect(() => {
     fetch("data.json")
