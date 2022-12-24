@@ -16,18 +16,19 @@
         opacity:0;
         @include filterPosition;
         z-index:2;
-            &.isVisible{
-                height: 100%;
-                width: 100%;
-                animation : slideEffect 0.4s ease;
-                opacity:1;
-            }
-            & img{
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                object-position: 60% center;
-            }
+        height: 100%;
+        width: 100%;
+        transition : opacity 0.3s linear;
+        &.isVisible{
+            transition : opacity 0.5s linear;
+            opacity:1;
+        }
+        & img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: 60% center;
+        }
     }
     button{
         background-color: transparent;
@@ -98,16 +99,11 @@
         bottom:20px;
         color: $color-secondary;
         z-index:10;
+        cursor: pointer;
         @include devices (mobile){  
             font-size: 0.8rem;
          }
     }
 }
 
-@keyframes slideEffect {  
-    0%{opacity: 0.4 }
-    50%{opacity: 0.7}
-    80%{opacity: 0.9}
-    100% {opacity: 1;filter: brightness(1)}
-} 
 

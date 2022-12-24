@@ -20,7 +20,7 @@
         height: 0;
         opacity:0;
         overflow: hidden;
-        transition: all 0.4s;
+        transition: all 0.3s linear;
     }
     .div_text{
         height: 0;
@@ -62,10 +62,12 @@
         .collapseWrapper{
             opacity:1;
             height: auto;
+            transition: all 0.3s linear;
         }
         .div_text{
             height: auto;
             opacity:1;     
+              transition: all 0.3s linear;
         }
     }
 }

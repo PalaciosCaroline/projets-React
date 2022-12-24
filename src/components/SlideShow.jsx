@@ -28,17 +28,15 @@ export default function Modalslide({imgsLogement}) {
             <img src={arrowDown} className="icon_next" aria-hidden="true" alt=""/>
             </div>
         </button>
-        <div className="numberImgOfImgs" >{ImgIndex + 1} / {imgsLogement.length}</div>
+        <div className="numberImgOfImgs"><span onClick={previousImg}>{ImgIndex + 1}</span><span>/</span><span onClick={nextImg}>{imgsLogement.length}</span></div>
         </>) : "";
- 
-
 
     return(
         <div className="slideShow">
                 {
                     imgsLogement.map((image,index) => { return(
                         <div className={`box_img ${ImgIndex === index ? "isVisible" : ""}`} key={image}>
-                        <img src={image} alt=""/>        
+                            <img src={image} alt=""/>
                         </div>
                     )})
                 }
