@@ -6,7 +6,6 @@ import LogementFicheHost from "../components/LogementFicheHost";
 import LogementFicheTitle from "../components/LogementFicheTitle";
 import LogementFicheMain from "../components/LogementFicheMain";
 
-
 export default function Logement() {
   const [logement, setlogement] = useState({
       id:"",
@@ -23,18 +22,15 @@ export default function Logement() {
   let { id } = useParams();
   let navigate = useNavigate();
 
-  useEffect(function () {
+  useEffect(() => {
     fetch("/data.json")
       .then((response) => {
         return response.json();
       })
       .then((data) => {
         let logementNew = data.find((item) => item.id === id);
-        if(logementNew !== undefined)
-          setlogement(logementNew);
-        else {
-          navigate("/error")
-        }
+        if(logementNew !== undefined) setlogement(logementNew);
+        else navigate("/error")
       });
   }, []);
 
