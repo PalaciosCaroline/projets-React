@@ -29,6 +29,9 @@
             margin-bottom: 10px;
         }
     }
+    .box_collapse.active ~ .box_collapse:nth-child(4){
+        margin-bottom: 10px;
+    }
     .div_text{
         @include devices (mobile){        
             padding: 20px 15px 25px 15px;
@@ -38,3 +41,4 @@
         }
     }
 }
+

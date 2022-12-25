@@ -18,6 +18,7 @@ export default function Modalslide({imgsLogement}) {
 
     const btnSlideShow = (imgsLogement.length > 1) ? ( 
         <>
+        <nav>
         <button className="btn_previous" onClick={previousImg} aria-label="image précédente">
             <div>
             <img src={arrowDown} className="icon_previous" aria-hidden="true" alt=""/>
@@ -28,6 +29,7 @@ export default function Modalslide({imgsLogement}) {
             <img src={arrowDown} className="icon_next" aria-hidden="true" alt=""/>
             </div>
         </button>
+        </nav>
         <div className="numberImgOfImgs"><span onClick={previousImg}>{ImgIndex + 1}</span><span>/</span><span onClick={nextImg}>{imgsLogement.length}</span></div>
         </>) : "";
 
