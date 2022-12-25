@@ -26,4 +26,14 @@ ul{
   }
 }
 
+.btn_collapse:active, 
+.slideShow button:active,
+.btn_collapse:focus:not(.focus-visible), 
+.slideShow button:focus:not(.focus-visible){
+      outline: none !important;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+
+
+
 
