@@ -32,7 +32,7 @@ export default function Logement() {
         if(logementNew !== undefined) setlogement(logementNew);
         else navigate("/error")
       });
-  }, []);
+  }, [id,navigate]);
 
   return (
     <main className="box_logementFiche">

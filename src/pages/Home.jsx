@@ -3,10 +3,9 @@ import React, { useState, useEffect } from "react";
 import Banner from "./../components/Banner";
 import Boxcards from "../components/Boxcards";
 
-
 export default function Home() {
   const [logements, setlogements] = useState([]);
-  // const [isMounted, setIsMounted] = useState(false);
+  // const [isMounted, setIsMounted] = useState(false)
 
   // useEffect(() => {
   //   !isMounted &&
@@ -16,13 +15,14 @@ export default function Home() {
   //     });
   // }, [isMounted]);
 
-
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
       .then((result) => {
-        setlogements(result);
-      });
+        setlogements(result)}) 
+      .catch(function(error) {
+          console.log('Il y a eu un problème avec l\'opération fetch : ' + error.message);
+      })
   }, []);
 
   return (
