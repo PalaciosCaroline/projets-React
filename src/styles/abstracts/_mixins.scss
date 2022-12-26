@@ -45,6 +45,10 @@
     margin-right: 7%;
     margin-left: 7%;
 }
+@mixin marge-page-mobile{
+    margin-right: 5.3%;
+    margin-left: 5.3%;
+}
 
 @mixin padding-box{
   padding-right: 3%;

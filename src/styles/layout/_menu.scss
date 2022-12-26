@@ -8,6 +8,9 @@
         margin: 15px 7% 20px 7%;
         text-transform: uppercase;
     }
+    @include devices (mobile){        
+        @include marge-page-mobile ;
+    }
     ul{
         display: flex;
         flex-direction: row;

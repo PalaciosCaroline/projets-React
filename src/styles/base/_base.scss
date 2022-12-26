@@ -17,12 +17,18 @@ ul{
 //marge
 .box_logementFiche{
   @include marge-page ;
+  @include devices (mobile){        
+    @include marge-page-mobile ;
+  }
 }
 
 .box_home{
   @include marge-page ;
   @include devices (small-pc){        
       padding-bottom:10px;
+  }
+  @include devices (mobile){        
+    @include marge-page-mobile ;
   }
 }
 

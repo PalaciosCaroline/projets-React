@@ -2,22 +2,18 @@
 import React, {useState} from 'react';
 import arrowDown from './../assets/arrowDown.svg'
 
-
 export default function Modalslide({imgsLogement}) {
     const [ImgIndex, setImgIndex] = useState(0);
    
     const nextImg = () => {
-        if(ImgIndex === (imgsLogement.length - 1)) setImgIndex(0)
-        else setImgIndex(ImgIndex + 1)   
+        (ImgIndex === (imgsLogement.length - 1)) ? setImgIndex(0) : setImgIndex(ImgIndex + 1)   
     }
 
     const previousImg = () => {
-        if(ImgIndex === 0) setImgIndex(imgsLogement.length - 1)
-         else setImgIndex(ImgIndex - 1)
+        (ImgIndex === 0) ? setImgIndex(imgsLogement.length - 1) : setImgIndex(ImgIndex - 1)
     }
 
     const btnSlideShow = (imgsLogement.length > 1) ? ( 
-        <>
         <nav>
         <button className="btn_previous" onClick={previousImg} aria-label="image précédente">
             <div>
@@ -30,8 +26,7 @@ export default function Modalslide({imgsLogement}) {
             </div>
         </button>
         </nav>
-        <div className="numberImgOfImgs"><span onClick={previousImg}>{ImgIndex + 1}</span><span>/</span><span onClick={nextImg}>{imgsLogement.length}</span></div>
-        </>) : "";
+        ) : "";
 
     return(
         <div className="slideShow">
@@ -43,8 +38,8 @@ export default function Modalslide({imgsLogement}) {
                     )})
                 }
             {btnSlideShow}
+            <div className="numberImgOfImgs"><span onClick={previousImg}>{ImgIndex + 1}</span><span>/</span><span onClick={nextImg}>{imgsLogement.length}</span></div>
         </div>
     )
 }
 
-{/* <img src={imgsLogement[`${ImgIndex}`]} className="img_modal" key={imgsLogement[`${ImgIndex}`]} alt=""/>        */}
