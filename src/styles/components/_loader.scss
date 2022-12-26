@@ -4,19 +4,21 @@
 	align-items: center;
 	flex-direction: column;
 	width: 100%;
-	min-height: 100vh;
-	height: 100%;
-  
-	color: #cacaca;
+	min-height: 70vh;
+	height: 70%;
+	@include devices(mobile) {
+		min-height: 60vh;
+		height: 60%;
+	}
 }
 .loaderWrapper {
-	  position: fixed;
+	  position: sticky;
 	  z-index: 2;
+	  margin-bottom:120px;
 	  display: flex;
 	  justify-content: center;
 	  align-items: center;
 	  width: 100%;
-	  height: 100vh;
 }
 .loader {
 		width: 100px;

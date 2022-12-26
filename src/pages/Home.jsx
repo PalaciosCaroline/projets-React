@@ -34,7 +34,7 @@ export default function Home() {
       {isDataLoading ? (
         <Loader />
         ) : (
-      <Boxcards logements={logements} />
+        <Boxcards logements={logements} />
       )}
     </main>
   );
