@@ -25,17 +25,30 @@ export default function Home() {
     fetchDatas()
   }, []);
 
+  // const [loader, setLoader] = useState(true);
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoader(false);
+  //   }, 2000);
+  // }, []);
+
   return (
-    <main className="box_home">
+   
+   
+       isDataLoading ? (
+      <Loader />
+      ) : (
+        <main className="box_home">
       <header className="bannerHome" >
             <Banner /> 
             <h1>Chez vous, <br/>partout et ailleurs</h1> 
       </header>
-      {isDataLoading ? (
-        <Loader />
-        ) : (
+      
         <Boxcards logements={logements} />
-      )}
-    </main>
-  );
+        </main>
+      )
+    )
+    
+  
 }

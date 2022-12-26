@@ -4,11 +4,11 @@
 	align-items: center;
 	flex-direction: column;
 	width: 100%;
-	min-height: 70vh;
-	height: 70%;
+	min-height: 90vh;
+	height: 90%;
 	@include devices(mobile) {
-		min-height: 60vh;
-		height: 60%;
+		min-height: 70vh;
+		height: 70%;
 	}
 }
 .loaderWrapper {
