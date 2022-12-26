@@ -1,73 +1,73 @@
-.btn_collapse{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.2rem ;
-    background-color:  $bg-btn;
-    color: $color-secondary;
-    height: 47px;
-    border: none;
-    border-radius: 5px;
-    padding: 0 15px;
-    box-shadow: $box-shadow-medium;
-    @include devices(mobile) {
-        height: 30px;
-    }
+.btn_collapse {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  background-color: $bg-btn;
+  color: $color-secondary;
+  height: 47px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 15px;
+  box-shadow: $box-shadow-medium;
+  @include devices(mobile) {
+    height: 30px;
+  }
 }
-.box_collapse{
-    .collapseWrapper{
-        height: 0;
-        opacity:0;
-        overflow: hidden;
-        transition: all 0.5s linear;
+.box_collapse {
+  .collapseWrapper {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s linear;
+  }
+  .div_text {
+    height: 0;
+    opacity: 0;
+    border-radius: 0 0 10px 10px;
+    transition: all 0.7s;
+    padding: 20px 15px 15px 15px;
+    background-color: $bg-collapseText;
+    font-size: 1.1rem;
+    line-height: 26px;
+    font-weight: 400;
+    @include devices(mobile) {
+      font-size: 0.8rem;
     }
-    .div_text{
-        height: 0;
-        opacity: 0;
-        border-radius: 0 0 10px 10px;
-        transition: all 0.7s;
-        padding: 20px 15px 15px 15px;
-        background-color: $bg-collapseText;
-        font-size: 1.1rem ;
-        line-height: 26px;
-        font-weight: 400;
-        @include devices(mobile) {
-            font-size: 0.8rem;
-        }
-        @include devices(mobile) {
-            padding: 20px 15px 25px 15px;
-        }
+    @include devices(mobile) {
+      padding: 20px 15px 25px 15px;
     }
+  }
+  img {
+    display: flex;
+    transition: transform 0.2s ease;
+    width: 26px;
+    height: auto;
+    @include devices(mobile) {
+      width: 16px;
+      height: auto;
+    }
+  }
+  .collapse_title {
+    @include devices(mobile) {
+      font-size: 0.9rem;
+    }
+  }
+  &.active {
     img {
-        display:flex;
-        transition: transform 0.2s ease;
-        width: 26px;
-        height: auto;
-        @include devices(mobile) {
-            width: 16px;
-            height: auto;
-        }
+      transform: rotate(-180deg);
+      transition: transform 0.2s ease;
     }
-    .collapse_title{
-        @include devices(mobile) {
-            font-size: 0.9rem;
-        }
+    .collapseWrapper {
+      opacity: 1;
+      height: auto;
+      transition: all 0.3s linear;
     }
-    &.active{
-        img {
-            transform: rotate(-180deg);
-            transition: transform 0.2s ease;
-            }
-        .collapseWrapper{
-            opacity:1;
-            height: auto;
-            transition: all 0.3s linear;
-        }
-        .div_text{
-            height: auto;
-            opacity:1;     
-              transition: all 0.3s linear;
-        }
+    .div_text {
+      height: auto;
+      opacity: 1;
+      transition: all 0.3s linear;
     }
+  }
 }

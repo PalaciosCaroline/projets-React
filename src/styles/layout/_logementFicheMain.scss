@@ -1,60 +1,58 @@
-.LogementFiche_boxArticles{
-    @include justifyBetween;
+.LogementFiche_boxArticles {
+  @include justifyBetween;
+  @include devices(900-pc) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .box_collapse {
+    width: 48%;
+    margin-bottom: 120px;
+
     @include devices(900-pc) {
-        display: flex;
-        flex-direction: column;
-        margin-top: 30px;
+      margin-bottom: 30px;
+      width: 100%;
+      font-size: 1rem;
     }
-    .box_collapse{
-        width: 48%;
-        margin-bottom: 120px;
-        
-        @include devices(900-pc) {
-            margin-bottom:30px;
-            width: 100%;
-            font-size: 1rem;
+    @include devices(mobile) {
+      margin-bottom: 20px;
+    }
+    &:nth-child(2) {
+      @include devices(900-pc) {
+        margin-bottom: 70px;
+      }
+      @include devices(mobile) {
+        margin-bottom: 60px;
+      }
+      &.active {
+        margin-bottom: 20px;
+      }
+    }
+    &.active {
+      margin-bottom: 30px;
+      .collapseWrapper {
+        @include devices(mobile) {
+          font-size: 0.8rem;
+        }
+      }
+      .div_text {
+        min-height: 180px;
+        @include devices(small-pc) {
+          min-height: 160px;
         }
         @include devices(mobile) {
-            margin-bottom: 20px;
-           
+          min-height: none;
         }
-        &:nth-child(2){
-            @include devices(900-pc) {
-                margin-bottom: 70px;
-            }
-            @include devices(mobile) {
-                margin-bottom: 60px;
-            }
-            &.active{
-                margin-bottom: 20px;
-            }
-        }
-        &.active{
-            margin-bottom: 30px;
-            .collapseWrapper{
-                @include devices(mobile) {
-                    font-size: 0.8rem;  
-                }
-            }
-            .div_text{
-                min-height: 180px;
-                @include devices(small-pc) {
-                    min-height: 160px;
-                }
-                @include devices(mobile) {
-                    min-height: none;
-                }
-                
-            }
-        }
+      }
     }
-    .collapseWrapper{
-        ul{
-            margin: 0;
-            padding: 0;
-        }
-        li{
-            line-height: 25px;
-        }
+  }
+  .collapseWrapper {
+    ul {
+      margin: 0;
+      padding: 0;
     }
+    li {
+      line-height: 25px;
+    }
+  }
 }

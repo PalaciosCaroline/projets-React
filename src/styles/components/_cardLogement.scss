@@ -1,36 +1,40 @@
 .card_logement {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-    background-size: cover;
-    background-position: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: $box-shadow-light;
+  transition: all 0.2s;
+  &:hover {
+    box-shadow: $box-shadow-hight;
+    transform: translate(1px, -1px);
+  }
+  .card_filter {
+    @include filterPosition;
     border-radius: 10px;
-    position: relative;
-    box-shadow: $box-shadow-light;
-    transition: all 0.2s;
-    &:hover{
-        box-shadow: $box-shadow-hight;
-        transform: translate(1px,-1px);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+    transition: all 0.1s;
+    &:hover {
+      background: none;
+      filter: $filter-lux;
     }
-    .card_filter{
-        @include filterPosition;
-        border-radius: 10px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
-        transition: all 0.1s;
-        &:hover{
-            background: none;
-            filter: $filter-lux;
-        }
-    }
-    h2 {
+  }
+  h2 {
     color: $color-secondary;
-    z-index:10;
+    z-index: 10;
     font-size: 1.1rem;
     margin-left: 20px;
     margin-right: 20px;
     @include devices(mobile) {
-        padding-left: 20px;
+      padding-left: 20px;
     }
-    }
+  }
 }

@@ -1,58 +1,57 @@
-.bannerHome{
-    text-align: center;
-    border-radius: 25px;
-    position: relative;
-    margin-bottom:30px;
-    @include devices (tablet){  
-        text-align: left;
-        height: 160px;
+.bannerHome {
+  text-align: center;
+  border-radius: 25px;
+  position: relative;
+  margin-bottom: 30px;
+  @include devices(tablet) {
+    text-align: left;
+    height: 160px;
+  }
+  @include devices(mobile) {
+    height: 111px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .banner {
+    background-image: url('./../../assets/img_home.png');
+    background-position: 30% center;
+    @include devices(tablet) {
+      height: 160px;
     }
-    @include devices (mobile){  
-        height: 111px;
-        border-radius: 10px;
-        margin-bottom:20px;
+    @include devices(mobile) {
+      height: 111px;
     }
-    .banner{
-        background-image: url('./../../assets/img_home.png');
-        background-position: 30% center;
-        @include devices (tablet){  
-            height: 160px;
-        }
-        @include devices (mobile){  
-            height: 111px;
-        }
+  }
+  h1 {
+    color: $color-secondary;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    width: 100%;
+    font-weight: 500;
+    @include devices(pc) {
+      font-size: 2rem;
+      top: 40%;
     }
-    h1 {
-        color: $color-secondary;
-        position: absolute;
-        top: 40%;
-        left:50%;
-        transform: translate(-50%, -50%); 
-        font-size: 3rem;
-        width: 100%;
-        font-weight: 500;
-        @include devices (pc){  
-            font-size: 2rem;
-            top: 40%;
-        }
-        @include devices (small-pc){  
-            font-size: 1.8rem;
-            width: 80%;
-        }
-        @include devices (tablet){  
-            left: 10%;
-            font-size: 1.5rem;
-            transform: translate(0%, -50%); 
-        }
-        @include devices (mobile){  
-            top:35%;
-        }
-        br {
-            display: none;
-            @include devices (tablet){  
-                display: flex;
-            }   
-        }
+    @include devices(small-pc) {
+      font-size: 1.8rem;
+      width: 80%;
     }
+    @include devices(tablet) {
+      left: 10%;
+      font-size: 1.5rem;
+      transform: translate(0%, -50%);
+    }
+    @include devices(mobile) {
+      top: 35%;
+    }
+    br {
+      display: none;
+      @include devices(tablet) {
+        display: flex;
+      }
+    }
+  }
 }
-

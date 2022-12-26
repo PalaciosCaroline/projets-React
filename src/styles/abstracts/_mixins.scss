@@ -1,85 +1,86 @@
-@mixin devices ($breakpoint) { //the name of the mixin is devices
-    @if $breakpoint == small-mobile {
-      @media only screen and (max-width: 360px) {
-        @content;
-      }
-    }
-    @if $breakpoint == mobile {
-      @media only screen and (max-width: 550px) {
-        @content;
-      }
-    }
-    @if $breakpoint == tablet {    
-      @media only screen and (max-width: 680px) {
-        @content;
-      }
-    } 
-    @if $breakpoint == small-pc {
-      @media only screen and (max-width: 800px) {
-        @content;
-      }
-    }
-    @if $breakpoint == 900-pc {
-      @media only screen and (max-width: 900px) {
-        @content;
-      }
-    }
-    @if $breakpoint == pc {
-      @media only screen and (max-width: 1200px) {
-        @content;
-      }
-    }
-    @if $breakpoint == big-pc {
-      @media only screen and (max-width: 1800px) {
-        @content;
-      }
-    }
-    @if $breakpoint == maxi-pc {
-      @media only screen and (min-width: 2300px) {
-        @content;
-      }
+@mixin devices($breakpoint) {
+  //the name of the mixin is devices
+  @if $breakpoint == small-mobile {
+    @media only screen and (max-width: 360px) {
+      @content;
     }
   }
-
-@mixin marge-page{
-    margin-right: 7%;
-    margin-left: 7%;
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 550px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 680px) {
+      @content;
+    }
+  }
+  @if $breakpoint == small-pc {
+    @media only screen and (max-width: 800px) {
+      @content;
+    }
+  }
+  @if $breakpoint == 900-pc {
+    @media only screen and (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == pc {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-pc {
+    @media only screen and (max-width: 1800px) {
+      @content;
+    }
+  }
+  @if $breakpoint == maxi-pc {
+    @media only screen and (min-width: 2300px) {
+      @content;
+    }
+  }
 }
-@mixin marge-page-mobile{
-    margin-right: 5.3%;
-    margin-left: 5.3%;
+
+@mixin marge-page {
+  margin-right: 7%;
+  margin-left: 7%;
+}
+@mixin marge-page-mobile {
+  margin-right: 5.3%;
+  margin-left: 5.3%;
 }
 
-@mixin padding-box{
+@mixin padding-box {
   padding-right: 3%;
   padding-left: 3%;
 }
 
-@mixin allCenter{
+@mixin allCenter {
   align-items: center;
   justify-content: center;
   display: flex;
 }
 
-@mixin alignCenter{
+@mixin alignCenter {
   align-items: center;
   display: flex;
 }
 
-@mixin justifyBetween{
+@mixin justifyBetween {
   display: flex;
   justify-content: space-between;
 }
 
-@mixin filterPosition{
+@mixin filterPosition {
   position: absolute;
-  top:0;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 }
 
-@mixin logo{
+@mixin logo {
   width: 160px;
   height: 50px;
   display: block;

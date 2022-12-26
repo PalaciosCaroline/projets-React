@@ -1,26 +1,25 @@
 //font-family
-$font-family: "Montserrat",'Roboto',sans-serif;
+$font-family: 'Montserrat', 'Roboto', sans-serif;
 
 //color charte
 $color-primary: rgba(255, 96, 96, 1);
 $color-secondary: #fff;
 
 //box-shadow
-$box-shadow-medium: 1px 1px 2px rgba(0,0,0,0.4);
-$box-shadow-light: 1px 1px 2px rgba(0,0,0,0.2);
-$box-shadow-hight: 3px 1px 6px rgba(0,0,0,0.6);
-
+$box-shadow-medium: 1px 1px 2px rgba(0, 0, 0, 0.4);
+$box-shadow-light: 1px 1px 2px rgba(0, 0, 0, 0.2);
+$box-shadow-hight: 3px 1px 6px rgba(0, 0, 0, 0.6);
 
 //background-color
-$bg-btn:  #FF6060;
-$bg-starColorred:  rgba(255, 96, 96, 1);
-$bg-starEmpty : rgba(227, 227, 227, 1);
-$bg-collapseText :rgba(246, 246, 246, 1);
+$bg-btn: #ff6060;
+$bg-starColorred: rgba(255, 96, 96, 1);
+$bg-starEmpty: rgba(227, 227, 227, 1);
+$bg-collapseText: rgba(246, 246, 246, 1);
 $bg-boxCards: rgba(246, 246, 246, 1);
-$bg-footer: rgb(0,0,0);
-$bg-logoMenu : #FF6060;
-$bg-logoFooter : #fff;
+$bg-footer: rgb(0, 0, 0);
+$bg-logoMenu: #ff6060;
+$bg-logoFooter: #fff;
 
 //filter
-$filter-sombre : brightness(70%);
-$filter-lux : brightness(1.1);
+$filter-sombre: brightness(70%);
+$filter-lux: brightness(1.1);

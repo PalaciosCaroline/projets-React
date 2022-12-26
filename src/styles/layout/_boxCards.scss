@@ -1,30 +1,30 @@
 .boxcards {
-    @include justifyBetween;
-    flex-wrap: wrap;
-    padding: 30px 3% 20px 3%;
-    border-radius: 25px;
-    background: $bg-boxCards;
+  @include justifyBetween;
+  flex-wrap: wrap;
+  padding: 30px 3% 20px 3%;
+  border-radius: 25px;
+  background: $bg-boxCards;
+  @include devices(mobile) {
+    padding: 0;
+    background-color: #fff;
+  }
+  .link_logement {
+    text-decoration: none;
+  }
+  a {
+    width: 31.5%;
+    height: 25vw;
+    // height: 340px;
+    margin-bottom: 20px;
+    @include devices(small-pc) {
+      width: 48.5%;
+      height: 37vw;
+      // height: 280px;
+    }
     @include devices(mobile) {
-        padding: 0;
-        background-color: #fff;
+      width: 100%;
+      // height: 255px;
+      height: 68vw;
     }
-    .link_logement {
-        text-decoration: none;
-    }
-    a{
-        width: 31.5%;
-        height: 25vw;
-        // height: 340px;
-        margin-bottom: 20px;
-        @include devices(small-pc) {
-            width: 48.5%;
-            height: 37vw;
-            // height: 280px;
-        }
-        @include devices(mobile) {
-            width: 100%;
-            // height: 255px;
-            height: 68vw;
-        }
-    }
+  }
 }

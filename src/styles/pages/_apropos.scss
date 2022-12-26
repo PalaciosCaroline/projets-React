@@ -1,44 +1,43 @@
-.apropos_page{
-    @include marge-page ; 
-    .banner{
-        background-image: url('./../../assets/img_apropos.png');
-        background-position: 70% center;
-        margin-bottom: 30px;
-        @include devices (mobile){  
-            margin-bottom: 20px;
-        }  
+.apropos_page {
+  @include marge-page;
+  .banner {
+    background-image: url('./../../assets/img_apropos.png');
+    background-position: 70% center;
+    margin-bottom: 30px;
+    @include devices(mobile) {
+      margin-bottom: 20px;
     }
-    .box_collapse{
-        margin:0 10% 35px 10%;
-        @include devices(small-pc) {
-            margin: 30px 0;
-        }
-        @include devices (mobile){        
-            max-height: 30px;
-            margin: 20px 0;
-        }
-        &.active{
-            @include devices (mobile){
-            max-height: none;
-            }
-        }
-        &:nth-child(4){
-            margin-bottom: 180px;
-        }
-        &:nth-child(4).active{
-            margin-bottom: 10px;
-        }
+  }
+  .box_collapse {
+    margin: 0 10% 35px 10%;
+    @include devices(small-pc) {
+      margin: 30px 0;
     }
-    .box_collapse.active ~ .box_collapse:nth-child(4){
-        margin-bottom: 10px;
+    @include devices(mobile) {
+      max-height: 30px;
+      margin: 20px 0;
     }
-    .div_text{
-        @include devices (mobile){        
-            padding: 20px 15px 25px 15px;
-        } 
-        @include devices (mobile){        
-            font-size: 0.8rem;
-        }
+    &.active {
+      @include devices(mobile) {
+        max-height: none;
+      }
     }
+    &:nth-child(4) {
+      margin-bottom: 180px;
+    }
+    &:nth-child(4).active {
+      margin-bottom: 10px;
+    }
+  }
+  .box_collapse.active ~ .box_collapse:nth-child(4) {
+    margin-bottom: 10px;
+  }
+  .div_text {
+    @include devices(mobile) {
+      padding: 20px 15px 25px 15px;
+    }
+    @include devices(mobile) {
+      font-size: 0.8rem;
+    }
+  }
 }
-

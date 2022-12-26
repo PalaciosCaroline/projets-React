@@ -1,34 +1,32 @@
 .footer_page {
-    width: 100%;
-    @include allCenter ; 
-    flex-direction: column;
-    background: $bg-footer;
-    height: 200px;
-    position: relative;
-    bottom: 0; 
-    margin-top:50px;
+  width: 100%;
+  @include allCenter;
+  flex-direction: column;
+  background: $bg-footer;
+  height: 200px;
+  position: relative;
+  bottom: 0;
+  margin-top: 50px;
+  @include devices(mobile) {
+    margin-top: 40px;
+  }
+  .logo {
+    &:after {
+      @include logo;
+      background-color: $bg-logoFooter;
+    }
+    @include devices(pc-mobile) {
+      margin: 30px 0 20px 0;
+    }
+  }
+  .pCopy {
+    color: #ffff;
+    font-size: 1.5rem;
+    @include devices(pc-mobile) {
+      font-size: 1rem;
+    }
     @include devices(mobile) {
-        margin-top:40px;
+      font-size: 0.8rem;
     }
-    .logo {
-        &:after {
-            @include logo;
-            background-color: $bg-logoFooter;
-        }
-        @include devices(pc-mobile) {
-            margin:30px 0 20px 0;
-        }
-    }
-    .pCopy {
-        color: #ffff;
-        font-size: 1.5rem;
-        @include devices(pc-mobile) {
-            font-size: 1rem;
-        }
-        @include devices(mobile) {
-            font-size: 0.8rem;
-        }
-    }
+  }
 }
-
-    

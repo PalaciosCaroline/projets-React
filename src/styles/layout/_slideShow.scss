@@ -1,99 +1,97 @@
-.slideShow{
-    position: relative;
+.slideShow {
+  position: relative;
+  width: 100%;
+  height: 415px;
+  border-radius: 25px;
+  overflow: hidden;
+  @include devices(small-pc) {
+    height: 300px;
+    border-radius: 15px;
+  }
+  @include devices(mobile) {
+    height: 255px;
+    border-radius: 10px;
+  }
+  .box_img {
+    opacity: 0;
+    @include filterPosition;
+    z-index: 2;
+    height: 100%;
     width: 100%;
-    height: 415px;
-    border-radius: 25px;
-    overflow: hidden;
-    @include devices (small-pc){  
-        height: 300px;
-        border-radius: 15px;   
+    transition: opacity 0.3s linear;
+    &.isVisible {
+      transition: opacity 0.5s linear;
+      opacity: 1;
     }
-    @include devices (mobile){  
-        height: 255px;
-        border-radius: 10px;     
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: 60% center;
     }
-    .box_img{
-        opacity:0;
-        @include filterPosition;
-        z-index:2;
-        height: 100%;
-        width: 100%;
-        transition : opacity 0.3s linear;
-        &.isVisible{
-            transition : opacity 0.5s linear;
-            opacity:1;
+  }
+  button {
+    background-color: transparent;
+    position: absolute;
+    border: none;
+    height: 100%;
+    z-index: 10;
+    div {
+      @include allCenter;
+      width: 60px;
+      height: 100px;
+      margin: 0;
+      @include devices(small-pc) {
+        width: 40px;
+        height: 50px;
+      }
+      @include devices(mobile) {
+        width: 30px;
+        height: 100px;
+      }
+      img {
+        height: 30px;
+        width: 70px;
+        @include devices(small-pc) {
+          width: 40px;
+          height: 20px;
         }
-        & img{
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            object-position: 60% center;
+        @include devices(mobile) {
+          width: 20px;
+          height: 12px;
         }
+      }
     }
-    button{
-        background-color: transparent;
-        position: absolute;
-        border:none;
-        height: 100%;
-        z-index:10;
-        div {
-            @include allCenter ; 
-            width: 60px;
-            height: 100px;
-            margin:0;
-            @include devices (small-pc){  
-                width: 40px;
-                height: 50px;
-            }
-            @include devices (mobile){  
-                width: 30px;
-                height: 100px;
-            }
-            img{
-                height: 30px;
-                width: 70px;
-                @include devices (small-pc){  
-                    width: 40px;
-                    height: 20px;
-                }
-                @include devices (mobile){  
-                    width: 20px;
-                    height: 12px;
-                }
-            }
-        }
+  }
+  .btn_previous {
+    left: 10px;
+    @include devices(small-pc) {
+      left: 0;
     }
-    .btn_previous{    
-        left: 10px; 
-        @include devices (small-pc){  
-            left:0;
-        }
-        img{
-            transform: rotate(90deg);
-        }
+    img {
+      transform: rotate(90deg);
     }
-    .btn_next{
-        right: 10px;
-        @include devices (small-pc){  
-           right: 0;
-        }
-        img{
-            transform: rotate(-90deg);
-        }
+  }
+  .btn_next {
+    right: 10px;
+    @include devices(small-pc) {
+      right: 0;
     }
-    .numberImgOfImgs{
-        position: absolute;
-        font-weight: bold;
-        font-size: 1.2rem;
-        left: 48%;
-        bottom:20px;
-        color: $color-secondary;
-        z-index:10;
-        cursor: pointer;
-        @include devices (mobile){  
-            font-size: 0.8rem;
-         }
+    img {
+      transform: rotate(-90deg);
     }
+  }
+  .numberImgOfImgs {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.2rem;
+    left: 48%;
+    bottom: 20px;
+    color: $color-secondary;
+    z-index: 10;
+    cursor: pointer;
+    @include devices(mobile) {
+      font-size: 0.8rem;
+    }
+  }
 }
-
-

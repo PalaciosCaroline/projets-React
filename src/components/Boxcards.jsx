@@ -1,7 +1,6 @@
-import Cardlogement from "./Cardlogement";
+import Cardlogement from './Cardlogement'
 
-export default function Boxcards({logements}) {
-
+export default function Boxcards({ logements }) {
   return (
     <div className="boxcards">
       {logements &&
@@ -10,7 +9,5 @@ export default function Boxcards({logements}) {
           <Cardlogement key={logement.id} logement={logement} />
         ))}
     </div>
-  );
+  )
 }
-
-

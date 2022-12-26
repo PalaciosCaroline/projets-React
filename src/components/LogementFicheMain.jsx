@@ -1,7 +1,6 @@
-import Collapse from "./Collapse";
+import Collapse from './Collapse'
 
-export default function LogementFicheMain({logement}) {
-
+export default function LogementFicheMain({ logement }) {
   return (
     <div className="LogementFiche_boxArticles">
       <Collapse
@@ -20,5 +19,5 @@ export default function LogementFicheMain({logement}) {
         }
       />
     </div>
-  );
+  )
 }

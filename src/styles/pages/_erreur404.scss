@@ -1,56 +1,49 @@
 .erreur404 {
-    @include marge-page ;
-    text-align: center;
+  @include marge-page;
+  text-align: center;
+  margin: 10%;
+  @include devices(small-pc) {
     margin: 10%;
-    @include devices (small-pc){        
-        margin: 10%
+  }
+  .erreur_small {
+    @include devices(small-pc) {
+      display: flex;
     }
-    .erreur_small{
-        @include devices (small-pc){  
-        display: flex;
-        }
-        display: none;
+    display: none;
+  }
+  h1 {
+    margin: 3rem 0 4rem 0;
+    font-size: 18rem;
+    font-weight: 700;
+    @include devices(small-pc) {
+      margin: 8rem 0 1rem 0;
+      font-size: 8rem;
     }
-    h1 {
-        margin: 3rem 0 4rem 0;
-        font-size: 18rem;
-        font-weight: 700;
-        @include devices (small-pc){  
-            margin: 8rem 0 1rem 0;
-            font-size: 8rem;
-        }
-        @include devices (mobile){  
-            margin: 6rem 0 1rem 0;
-            font-size: 6rem;
-        }
+    @include devices(mobile) {
+      margin: 6rem 0 1rem 0;
+      font-size: 6rem;
     }
-    h2 {
-        @include devices (small-pc){  
-            font-size: 1.5rem;
-        }
-        @include devices (mobile){  
-            font-size: 1.1rem;
-        }
-        font-size: 2.2rem;
+  }
+  h2 {
+    @include devices(small-pc) {
+      font-size: 1.5rem;
     }
-    .erreur404_link {
-        display: inline-block;
-        margin: 7rem 0;
-        font-size: 1.2rem;
-        text-decoration: underline;
-        @include devices (small-pc){  
-            margin: 4rem 0;
-            font-size: 1.2rem;
-        }
-        @include devices (mobile){  
-            font-size: 0.9rem;
-        }
+    @include devices(mobile) {
+      font-size: 1.1rem;
     }
+    font-size: 2.2rem;
+  }
+  .erreur404_link {
+    display: inline-block;
+    margin: 7rem 0;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    @include devices(small-pc) {
+      margin: 4rem 0;
+      font-size: 1.2rem;
+    }
+    @include devices(mobile) {
+      font-size: 0.9rem;
+    }
+  }
 }
- 
-
-
-  
-
-  
-  
