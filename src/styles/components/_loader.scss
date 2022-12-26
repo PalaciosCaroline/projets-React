@@ -7,14 +7,24 @@
 	min-height: 90vh;
 	height: 90%;
 	@include devices(mobile) {
-		min-height: 70vh;
-		height: 70%;
+		min-height: 80vh;
+		height: 80%;
+	}
+}
+.loader_appli {
+	.main_loader {
+	min-height: 100vh;
+	height: 100%;
+		@include devices(mobile) {
+			min-height: 100vh;
+			height: 100%;
+		}
 	}
 }
 .loaderWrapper {
 	  position: sticky;
 	  z-index: 2;
-	  margin-bottom:120px;
+	  margin-bottom:80px;
 	  display: flex;
 	  justify-content: center;
 	  align-items: center;
@@ -25,6 +35,9 @@
 		height: 100px;
 		border-radius: 50%;
 		perspective: 800px;
+		background-image: url('./../../assets/kasa.svg');
+	  	background-repeat: no-repeat;
+	  	background-position: -6px 18px;
 }
 .span_loader {
 		  position: absolute;

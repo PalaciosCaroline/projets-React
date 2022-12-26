@@ -10,11 +10,13 @@ export default function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoader(false);
-    }, 2000);
+    }, 1500);
   }, []);
 
   return loader ? (
+    <div className="loader_appli">
     <Loader />
+    </div>
   ) : (
     <>
       <Menu />

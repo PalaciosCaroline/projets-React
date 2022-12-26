@@ -19,7 +19,7 @@ export default function Logement() {
       equipments: [],
       tags: [],
   });
-  const [isLoading, setLoading] = useState(false)
+  // const [isLoading, setLoading] = useState(true)
 
   window.scrollTo(0, 0);
   let { id } = useParams();
@@ -28,22 +28,21 @@ export default function Logement() {
   useEffect(() => {
     fetch("/data.json")
       .then((response) => {
-        setLoading(true);
         return response.json();
       })
       .then((data) => {
         let logementNew = data.find((item) => item.id === id);
         if(logementNew !== undefined) { setlogement(logementNew)}
         else {navigate("/error")}
-        setLoading(false);
+        // setLoading(false);
       });
   }, [id,navigate]);
 
   return (
     <>
-    {isLoading ? (
+    {/* {isLoading ? (
       <Loader />
-      ) : (
+      ) : ( */}
       <main className="box_logementFiche">
         <SlideShow imgsLogement={logement.pictures} />
         <header className='logementFiche_header'>
@@ -52,7 +51,7 @@ export default function Logement() {
         </header>
         <LogementFicheMain logement={logement} />
       </main>
-      )}
+      {/* )} */}
    </>
   );
 }

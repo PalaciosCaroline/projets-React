@@ -25,17 +25,7 @@ export default function Home() {
     fetchDatas()
   }, []);
 
-  // const [loader, setLoader] = useState(true);
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoader(false);
-  //   }, 2000);
-  // }, []);
-
   return (
-   
-   
        isDataLoading ? (
       <Loader />
       ) : (
@@ -49,6 +39,4 @@ export default function Home() {
         </main>
       )
     )
-    
-  
 }
