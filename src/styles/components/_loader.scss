@@ -12,6 +12,9 @@
   }
 }
 .loader_appli {
+	.spinner {
+		display: none;
+	}
   .main_loader {
     min-height: 100vh;
     height: 100%;
@@ -96,3 +99,12 @@
     transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
 }
+.box_home {
+	.span_loader{
+		display: none;
+	}
+	.loader {
+		background-image: none;
+	}
+}
+

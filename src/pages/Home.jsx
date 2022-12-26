@@ -9,7 +9,7 @@ export default function Home() {
 
   useEffect(() => {
     async function fetchDatas() {
-      // setDataLoading(true)
+      setDataLoading(true)
       try {
         const response = await fetch('data.json')
         const logementsData = await response.json()
@@ -17,9 +17,9 @@ export default function Home() {
       } catch (err) {
         console.log(err, "Il y a eu un problème avec l'opération fetch")
       }
-      // finally{
-      //   setDataLoading(false)
-      // }
+      finally{
+        setDataLoading(false)
+      }
     }
     fetchDatas()
   }, [])
@@ -39,9 +39,7 @@ export default function Home() {
   // }, []);
 
   return (
-    //  isDataLoading ? (
-    // <Loader />
-    // ) : (
+    
     <main className="box_home">
       <header className="bannerHome">
         <Banner />
@@ -50,9 +48,12 @@ export default function Home() {
           partout et ailleurs
         </h1>
       </header>
-
+      {isDataLoading ? (
+      <Loader />
+      ) : (
       <Boxcards logements={logements} />
+      )}
     </main>
-    // )
+   
   )
 }
