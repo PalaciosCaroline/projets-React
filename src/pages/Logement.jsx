@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import Loader from '../components/Loader'
 import SlideShow from "../components/SlideShow";
 import LogementFicheHost from "../components/LogementFicheHost";
 import LogementFicheTitle from "../components/LogementFicheTitle";
@@ -18,6 +19,7 @@ export default function Logement() {
       equipments: [],
       tags: [],
   });
+  const [isLoading, setLoading] = useState(false)
 
   window.scrollTo(0, 0);
   let { id } = useParams();
@@ -26,23 +28,31 @@ export default function Logement() {
   useEffect(() => {
     fetch("/data.json")
       .then((response) => {
+        setLoading(true);
         return response.json();
       })
       .then((data) => {
         let logementNew = data.find((item) => item.id === id);
-        if(logementNew !== undefined) setlogement(logementNew);
-        else navigate("/error")
+        if(logementNew !== undefined) { setlogement(logementNew)}
+        else {navigate("/error")}
+        setLoading(false);
       });
   }, [id,navigate]);
 
   return (
-    <main className="box_logementFiche">
-      <SlideShow imgsLogement={logement.pictures} />
-      <header className='logementFiche_header'>
-            <LogementFicheTitle autoFocus logement={logement} />
-            <LogementFicheHost logement={logement} />
-      </header>
-      <LogementFicheMain logement={logement} />
-    </main>
+    <>
+    {isLoading ? (
+      <Loader />
+      ) : (
+      <main className="box_logementFiche">
+        <SlideShow imgsLogement={logement.pictures} />
+        <header className='logementFiche_header'>
+              <LogementFicheTitle autoFocus logement={logement} />
+              <LogementFicheHost logement={logement} />
+        </header>
+        <LogementFicheMain logement={logement} />
+      </main>
+      )}
+   </>
   );
 }

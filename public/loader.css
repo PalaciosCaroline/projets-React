@@ -37,19 +37,19 @@
 		  border-radius: 50%;
 }
 .span_loader:nth-child(1) {
-			border-bottom: 6px double #00FFFF;
-			transform: rotateX(35deg) rotateY(-45deg);
-			animation: rotateOne .8s linear infinite;
-		  }
+	border-bottom: 6px double rgb(213, 9, 9);
+	transform: rotateX(35deg) rotateY(-45deg);
+	animation: rotateOne .8s linear infinite;
+  }
 .span_loader:nth-child(2) {
-			border-right: 6px double #89CFF0;
-			transform: rotateX(50deg) rotateY(10deg);
-			animation: rotateTwo .8s linear infinite;
-		  }
+	border-right: 6px double rgba(255, 96, 96, 1);
+	transform: rotateX(50deg) rotateY(10deg);
+	animation: rotateTwo .8s linear infinite;
+  }
 .span_loader:nth-child(3) {
-			border-top: 6px double #088F8F;
-			transform: rotateX(35deg) rotateY(55deg);
-			animation: rotateThree .8s linear infinite;
+	border-top: 6px double rgb(243, 26, 26);
+	transform: rotateX(35deg) rotateY(55deg);
+	animation: rotateThree .8s linear infinite;
 }
 	
   

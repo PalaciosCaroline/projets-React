@@ -8,7 +8,7 @@ export default function Home() {
   const [isDataLoading, setDataLoading] = useState(false)
 
   useEffect(() => {
-    async function fetchData() {
+    async function fetchDatas() {
       setDataLoading(true)
       try{
         const response = await fetch('data.json')
@@ -22,7 +22,7 @@ export default function Home() {
         setDataLoading(false)
       }
     }
-    fetchData()
+    fetchDatas()
   }, []);
 
   return (
