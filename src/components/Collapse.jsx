@@ -6,11 +6,11 @@ export default function Collapse({ title, content }) {
   const [setActive, setActiveState] = useState('')
 
   const toggleChevron = () => {
-    setActiveState(!setActive ? 'active' : '')
+    setActiveState(!setActive)
   }
 
   return (
-    <div className={`box_collapse ${setActive}`}>
+    <div className={`box_collapse ${setActive && 'active'}`}>
       <button className="btn_collapse" onClick={toggleChevron}>
         <span className="collapse_title">{title}</span>
         <img src={arrowDown} aria-hidden="true" alt="" />
