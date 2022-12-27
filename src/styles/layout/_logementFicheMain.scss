@@ -28,6 +28,9 @@
         margin-bottom: 20px;
       }
     }
+    &.active ~ .box_collapse:nth-child(2) {
+      margin-bottom: 20px;
+    }
     &.active {
       margin-bottom: 30px;
       .collapseWrapper {
@@ -41,7 +44,7 @@
           min-height: 160px;
         }
         @include devices(mobile) {
-          min-height: none;
+          min-height: 50px;
         }
       }
     }

@@ -19,6 +19,7 @@ export default function Logement() {
     equipments: [],
     tags: [],
   })
+  
   // const [isLoading, setLoading] = useState(true)
 
   window.scrollTo(0, 0)
