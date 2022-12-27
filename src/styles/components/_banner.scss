@@ -11,16 +11,4 @@
   @include devices(mobile) {
     border-radius: 10px;
   }
-  .imgBanner_filter {
-    @include filterPosition;
-    border-radius: 25px;
-    background: linear-gradient(
-      173deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(0, 0, 0, 0.5) 70%
-    );
-    @include devices(mobile) {
-      border-radius: 10px;
-    }
-  }
 }
