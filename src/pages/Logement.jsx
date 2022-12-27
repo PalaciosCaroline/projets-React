@@ -20,8 +20,6 @@ export default function Logement() {
     tags: [],
   })
   
-  // const [isLoading, setLoading] = useState(true)
-
   window.scrollTo(0, 0)
   let { id } = useParams()
   let navigate = useNavigate()
@@ -38,15 +36,10 @@ export default function Logement() {
         } else {
           navigate('/error')
         }
-        // setLoading(false);
       })
   }, [id, navigate])
 
   return (
-    <>
-      {/* {isLoading ? (
-      <Loader />
-      ) : ( */}
       <main className="box_logementFiche">
         <SlideShow imgsLogement={logement.pictures} />
         <header className="logementFiche_header">
@@ -54,8 +47,6 @@ export default function Logement() {
           <LogementFicheHost logement={logement} />
         </header>
         <LogementFicheMain logement={logement} />
-      </main>
-      {/* )} */}
-    </>
+      </main>  
   )
 }
