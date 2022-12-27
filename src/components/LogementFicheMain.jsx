@@ -1,3 +1,4 @@
+import React from 'react'
 import Collapse from './Collapse'
 
 export default function LogementFicheMain({ logement }) {

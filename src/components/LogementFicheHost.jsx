@@ -1,4 +1,5 @@
 // import { FaStar} from 'react-icons/fa';
+import React from 'react'
 
 export default function LogementFicheHost({ logement }) {
   let firstNameAndLastName = logement.host.name.split(' ')

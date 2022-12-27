@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default function LogementFicheTitle({ logement }) {
   return (
     <div className="box_logementFicheTitle">

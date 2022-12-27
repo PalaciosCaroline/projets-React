@@ -1,3 +1,4 @@
+import React from 'react'
 import Cardlogement from './Cardlogement'
 
 export default function Boxcards({ logements }) {
