@@ -18,7 +18,7 @@ export default function Modalslide({ imgsLogement }) {
   }
 
   const btnSlideShow =
-    imgsLogement.length > 1 ? (
+    imgsLogement.length > 1 && (
       <nav>
         <button
           className="btn_previous"
@@ -49,8 +49,6 @@ export default function Modalslide({ imgsLogement }) {
           </div>
         </button>
       </nav>
-    ) : (
-      ''
     )
 
   return (
@@ -58,7 +56,7 @@ export default function Modalslide({ imgsLogement }) {
       {imgsLogement.map((image, index) => {
         return (
           <div
-            className={`box_img ${ImgIndex === index ? 'isVisible' : ''}`}
+            className={`box_img ${ImgIndex === index && 'isVisible'}`}
             key={image}
           >
             <img src={image} alt="" />

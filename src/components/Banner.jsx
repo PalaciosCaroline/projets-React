@@ -3,7 +3,7 @@ import React from 'react'
 export default function Banner({ image }) {
 
   const sectionStyle = {
-    backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(" + image + ")"
+    backgroundImage: "linear-gradient(45deg,rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.3)), url(" + image + ")"
   }
 
   return (
