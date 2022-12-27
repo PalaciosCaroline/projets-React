@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import Loader from '../components/Loader'
+// import Loader from '../components/Loader'
 import SlideShow from '../components/SlideShow'
 import LogementFicheHost from '../components/LogementFicheHost'
 import LogementFicheTitle from '../components/LogementFicheTitle'

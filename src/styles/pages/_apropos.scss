@@ -1,7 +1,6 @@
 .apropos_page {
   @include marge-page;
   .banner {
-    background-image: url('./../../assets/img_apropos.png');
     background-position: 70% center;
     margin-bottom: 30px;
     @include devices(mobile) {

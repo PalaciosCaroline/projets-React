@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Banner from './../components/Banner'
+import imageHome from './../assets/img_home.png'
 import Boxcards from '../components/Boxcards'
 import Loader from '../components/Loader'
 
@@ -16,8 +17,7 @@ export default function Home() {
         setlogements(logementsData)
       } catch (err) {
         console.log(err, "Il y a eu un problème avec l'opération fetch")
-      }
-      finally{
+      } finally {
         setDataLoading(false)
       }
     }
@@ -39,21 +39,15 @@ export default function Home() {
   // }, []);
 
   return (
-    
     <main className="box_home">
       <header className="bannerHome">
-        <Banner />
+        <Banner image={imageHome} />
         <h1>
           Chez vous, <br />
           partout et ailleurs
         </h1>
       </header>
-      {isDataLoading ? (
-      <Loader />
-      ) : (
-      <Boxcards logements={logements} />
-      )}
+      {isDataLoading ? <Loader /> : <Boxcards logements={logements} />}
     </main>
-   
   )
 }

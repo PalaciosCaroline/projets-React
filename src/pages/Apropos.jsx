@@ -1,4 +1,5 @@
 import Banner from './../components/Banner'
+import imageApropos from "./../assets/img_apropos.png"
 import Collapse from '../components/Collapse.jsx'
 
 export default function Apropos() {
@@ -27,7 +28,7 @@ export default function Apropos() {
 
   return (
     <main className="apropos_page">
-      <Banner />
+      <Banner image={imageApropos}/>
       <div className="apropos_boxText">
         {data.map((elt, index) => (
           <Collapse

@@ -10,7 +10,7 @@ export default function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoader(false);
-    }, 1500);
+    }, 1000);
   }, []);
 
   return (
