@@ -19,13 +19,12 @@
     height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: all 0.5s linear;
+    transition: all 0.3s linear;
   }
   .div_text {
     height: 0;
-    opacity: 0;
     border-radius: 0 0 10px 10px;
-    transition: all 0.7s;
+    transition: all 0.4s;
     padding: 20px 15px 15px 15px;
     background-color: $bg-collapseText;
     font-size: 1.1rem;
@@ -65,7 +64,6 @@
     }
     .div_text {
       height: auto;
-      opacity: 1;
       transition: all 0.3s linear;
     }
   }

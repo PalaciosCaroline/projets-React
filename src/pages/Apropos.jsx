@@ -5,7 +5,7 @@ import imageAproposMobile from "./../assets/img_apropos_mobile.jpg"
 import Collapse from '../components/Collapse.jsx'
 
 export default function Apropos() {
-  const data = [
+  const dataApropos = [
     {
       title: 'Fiabilité',
       content:
@@ -42,7 +42,7 @@ export default function Apropos() {
     <main className="apropos_page">
       <Banner image={largeur > 800 ? `${imageApropos}` : `${imageAproposMobile}`}/>
       <div className="apropos_boxText">
-        {data.map((elt, index) => (
+        {dataApropos.map((elt, index) => (
           <Collapse
             title={elt.title}
             content={elt.content}
