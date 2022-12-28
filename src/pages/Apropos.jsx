@@ -1,5 +1,7 @@
+import React, { useState, useEffect } from 'react'
 import Banner from './../components/Banner'
 import imageApropos from "./../assets/img_apropos.png"
+import imageAproposMobile from "./../assets/img_apropos_mobile.jpg"
 import Collapse from '../components/Collapse.jsx'
 
 export default function Apropos() {
@@ -26,9 +28,19 @@ export default function Apropos() {
     },
   ]
 
+  const [largeur, setLargeur] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const changeWidth = () => {
+      setLargeur(window.innerWidth)
+    }
+    window.addEventListener('resize', changeWidth);
+    return () => {window.removeEventListener('resize', changeWidth)}
+  }, [])
+
   return (
     <main className="apropos_page">
-      <Banner image={imageApropos}/>
+      <Banner image={largeur > 800 ? `${imageApropos}` : `${imageAproposMobile}`}/>
       <div className="apropos_boxText">
         {data.map((elt, index) => (
           <Collapse
