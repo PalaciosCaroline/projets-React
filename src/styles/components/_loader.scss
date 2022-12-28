@@ -1,36 +1,18 @@
 .main_loader {
-  display: flex;
-  // justify-content: center;
-  align-items: center;
+  @include alignCenter;
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
   height: 100%;
-  @include devices(mobile) {
-    min-height: (100vh);
-    height: 100%;
-  }
 }
 .loader_appli {
   .main_loader {
     margin-top: 140.4px;
-    min-height: 100vh;
-    height: 100%;
     @include devices(small-pc) {
       margin-top: 104px;
     }
     @include devices(mobile) {
       margin-top: 88.6px;
-      min-height: 100vh;
-      height: 100%;
-    }
-  }
-  .loaderWrapper{
-    top:300px;
-    margin-bottom:0;
-  
-    @include devices(mobile) {
-      top:180px;
     }
   }
 }
@@ -39,16 +21,13 @@
 }
 
 .loaderWrapper {
-  // position: sticky;
   position:relative;
-  top:300px;
+  top:250px;
   z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include allCenter;
   width: 100%;
     @include devices(mobile) {
-      top:180px;
+      top:200px;
     }
 }
 .loader {
@@ -56,6 +35,10 @@
   height: 100px;
   border-radius: 50%;
   perspective: 800px;
+  @include devices(mobile) {
+    width: 60px;
+    height: 60px;
+  }
 }
 .span_loader {
   position: absolute;
@@ -114,12 +97,3 @@
     transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
 }
-// .box_home {
-// 	.span_loader{
-// 		display: none;
-// 	}
-// 	.loader {
-// 		background-image: none;
-// 	}
-// }
-

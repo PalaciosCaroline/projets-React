@@ -25,18 +25,8 @@
       @content;
     }
   }
-  @if $breakpoint == pc {
-    @media only screen and (max-width: 1200px) {
-      @content;
-    }
-  }
   @if $breakpoint == big-pc {
-    @media only screen and (max-width: 1800px) {
-      @content;
-    }
-  }
-  @if $breakpoint == maxi-pc {
-    @media only screen and (min-width: 2300px) {
+    @media only screen and (min-width: 2000px) {
       @content;
     }
   }
@@ -81,8 +71,6 @@
 }
 
 @mixin logo {
-  width: 160px;
-  height: 50px;
   display: block;
   content: '';
   -webkit-mask: url(./../../assets/logo.svg) no-repeat 50% 50%;

@@ -12,6 +12,9 @@
     height: 255px;
     border-radius: 10px;
   }
+  @include devices(big-pc) {
+    height: 550px;
+  }
   .box_img {
     opacity: 0;
     @include filterPosition;

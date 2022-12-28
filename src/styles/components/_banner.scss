@@ -11,6 +11,9 @@
   @include devices(mobile) {
     border-radius: 10px;
   }
+  @include devices(big-pc) {
+    height: 340px;
+  }
   .imgBanner_filter {
     @include filterPosition;
     border-radius: 25px;

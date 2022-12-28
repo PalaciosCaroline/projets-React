@@ -5,16 +5,14 @@
   margin-bottom: 30px;
   @include devices(tablet) {
     text-align: left;
-    height: 160px;
   }
   @include devices(mobile) {
-    height: 111px;
     border-radius: 10px;
     margin-bottom: 20px;
   }
   .banner {
     background-position: 30% center;
-    @include devices(tablet) {
+    @include devices(small-pc) {
       height: 160px;
     }
     @include devices(mobile) {

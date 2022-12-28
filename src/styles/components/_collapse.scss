@@ -1,7 +1,6 @@
 .btn_collapse {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  @include justifyBetween;
   align-items: center;
   font-size: 1.2rem;
   background-color: $bg-btn;
