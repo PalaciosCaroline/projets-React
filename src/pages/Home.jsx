@@ -25,8 +25,8 @@ export default function Home() {
   }, [])
 
   return (
-    isDataLoading ? (<Loader />) : 
-    (<main className="box_home">
+    isDataLoading ? <Loader /> : 
+    <main className="box_home">
       <header className="bannerHome">
         <Banner image={imageHome} />
         <h1>
@@ -35,6 +35,6 @@ export default function Home() {
         </h1>
       </header>
       <Boxcards logements={logements} />
-    </main>)
+    </main>
   )
 }
