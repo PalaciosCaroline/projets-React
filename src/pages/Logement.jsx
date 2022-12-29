@@ -41,7 +41,7 @@ export default function Logement() {
       <main className="box_logementFiche">
         <SlideShow imgsLogement={logement.pictures} />
         <header className="logementFiche_header">
-          <LogementFicheTitle autoFocus logement={logement} />
+          <LogementFicheTitle logement={logement} />
           <LogementFicheHost logement={logement} />
         </header>
         <LogementFicheMain logement={logement} />

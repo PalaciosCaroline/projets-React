@@ -10,6 +10,9 @@ export default function Home() {
 
   useEffect(() => {
     async function fetchDatas() {
+      setTimeout(() => {
+        setDataLoading(false);
+      }, 600);
       try {
         const response = await fetch('data.json')
         const logementsData = await response.json()
@@ -20,12 +23,6 @@ export default function Home() {
     }
     fetchDatas()
   }, [])
-
-  useEffect(() => {
-    setTimeout(() => {
-      setDataLoading(false);
-    }, 600);
-  }, []);
 
   return (
     isDataLoading ? (<Loader />) : 

@@ -1,20 +1,22 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-export default function Cardlogement({ logement }) {
-  
+export default function Cardlogement({ logementId, logementCover, logementTitle }) {
+
+  const coverCard = { backgroundImage: `url(${logementCover})` }
+
   return (
     <NavLink
-      to={'/logement/' + logement.id}
+      to={'/logement/' + logementId}
       className="link_logement"
-      aria-label={`lien vers la page du logement ${logement.title}`}
+      aria-label={`lien vers la page du logement ${logementTitle}`}
     >
       <article
         className="card_logement"
-        style={{ backgroundImage: `url(${logement.cover})` }}
+        style={coverCard}
       >
         <div className="card_filter"></div>
-        <h2>{logement.title}</h2>
+        <h2>{logementTitle}</h2>
       </article>
     </NavLink>
   )

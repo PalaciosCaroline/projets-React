@@ -33,6 +33,10 @@ ul {
   }
 }
 
+.apropos_page {
+  @include marge-page;
+}
+
 .btn_collapse:active,
 .slideShow button:active,
 .btn_collapse:focus:not(.focus-visible),

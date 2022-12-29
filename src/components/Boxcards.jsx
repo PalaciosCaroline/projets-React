@@ -7,7 +7,7 @@ export default function Boxcards({ logements }) {
       {logements &&
         logements.length > 0 &&
         logements.map((logement) => (
-          <Cardlogement key={logement.id} logement={logement} />
+          <Cardlogement key={logement.id} logementId={logement.id} logementCover={logement.cover} logementTitle={logement.title} />
         ))}
     </div>
   )
