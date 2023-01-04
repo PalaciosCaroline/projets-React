@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import Linkcv from './Linkcv'
 
 export default function Menu() {
   return (
@@ -10,14 +11,13 @@ export default function Menu() {
         </div>
         <nav className="box_nav">
           <ul>
+          
             <li>
-            
-               
-              <NavLink  className="link_CV11" to="/retour_cv"> Retour web CV </NavLink> 
-           
-              
-            </li>
-            <li>
+            <a href="https://palacioscaroline.github.io" target="_blank" className="link_CV11" rel="noopener noreferrer">
+            Retour web CV 
+              </a>
+              </li>
+              <li>
               <NavLink
                 to="/"
                 end
