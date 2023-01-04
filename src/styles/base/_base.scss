@@ -55,7 +55,7 @@ ul {
       border-radius: 20px;
       display: block;
       margin:15px auto 10px;
-      width: 180px;
+      // width: 180px;
       align-self: center;
       color:#fff;
       background: linear-gradient(to left,rgba(228, 41, 3, 1) 0%,rgba(214, 47, 13, 1) 100%);
@@ -64,7 +64,7 @@ ul {
       /* background: linear-gradient(to left,rgba(214,131,114,0.9) 0%,rgba(214,131,114,0.8) 100%); */
       text-align: center;
       @include devices(mobile){
-        font-size: 1rem;
+        font-size: 0.8rem;
       }
     }
     
