@@ -65,6 +65,7 @@ ul {
       text-align: center;
       @include devices(mobile){
         font-size: 0.8rem;
+        align-self: flex-start;
       }
     }
     
