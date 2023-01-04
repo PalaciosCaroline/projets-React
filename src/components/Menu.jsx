@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import Linkcv from './Linkcv'
 
 export default function Menu() {
   return (
