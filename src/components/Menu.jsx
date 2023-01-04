@@ -5,11 +5,19 @@ export default function Menu() {
   return (
     <>
       <header className="menu">
-        <NavLink to="/" end className="box_logo">
+        <div className="box_logo">
           <p className="header_logo"></p>
-        </NavLink>
+        </div>
         <nav className="box_nav">
           <ul>
+            <li>
+              <NavLink
+                to="https://palacioscaroline.github.io/#projets"
+                className="link_CV11"
+              >
+                Retour au web CV
+              </NavLink>
+            </li>
             <li>
               <NavLink
                 to="/"
