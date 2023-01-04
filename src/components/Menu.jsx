@@ -15,7 +15,7 @@ export default function Menu() {
                 to="https://palacioscaroline.github.io"
                 className="link_CV11"
               >
-                Retour au web CV
+                Retour web CV
               </NavLink>
             </li>
             <li>

@@ -48,21 +48,23 @@ ul {
 .menu{
   .box_nav{
     .link_CV11{
-      position: absolute;
-      top: 20;
+     
       z-index:10;
-      right: 10px;
+    
       border: 2px solid #b6604f;
       border-radius: 20px;
       display: block;
-      margin:25px auto 10px;
-      width: 220px;
+      margin:15px auto 10px;
+      width: 160px;
       align-self: center;
       background: linear-gradient(to left,rgba(228, 41, 3, 1) 0%,rgba(214, 47, 13, 1) 100%);
       box-shadow: 2px 2px 6px rgba(0,0,0,0.8);
       text-decoration: none;
       /* background: linear-gradient(to left,rgba(214,131,114,0.9) 0%,rgba(214,131,114,0.8) 100%); */
       text-align: center;
+      @include devices(mobile){
+        font-size: 1rem;
+      }
     }
     
     .link_CV11:hover{
