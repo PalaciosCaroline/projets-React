@@ -12,7 +12,7 @@ export default function Menu() {
           <ul>
           
             <li>
-            <a href="https://palacioscaroline.github.io" target="_blank" className="link_CV11" rel="noopener noreferrer">
+            <a href="https://palacioscaroline.github.io#projets" target="_blank" className="link_CV11" rel="noopener noreferrer">
             Retour web CV 
               </a>
               </li>
