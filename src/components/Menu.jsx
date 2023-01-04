@@ -13,7 +13,7 @@ export default function Menu() {
             <li>
               <NavLink
                 to="https://palacioscaroline.github.io"
-                id="link_CV11"
+                className="link_CV11"
               >
                 Retour au web CV
               </NavLink>
