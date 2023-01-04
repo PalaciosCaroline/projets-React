@@ -10,8 +10,8 @@ export default function Router() {
       <Route index element={<Home />} />
       <Route path="/Apropos" element={<Apropos />} />
       <Route path="/logement/:id" element={<Logement />} />
-      <Route path='/web-cv' component={() => {
-    window.location.href = 'https://palacioscaroline.github.io';
+      <Route path='/retour-cv' component={() => {
+    window.location.replace('https://palacioscaroline.github.io');
     return null;
 }}/>
       <Route path="*" element={<Erreur404 />} />

@@ -11,12 +11,10 @@ export default function Menu() {
         <nav className="box_nav">
           <ul>
             <li>
-              <NavLink
-                to="/web-cv"
-                className="link_CV11"
-              >
-                Retour web CV
-              </NavLink>
+            
+               
+              <NavLink  className="link_CV11" to="/retour_cv"> Retour web CV </NavLink> 
+           
               
             </li>
             <li>
