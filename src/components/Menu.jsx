@@ -12,11 +12,12 @@ export default function Menu() {
           <ul>
             <li>
               <NavLink
-                to="https://palacioscaroline.github.io"
+                to="/web-cv"
                 className="link_CV11"
               >
                 Retour web CV
               </NavLink>
+              
             </li>
             <li>
               <NavLink
