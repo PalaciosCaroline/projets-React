@@ -12,8 +12,8 @@ export default function Menu() {
           <ul>
             <li>
               <NavLink
-                to="https://palacioscaroline.github.io/#projets"
-                className="link_CV11"
+                to="https://palacioscaroline.github.io"
+                id="link_CV11"
               >
                 Retour au web CV
               </NavLink>
