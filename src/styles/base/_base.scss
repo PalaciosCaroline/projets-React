@@ -48,14 +48,12 @@ ul {
 .menu{
   .box_nav{
     .link_CV11{
-     
       z-index:10;
-    padding:10px 3px 10px 3px;
+    padding:10px 10px 10px 10px;
       border: 2px solid #b6604f;
       border-radius: 20px;
       display: block;
       margin:15px auto 10px;
-      // width: 180px;
       align-self: center;
       color:#fff;
       background: linear-gradient(to left,rgba(228, 41, 3, 1) 0%,rgba(214, 47, 13, 1) 100%);
@@ -66,6 +64,7 @@ ul {
       @include devices(mobile){
         font-size: 0.8rem;
         align-self: flex-start;
+        padding:10px 8px 10px 8px;
       }
     }
     

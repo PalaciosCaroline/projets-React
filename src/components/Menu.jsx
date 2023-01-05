@@ -8,15 +8,12 @@ export default function Menu() {
         <div className="box_logo">
           <p className="header_logo"></p>
         </div>
-        <nav className="box_nav">
-          <ul>
-          
-            <li>
-            <a href="https://palacioscaroline.github.io#projets" target="_blank" className="link_CV11" rel="noopener noreferrer">
+        <a href="https://palacioscaroline.github.io#projets" target="_blank" className="link_CV11" rel="noopener noreferrer">
             Retour web CV 
               </a>
-              </li>
-              <li>
+        <nav className="box_nav">
+          <ul>
+            <li>
               <NavLink
                 to="/"
                 end
