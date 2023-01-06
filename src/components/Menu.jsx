@@ -8,7 +8,7 @@ export default function Menu() {
         <div className="box_logo">
           <p className="header_logo"></p>
         </div>
-        <a href="https://palacioscaroline.github.io#projets" target="_blank" id="link_CV11" rel="noopener noreferrer">
+        <a href="https://palacioscaroline.github.io#projet11" target="_blank" id="link_CV11" rel="noopener noreferrer">
             Retour web CV 
               </a>
         <nav className="box_nav">
