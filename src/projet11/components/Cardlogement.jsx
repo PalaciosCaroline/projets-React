@@ -7,7 +7,7 @@ export default function Cardlogement({ logementId, logementCover, logementTitle 
 
   return (
     <NavLink
-      to={'/logement/' + logementId}
+      to={'/projet11/logement/' + logementId}
       className="link_logement"
       aria-label={`lien vers la page du logement ${logementTitle}`}
     >

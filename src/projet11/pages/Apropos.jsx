@@ -3,6 +3,8 @@ import Banner from './../components/Banner'
 import imageApropos from "./../assets/img_apropos.png"
 import imageAproposMobile from "./../assets/img_apropos_mobile.jpg"
 import Collapse from '../components/Collapse.jsx'
+import Menu from '../components/Menu'
+import Footer from '../components/Footer'
 
 export default function Apropos() {
   const dataApropos = [
@@ -39,6 +41,8 @@ export default function Apropos() {
   }, [])
 
   return (
+    <>
+    <Menu/>
     <main className="apropos_page">
       <Banner image={largeur > 800 ? `${imageApropos}` : `${imageAproposMobile}`}/>
       <div className="apropos_boxText">
@@ -51,5 +55,7 @@ export default function Apropos() {
         ))}
       </div>
     </main>
+    <Footer/>
+    </>
   )
 }

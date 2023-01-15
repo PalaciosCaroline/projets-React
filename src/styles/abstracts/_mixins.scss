@@ -73,8 +73,8 @@
 @mixin logo {
   display: block;
   content: '';
-  -webkit-mask: url(./../../assets/logo.svg) no-repeat 50% 50%;
-  mask: url(./../../assets/logo.svg) no-repeat 50% 50%;
+  -webkit-mask: url(./../../projet11/assets/logo.svg) no-repeat 50% 50%;
+  mask: url(./../../projet11/assets/logo.svg) no-repeat 50% 50%;
   -webkit-mask-size: cover;
   mask-size: cover;
 }

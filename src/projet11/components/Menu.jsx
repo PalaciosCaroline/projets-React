@@ -15,7 +15,7 @@ export default function Menu() {
           <ul>
             <li>
               <NavLink
-                to="/"
+                to="/projet11"
                 end
                 className={({ isActive }) =>
                   isActive ? 'activeLink' : undefined
@@ -26,7 +26,7 @@ export default function Menu() {
             </li>
             <li>
               <NavLink
-                to="/Apropos"
+                to="/projet11/Apropos"
                 className={({ isActive }) =>
                   isActive ? 'activeLink' : undefined
                 }

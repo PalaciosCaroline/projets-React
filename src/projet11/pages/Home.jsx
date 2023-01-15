@@ -4,6 +4,7 @@ import imageHome from './../assets/img_home.png'
 import Boxcards from '../components/Boxcards'
 import Loader from '../components/Loader'
 
+
 export default function Home() {
   const [logements, setlogements] = useState([])
   const [isDataLoading, setDataLoading] = useState(true)
@@ -26,6 +27,8 @@ export default function Home() {
 
   return (
     isDataLoading ? <Loader /> : 
+    <>
+
     <main className="box_home">
       <header className="bannerHome">
         <Banner image={imageHome} />
@@ -36,5 +39,7 @@ export default function Home() {
       </header>
       <Boxcards logements={logements} />
     </main>
+
+    </>
   )
 }

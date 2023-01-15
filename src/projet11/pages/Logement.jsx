@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import SlideShow from '../components/SlideShow'
-import LogementFicheHost from '../components/LogementFicheHost'
-import LogementFicheTitle from '../components/LogementFicheTitle'
-import LogementFicheMain from '../components/LogementFicheMain'
+import SlideShow from './../components/SlideShow'
+import LogementFicheHost from './../components/LogementFicheHost'
+import LogementFicheTitle from './../components/LogementFicheTitle'
+import LogementFicheMain from './../components/LogementFicheMain'
+import Menu from '../components/Menu'
+import Footer from '../components/Footer'
 
 export default function Logement() {
   const [logement, setlogement] = useState({
@@ -38,6 +40,8 @@ export default function Logement() {
   }, [id, navigate])
 
   return (
+    <>
+    <Menu></Menu>
       <main className="box_logementFiche">
         <SlideShow imgsLogement={logement.pictures} />
         <header className="logementFiche_header">
@@ -45,6 +49,8 @@ export default function Logement() {
           <LogementFicheHost logement={logement} />
         </header>
         <LogementFicheMain logement={logement} />
-      </main>  
+      </main> 
+      <Footer></Footer>
+      </> 
   )
 }
