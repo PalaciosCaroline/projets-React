@@ -45,7 +45,7 @@ export default function DailyActivity({userActivity}) {
               margin={{
                 top: 30,
                 right: 0,
-                left: 30,
+                left: 20,
                 bottom: 0,
               }}
             >
