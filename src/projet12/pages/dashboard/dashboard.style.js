@@ -84,6 +84,22 @@ justify-content: space-between;
 @media (max-width: 1010px) {
   justify-content: space-around;
 }
+.boxline{
+   background-color: rgba(255, 0, 0, 1);
+  color:#fff;
+  width:263px;
+  width:263px;
+  @media (max-width: 1150px) {
+    flex-wrap:wrap;
+    width:245px;
+    height:245px;
+  }
+  @media (max-width: 1010px) {
+    flex-wrap:wrap;
+    width:100%;
+    height:263px;
+  }
+}
 `
 
 export const Keyfigures = styled.section`

@@ -12,7 +12,7 @@ import { BoxBarChart,TitleLegendActivity,LegendBox,TagPoids,TagCalories,BoxToolt
   */
 export default function DailyActivity({userActivity}) {
 
-  if (userActivity.length === 0) return null;
+  if (userActivity.length <= 0) return null;
 
     const TooltipTag = ({active,payload}) => {
 

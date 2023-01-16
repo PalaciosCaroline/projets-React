@@ -1,13 +1,10 @@
-import { palette } from '../../theme/styledvariable'
 import styled from 'styled-components'
 
-
-export const BoxLineChart = styled.article`
-  background-color: ${palette.colorSecondary};
+export const BoxLineChart = styled.div`
+  background-color: rgba(255, 0, 0, 1);
   color:#fff;
   width:263px;
   width:263px;
-
   @media (max-width: 1150px) {
     flex-wrap:wrap;
     width:245px;

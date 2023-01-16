@@ -23,33 +23,29 @@ export default function AverageSessions({userAverageSessions}) {
           return;
         }
   }
-
-  const animateBgColor = (e) => {
-    let boxContainer = document.querySelector('.gyPpHz')
-    if (e.isTooltipActive === true) {
-      let windowWidth = boxContainer.clientWidth
-      let mouseXpercentage = Math.round(
-        (e.activeCoordinate.x / windowWidth) * 100
-      )
-      boxContainer.style.background = `linear-gradient(90deg, hsla(0, 100%, 50%, 1)
-      ${mouseXpercentage}%, hsla(0, 80%, 50%, 1) ${mouseXpercentage}%, hsla(0, 80%, 50%, 1) 100%)`
-    } else {
-      boxContainer.style.background = 'hsla(0, 100%, 50%, 1)'
-    }
-  }
-
-  const stopAnimateBgColor = () => {
-    let boxContainer = document.querySelector('.gyPpHz')
-    boxContainer.style.background = 'hsla(0, 100%, 50%, 1)'
-  }
   
   return (
-    <BoxLineChart>
+    <article className='boxline'>
       <LegendTitle>Durée moyenne des<br/> sessions</LegendTitle>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
-        onMouseMove={(e) => {animateBgColor(e)}}
-        onMouseLeave={() => {stopAnimateBgColor()}}
+        onMouseMove={(e) => {
+        if (e.isTooltipActive === true) {
+          let boxline = document.querySelector('.boxline')
+          let windowWidth = boxline.clientWidth
+          let mouseXpercentage = Math.round(
+            (e.activeCoordinate.x / windowWidth) * 100
+          )
+          boxline.style.background = `linear-gradient(90deg, hsla(0, 100%, 50%, 1)
+          ${mouseXpercentage}%, hsla(0, 80%, 50%, 1) ${mouseXpercentage}%, hsla(0, 80%, 50%, 1) 100%)`
+        } else {
+          let boxline = document.querySelector('.boxline')
+          boxline.style.background = 'hsla(0, 100%, 50%, 1)'
+        }}}
+        onMouseLeave={() => { 
+          let boxline = document.querySelector('.boxline')
+          boxline.style.background = 'hsla(0, 100%, 50%, 1)'
+        }}
           width={200}
           height={200}
           data={userAverageSessions}
@@ -73,7 +69,7 @@ export default function AverageSessions({userAverageSessions}) {
                 dataKey="sessionLength" stroke="rgba(255,255,255,0.6" strokeWidth={2} dot={false} activeDot={{ r: 3,stroke: "#fff", fill:"#fff"}}/>
         </LineChart>
       </ResponsiveContainer>
-    </BoxLineChart>
+    </article>
   )
 }
 

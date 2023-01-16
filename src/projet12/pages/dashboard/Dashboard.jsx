@@ -67,7 +67,7 @@ export default function Dashboard() {
       setUserActivity(data)
   }, [id])
 
-  if (userInfos.length === 0) return null
+  if (userInfos.length <= 0) return null
   let valueKilo = formatterKilo(userInfos.keyData.calorieCount)
 
   return (
@@ -93,23 +93,23 @@ export default function Dashboard() {
               </SessionWrapper> 
             </Column1>
             <Keyfigures>
-          <KeyfigureCard  img={caloriesIcon} type="Calories" value={`${valueKilo}Kcal`} />
-          <KeyfigureCard
-            img={proteinIcon}
-            type="Protéines"
-            value={`${userInfos.keyData.proteinCount.toString()}g`}
-          />
-          <KeyfigureCard
-            img={carbsIcon}
-            type="Glucides"
-            value={`${userInfos.keyData.carbohydrateCount.toString()}g`}
-          />
-          <KeyfigureCard
-            img={fatIcon}
-            type="Lipides"
-            value={`${userInfos.keyData.lipidCount.toString()}g`}
-          />
-        </Keyfigures>
+              <KeyfigureCard  img={caloriesIcon} type="Calories" value={`${valueKilo}Kcal`} />
+              <KeyfigureCard
+                img={proteinIcon}
+                type="Protéines"
+                value={`${userInfos.keyData.proteinCount}g`}
+              />
+              <KeyfigureCard
+                img={carbsIcon}
+                type="Glucides"
+                value={`${userInfos.keyData.carbohydrateCount}g`}
+              />
+              <KeyfigureCard
+                img={fatIcon}
+                type="Lipides"
+                value={`${userInfos.keyData.lipidCount}g`}
+              />
+            </Keyfigures>
           </BoxResult> 
         </Wrapped>
     </Mainapp>
