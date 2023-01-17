@@ -4,13 +4,10 @@ import iconlogo from './../assets/logo_sportseeSVG.svg'
 import styled from 'styled-components'
 import { palette } from './../theme/styledvariable'
 
-
-
 /** render Header_page Nav
   * @param {img} iconlogo
   * @return {JSX FC React} 
   */
-
 export default function Navhorizontale() {
   return (
     <Header>
@@ -22,18 +19,18 @@ export default function Navhorizontale() {
             </Logohome>
           </li>
           <li>
-            <LinkHeader href="/" end="true">
+            <LinkHeader href="/projet12" end="true">
               Accueil
             </LinkHeader>
           </li>
           <li>
-            <LinkHeader href="/">Profil</LinkHeader>
+            <LinkHeader href="/projet12">Profil</LinkHeader>
           </li>
           <li>
-            <LinkHeader href="/">Réglage</LinkHeader>
+            <LinkHeader href="/projet12">Réglage</LinkHeader>
           </li>
           <li>
-            <LinkHeader href="/">Communauté</LinkHeader>
+            <Linkcv href="https://palacioscaroline.github.io/"><span>Retour CV</span></Linkcv>
           </li>
         </UlHeader>
       </nav>
@@ -56,7 +53,37 @@ const Header = styled.header`
   } 
   
 `
+
+const Linkcv = styled.a`
+// height:50px;
+// padding:5px;
+
+// margin-top :10px;
+// margin-bottom :10px;
  
+  border-radius: 20px;
+  display: block;
+  // color:#fff;
+  
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+  text-decoration: none;
+  text-align: center;
+  width:180px;
+  @include devices(mobile){
+    font-size: 0.7rem;
+  }
+  &:hover{
+    background: linear-gradient(to left,rgba(182, 35, 5, 1) 0%,rgba(159, 36, 11, 1) 100%);
+    transform: translatey(1px); 
+  }
+  span{
+    display:block;
+    background: linear-gradient(to left,rgba(228, 41, 3, 1) 0%,rgba(214, 47, 13, 1) 100%);
+    border: 2px solid #b6604f;
+  }
+ 
+`
+
 const UlHeader = styled.ul`
   font-size: 1.4rem;
   // min-height: 40px;
