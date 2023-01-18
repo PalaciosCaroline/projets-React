@@ -11,15 +11,16 @@ export default function Home() {
 
   useEffect(() => {
     async function fetchDatas() {
-      // setTimeout(() => {
-      //   setDataLoading(false);
-      // }, 600);
+      //Mise en place d'un loader pour le chargement en cas d'appel API
+          //setDataLoading(true)
       try {
         const response = await fetch('data.json')
         const logementsData = await response.json()
         setlogements(logementsData)
       } catch (err) {
         console.log(err, "Il y a eu un problème avec l'opération fetch")
+      } finally {
+          //setDataLoading(false)
       }
     }
     fetchDatas()
