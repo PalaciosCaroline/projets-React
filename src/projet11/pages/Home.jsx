@@ -7,13 +7,13 @@ import Loader from '../components/Loader'
 
 export default function Home() {
   const [logements, setlogements] = useState([])
-  const [isDataLoading, setDataLoading] = useState(true)
+  // const [isDataLoading, setDataLoading] = useState(false)
 
   useEffect(() => {
     async function fetchDatas() {
-      setTimeout(() => {
-        setDataLoading(false);
-      }, 600);
+      // setTimeout(() => {
+      //   setDataLoading(false);
+      // }, 600);
       try {
         const response = await fetch('data.json')
         const logementsData = await response.json()
@@ -26,9 +26,8 @@ export default function Home() {
   }, [])
 
   return (
-    isDataLoading ? <Loader /> : 
+    // isDataLoading ? <Loader /> : 
     <>
-
     <main className="box_home">
       <header className="bannerHome">
         <Banner image={imageHome} />
@@ -39,7 +38,6 @@ export default function Home() {
       </header>
       <Boxcards logements={logements} />
     </main>
-
     </>
   )
 }
