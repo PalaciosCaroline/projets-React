@@ -7,12 +7,12 @@ import Loader from '../components/Loader'
 
 export default function Home() {
   const [logements, setlogements] = useState([])
-  // const [isDataLoading, setDataLoading] = useState(false)
+  const [isDataLoading, setDataLoading] = useState(false)
 
   useEffect(() => {
     async function fetchDatas() {
       //Mise en place d'un loader pour le chargement en cas d'appel API
-          //setDataLoading(true)
+          setDataLoading(true)
       try {
         const response = await fetch('data.json')
         const logementsData = await response.json()
@@ -20,14 +20,14 @@ export default function Home() {
       } catch (err) {
         console.log(err, "Il y a eu un problème avec l'opération fetch")
       } finally {
-          //setDataLoading(false)
+          setDataLoading(false)
       }
     }
     fetchDatas()
   }, [])
 
   return (
-    // isDataLoading ? <Loader /> : 
+    isDataLoading ? <Loader /> : 
     <>
     <main className="box_home">
       <header className="bannerHome">
