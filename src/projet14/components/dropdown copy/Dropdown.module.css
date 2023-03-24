@@ -1,0 +1,53 @@
+/* styles pour le dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* styles pour le bouton de déclenchement du dropdown */
+  .dropdownToggle {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+  }
+  
+  /* styles pour la flèche du dropdown */
+  .arrow {
+    margin-left: 8px;
+  }
+  
+  /* styles pour le menu déroulant */
+  .dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    z-index: 1;
+  }
+  
+  /* styles pour les options du menu déroulant */
+  .dropdownOption {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .dropdownOption:hover {
+    background-color: #f2f2f2;
+  }
+  
+  /* styles pour l'option sélectionnée */
+  .selected {
+    background-color: #b1c46c;
+    color: #fff;
+  }

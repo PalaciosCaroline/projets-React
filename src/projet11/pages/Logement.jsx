@@ -6,6 +6,7 @@ import LogementFicheTitle from './../components/LogementFicheTitle'
 import LogementFicheMain from './../components/LogementFicheMain'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
+import './../styles/index.scss'
 
 export default function Logement() {
   const [logement, setlogement] = useState({

@@ -5,6 +5,7 @@ import imageAproposMobile from "./../assets/img_apropos_mobile.jpg"
 import Collapse from '../components/Collapse.jsx'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
+import './../styles/index.scss'
 
 export default function Apropos() {
   const dataApropos = [

@@ -3,6 +3,7 @@ import Banner from './../components/Banner'
 import imageHome from './../assets/img_home.png'
 import Boxcards from '../components/Boxcards'
 import Loader from '../components/Loader'
+import './../styles/index.scss'
 
 
 export default function Home() {

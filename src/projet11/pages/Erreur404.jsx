@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
+import './../styles/index.scss'
 
 export default function Erreur404() {
   return (

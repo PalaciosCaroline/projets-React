@@ -11,7 +11,7 @@ export default function Collapse({ title, content }) {
 
   return (
     <div className={`box_collapse ${setActive && 'active'}`}>
-      <button className="btn_collapse" onClick={toggleChevron}>
+      <button className="btn_collapse buttonprojet11" onClick={toggleChevron}>
         <span className="collapse_title">{title}</span>
         <img src={arrowDown} aria-hidden="true" alt="" />
       </button>

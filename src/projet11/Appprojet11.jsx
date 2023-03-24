@@ -3,6 +3,7 @@ import Footer from './components/Footer'
 // import Loader from './components/Loader'
 import Menu from './components/Menu'
 import Home from './pages/Home'
+import './styles/index.scss'
 // import Router1 from '../Router1'
 // import { useState, useEffect } from 'react'
 

@@ -5,27 +5,31 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    h1{
+}
+    #wrapperapp   h1{
         font-size:2rem;
         color: black;
     }
-    nav{
+    #wrapperapp  nav{
         display: flex;
         text-align: center;
     }
-    a{
+    #wrapperapp   a{
         color: #fff;
         text-decoration: none;
         padding: 5px 15px 5px 15px;
         border-radius: 15px;
         display:block;
         margin: 15px;
-        &:nth-child(1){
+    }
+        #wrapperapp     a:nth-child(1){
             background-color: rgb(240, 159, 39);
         }
-        &:nth-child(2){
+        #wrapperapp   a:nth-child(2){
             background-color: rgb(212, 43, 21);
         }
-    }
+        #wrapperapp  a:nth-child(3){
+            background-color: #677e11;
+        }
     
-}
+    

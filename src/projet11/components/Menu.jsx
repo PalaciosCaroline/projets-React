@@ -18,7 +18,7 @@ export default function Menu() {
                 to="/projet11"
                 end
                 className={({ isActive }) =>
-                  isActive ? 'activeLink' : undefined
+                  isActive ? 'activeLink aprojet11' : 'aprojet11'
                 }
               >
                 Accueil
@@ -28,7 +28,7 @@ export default function Menu() {
               <NavLink
                 to="/projet11/Apropos"
                 className={({ isActive }) =>
-                  isActive ? 'activeLink' : undefined
+                  isActive ? 'activeLink aprojet11' : 'aprojet11'
                 }
               >
                 A propos

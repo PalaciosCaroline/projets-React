@@ -1,0 +1,560 @@
+.wrapper_projet14 {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  color: #0d0d0d;
+  padding: 0;
+  height:100vh;
+  box-sizing: border-box;
+  background-color: #eff2e9;
+}
+
+*{
+  box-sizing: border-box;
+}
+.wrapper_projet14{
+
+  ul, li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .sr-only {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* masque le contenu, mais le rend accessible pour les lecteurs d'écran */
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  button{
+    cursor: pointer;
+  }
+
+  .box_app{
+    display: flex;
+    text-align: center;
+  }
+  @media (max-width: 500px) {
+    .box_app{
+      flex-direction: column;
+    }
+  }
+
+  main {
+    text-align:center;
+    margin : 0 auto;
+  }
+
+  .main_newEmployee{
+    display: flex;
+  } 
+
+  h1, h2{
+    font-size:3rem;
+    color: #0d0d0d;
+  }
+
+  @media (max-width: 1200px) {
+      h1, h2{
+      font-size: 2rem;
+      }
+  }
+
+  .errorEntree{
+    color: red;
+    font-size: 0.8rem;
+    margin-top : 0;
+  }
+  .linkNewEmployee, .linkListEmployee{
+    margin: 20px 20px 20px 50px;
+    border:none;
+    color: black;
+    display:inline-block;
+    text-align:center;
+    width:300px;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #677e11;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  }
+
+  .linkNewEmployee:hover, .linkListEmployee:hover{
+    background-color: #7e9b16;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  }
+
+  .box_home{
+    min-height: 100vh;
+    background-color: #eff2e9;
+  }
+
+  .main_newEmployee {
+    min-height: 100vh;
+    min-width: 100%;
+  }
+
+  @media (max-width: 900px) {
+    .main_newEmployee {
+      flex-direction: column;
+    }
+
+  }
+
+  .main_newEmployee input{
+    background: #ecf0f3;
+    padding: 10px;
+    padding-left: 20px;
+    border: none;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+    outline:1px solid rgb(220, 239, 232);
+  }
+
+  /* .main_newEmployee header{
+    background-color: #b1c46c;
+    background-color: #eff2e9;
+    background-color: #c9df7d;
+    width: 400px;
+  } */
+
+  @media (max-width: 1000px) {
+    img{
+      margin:20px auto 0;
+      width: 300px;
+      height: 300px;
+    }
+
+    .main_newEmployee header{
+      width: 400px;
+    }
+    /* .boxName, .address{
+      display: flex;
+      flex-direction: column;
+    } */
+  }
+  @media (max-width: 900px) {
+    img{
+      margin:20px auto 0;
+      width: 100px;
+      height: 100px;
+    }
+    .main_newEmployee{
+      flex-direction: column;
+    }
+
+    .main_newEmployee header{
+      width: 100%;
+    }
+  }
+
+  /* .box_input{
+    margin-top : 10px;
+  } */
+
+  .boxName{
+    display: flex;
+    justify-content: center;
+  }
+
+  .boxName .box_input{
+    margin-bottom: 20px;
+  }
+  @media (max-width: 650px), (min-width: 900px) and (max-width: 1000px){
+    .boxName, .address{
+      display: flex;
+      flex-direction: column;
+    }
+    .boxName{
+      display: flex;
+      justify-content: center;
+    }
+
+    .address label{ 
+      margin-top:10px;
+    }
+  }
+
+  .box_formEntree{
+    position: relative;
+  }
+
+  .boxDate{
+    display: flex;
+    justify-content: center;
+  }
+
+  .box_startDate .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root, .box_dateOfBirth .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root{
+    padding-left: 10px;
+    padding-top:5px;
+  }
+
+  .box_dateOfBirth{
+    margin-right: 20px;
+  }
+
+  .box_startDate, .box_dateOfBirth{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .box_startDate p ,.box_dateOfBirth p{
+    margin-right: 10px;
+
+  }
+  .box_startDate p{
+    margin-left: 20px;
+  }
+  .box_startDate .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root, .box_dateOfBirth .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root{
+    padding-left: 10px;
+  }
+
+  .box_startDate .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input, .box_dateOfBirth .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
+    margin:10px;
+    height:25px;
+  }
+
+  @media (max-width: 1000px) {
+    .boxDate{
+      flex-direction: column;
+    }
+    .box_startDate, .box_dateOfBirth{
+      margin-top:20px;
+    }
+    .boxDate .box_startDate p{
+      margin-left:0;
+    }
+
+    .box_dateOfBirth{
+      margin-right:0;
+      margin-top:10px;
+    }
+  }
+
+  .errorMessage{
+    position: absolute;
+    margin:0;
+    bottom: -20px;
+    left:0;
+    color:red;
+  }
+
+  .errorBorder{
+    border: 1px solid red;
+  }
+
+  .address{
+    margin:10px auto;
+  } 
+
+  fieldset, select {
+    border: 1px solid #57810b;
+  }
+
+  .box_state, .box_department{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .box_state .p_label, .box_department .p_label {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .box_state li:hover, .box_department li:hover{
+    background-color: #d8e3b3;
+  }
+
+  .box_state li.selectedOption:hover, .box_department li.selectedOption:hover {
+    background-color:  #b1c46c;
+  }
+
+  .box_state li.selectedOption, .box_department li.selectedOption{
+    background-color:  #b1c46c;
+  }
+
+  .confirmationModal{
+    width: 100%;
+    height: 100%;
+    background-color:  #c4da78 ;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    padding: 20px 20px 20px 20px;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    z-index: 9999;
+  }
+  .confirmationModal h2{
+    font-size: 2.5rem;
+  }
+
+  .confirmationModal p{
+    font-size: 2rem;
+  }
+
+  .btn_closeModal{
+    align-self: flex-end;
+    background-color: #677e11;
+    border: none;
+    color: #fff;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .btn_closeModal_icon{
+    width: 30px;
+    height: 30px;
+  }
+
+  @media (max-width: 1200px) {
+    a{
+    font-size: 1.2rem;
+    }
+
+    /* .confirmationModal{
+      width: 400px;
+    } */
+  }
+
+  @media (max-width: 550px) {
+    a{
+    font-size: 1.2rem;
+    }
+
+    /* .confirmationModal{
+      width: 90%;
+    } */
+  }
+
+  .containerNewEmployee{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #f6f8f2;
+  }
+
+  .containerNewEmployee h1{
+    margin-top:20px;
+    margin-bottom: 10px;
+    font-size: 2.4rem;
+    color :#3f3f3f;
+  }
+  .main_ListEmployees h1 { 
+    margin-top:20px;
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+    color :#2d2d2d;
+  }
+  .containerNewEmployee select{
+    background-color: #f6f8f2;
+    text-align: center;
+  }
+
+  .containerNewEmployee input{
+    background-color: #f6f8f2;
+  }
+
+  /* List employee */
+  .titleService{
+    font-size: 2rem;
+    font-weight: bold;
+    margin:10px 0;
+  }
+
+  /* .linkNewEmployee{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  } */
+
+  .header_ListEmployees{
+    background-color: #c9df7d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .box_logoService{
+    display: flex;
+    width:350px;
+  }
+  @media (max-width: 1000px) {
+    .box_logoService{
+      display: flex;
+      width:150px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .header_ListEmployees img{
+    width: 80px;
+    height: 70px;
+    /* justify-self: flex-start; */
+    margin-left:20px;
+  }
+
+  .header_ListEmployees h1{
+    font-size: 2rem;
+    margin: 10px auto;
+  }
+
+  form{
+    padding: 0 20px 20px 20px;
+  }
+
+  form input{
+    margin: 10px 10px 0;
+  }
+
+  form select {
+    margin: 20px 10px 10px;
+  }
+
+  select{
+    height: 30px;
+  }
+
+  .btnFormSave{
+    text-align:center;
+    width:300px;
+    padding: 10px 20px;
+    color: #fff;
+    /* color: #000; */
+    background-color: #677e11;
+    /* background-color: #b1c46c; */
+    /* background-color: #c9df7d; */
+    border-radius: 25px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    border: none;
+    font-size: 1.2rem;
+    margin: 20px auto 30px;
+  }
+
+  .btnFormSave:hover{
+    /* background-color:  #bbd267; */
+    background-color: #7e9b16;
+    box-shadow: 2px 2px 4px rgb(0 0 0 / 30%);
+  }
+  .box_table{
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  input::placeholder {
+    color: gray;
+  }
+
+  main_newEmployee input{
+    background: #ecf0f3;
+    padding: 10px;
+    padding-left: 20px;
+    border: none;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+    outline:1px solid rgb(220, 239, 232);
+  }
+
+  .title_newEmployee{
+    font-size: 2rem;
+    padding-top:40px;
+    padding-bottom:40px;
+    margin-top:0;
+    margin-bottom:0;
+  }
+
+  .main_ListEmployees{
+    margin: 0 5%;
+  }
+
+  main .box_table{
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .box_table .box_tableManaged .toggle-btnManagedColumns > svg {
+    color:#fff;
+    min-width: 60px;
+  }
+
+  .box_table .box_tableManaged .toggle-btnManagedColumns:hover{
+    width: 220px;
+  }
+
+  .box_table .modal button{
+    margin-bottom:15px;
+  }
+  .box_table .modal{
+    min-width: 340px;
+  }
+
+  .box_table .showingEntries{
+    text-align: left;
+  }
+
+
+  .box_startDate .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input, .box_dateOfBirth .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+    /* height: 25px; */
+    margin: 10px; 
+    padding:10px;
+  }
+
+  .inputSearchByProperty::placeholder{
+    color: #000;
+  }
+
+  .logoHome{
+    width: 330px;
+    height: 300px;
+  }
+
+  @media (max-width: 800px) {
+    .header_ListEmployees{
+      flex-direction: column;
+    }
+  }
+
+  .main_ListEmployees .box_searchGlobal input{
+    height: 45px;
+  }
+
+  .main_ListEmployees{
+  padding-bottom:30px;
+  }
+
+  @media (max-width: 800px) {
+    .box_table .box_searchReset{
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+    .box_table .box_searchReset .box_searchGlobal{
+      margin-bottom: 20px;
+    }
+  }
+
+}
