@@ -5,7 +5,7 @@ import {Table} from 'table-component-library';
 const EmployeeTable = React.memo(({ employees, styles }) => {
 
   return (
-    <div className='box_table'>
+    <div className='box_tableComponent scroller'>
       <h1>List of employees</h1>
       <Table data={employees} columns={columns}/>
     </div>

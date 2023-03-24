@@ -92,6 +92,17 @@
     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
   }
 
+  @media (max-width: 1200px) {
+    .linkNewEmployee, .linkListEmployee{
+      margin: 20px 20px 20px 0;
+    }
+  }
+  @media (max-width: 500px) {
+    .linkNewEmployee, .linkListEmployee{
+      margin: 20px 0 20px 0;
+    }
+  }
+
   .linkNewEmployee:hover, .linkListEmployee:hover{
     background-color: #7e9b16;
     box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
@@ -100,7 +111,9 @@
   .box_home{
     min-height: 100vh;
     background-color: #eff2e9;
+    margin: 0 auto;
   }
+
 
   .main_newEmployee {
     min-height: 100vh;
@@ -464,7 +477,7 @@
     background-color: #7e9b16;
     box-shadow: 2px 2px 4px rgb(0 0 0 / 30%);
   }
-  .box_table{
+  .box_tableComponent{
     width: 90%;
     margin: 20px auto;
   }
@@ -497,7 +510,7 @@
     margin: 0 5%;
   }
 
-  main .box_table{
+  main .box_tableComponent{
     width: 100%;
     margin: 20px auto;
   }
@@ -524,7 +537,7 @@
 
 
   .box_startDate .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input, .box_dateOfBirth .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
-    /* height: 25px; */
+    height: 25px;
     margin: 10px; 
     padding:10px;
   }
@@ -553,13 +566,14 @@
   }
 
   @media (max-width: 800px) {
-    .box_table .box_searchReset{
+    .box_tableComponent .box_searchReset{
       flex-direction: column;
       margin-bottom: 20px;
     }
-    .box_table .box_searchReset .box_searchGlobal{
+    .box_tableComponent .box_searchReset .box_searchGlobal{
       margin-bottom: 20px;
     }
   }
 
 }
+
