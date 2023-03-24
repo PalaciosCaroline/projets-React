@@ -200,7 +200,7 @@
   }
 
   .box_startDate .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root, .box_dateOfBirth .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root{
-    padding-left: 10px;
+    padding-left: 20px;
     padding-top:5px;
   }
 
@@ -227,8 +227,13 @@
 
   .box_startDate .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input, .box_dateOfBirth .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
     margin:10px;
+    // padding-left:30px;
     height:25px;
   }
+
+  // .box_startDate .css-1jy569b-MuiFormLabel-root-MuiInputLabel-roo{
+  //   padding-left:10px;
+  // }
 
   @media (max-width: 1000px) {
     .boxDate{
