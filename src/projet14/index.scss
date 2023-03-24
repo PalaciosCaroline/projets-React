@@ -188,20 +188,7 @@
   .boxName .box_input{
     margin-bottom: 20px;
   }
-  @media (max-width: 650px), (min-width: 900px) and (max-width: 1000px){
-    .boxName, .address{
-      display: flex;
-      flex-direction: column;
-    }
-    .boxName{
-      display: flex;
-      justify-content: center;
-    }
-
-    .address label{ 
-      margin-top:10px;
-    }
-  }
+  
 
   .box_formEntree{
     position: relative;
@@ -244,7 +231,7 @@
   .box_startDate .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input, .box_dateOfBirth .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
     margin:10px;
     // padding:10px;
-    height:25px;
+    height:20px;
   }
 
   .box_startDate .css-1ralhbl-MuiFormControl-root-MuiTextField-root,.box_dateOfBirth .css-1ralhbl-MuiFormControl-root-MuiTextField-root{
@@ -252,7 +239,12 @@
   }
 
   .box_startDate .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root,.box_dateOfBirth .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
-    margin:0 0 10px 0;
+   
+    padding:5px 5px 5px 5px;
+  }
+
+  .box_startDate .css-1ralhbl-MuiFormControl-root-MuiTextField-root .MuiInputBase-input,.box_dateOfBirth .css-1ralhbl-MuiFormControl-root-MuiTextField-root .MuiInputBase-input{
+    height: 20px;
   }
 
   // .box_startDate .css-1jy569b-MuiFormLabel-root-MuiInputLabel-roo{
@@ -319,6 +311,29 @@
 
   .box_state li.selectedOption, .box_department li.selectedOption{
     background-color:  #b1c46c;
+  }
+
+  @media (max-width: 650px), (min-width: 900px) and (max-width: 1000px){
+    .boxName, .address{
+      display: flex;
+      flex-direction: column;
+    }
+
+      .address{
+        margin:20px auto 20px;
+      } 
+      #zip-code{
+        margin-bottom:20px;
+      }
+    
+    .boxName{
+      display: flex;
+      justify-content: center;
+    }
+
+    .address label{ 
+      margin-top:10px;
+    }
   }
 
   .confirmationModal{
