@@ -568,11 +568,15 @@
   @media (max-width: 800px) {
     .box_tableComponent .box_searchReset{
       flex-direction: column;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
     .box_tableComponent .box_searchReset .box_searchGlobal{
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
+  }
+
+  .box_tableManaged{
+    padding-top:30px;
   }
 
 }
