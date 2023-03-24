@@ -7,6 +7,7 @@ import './../styles/index.scss'
 
 
 export default function Home() {
+  document.title = 'Projet 11';
   const [logements, setlogements] = useState([])
   const [isDataLoading, setDataLoading] = useState(true)
 

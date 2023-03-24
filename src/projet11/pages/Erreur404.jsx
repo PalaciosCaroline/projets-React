@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import './../styles/index.scss'
 
 export default function Erreur404() {
+  document.title = 'Projet 11';
   return (
     <>
     <Menu></Menu>

@@ -9,6 +9,7 @@ import Footer from '../components/Footer'
 import './../styles/index.scss'
 
 export default function Logement() {
+  document.title = 'Projet 11';
   const [logement, setlogement] = useState({
     id: '',
     title: '',

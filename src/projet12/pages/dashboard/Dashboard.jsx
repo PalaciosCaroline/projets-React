@@ -33,6 +33,7 @@ import GlobalStyle from './../../theme/globalStyles';
  * @return {JSX FC React}
  */
 export default function Dashboard() {
+  document.title = 'Projet 12';
   const [userInfos, setUserInfos] = useState([])
   const [userPerformance, setUserPerformance] = useState([])
   const [userAverageSessions, setUserAverageSessions] = useState([])

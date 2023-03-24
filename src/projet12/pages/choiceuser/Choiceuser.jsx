@@ -4,6 +4,7 @@ import {MainAccueil} from './choiceuser.style'
 import GlobalStyle from './../../theme/globalStyles';
 
 export default function Choiceuser() {
+  document.title = 'Projet 12';
   return (
     <>
     <GlobalStyle />

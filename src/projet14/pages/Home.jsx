@@ -4,7 +4,7 @@ import logoHRnet from './../assets/logoHRnet_bg.png'
 import './../../projet14/index.scss';
 
 export default function HomeProjet14() {
-
+  document.title = 'Projet 14';
   return (
     <div className='wrapper_projet14'>
     <main className='box_home'>
