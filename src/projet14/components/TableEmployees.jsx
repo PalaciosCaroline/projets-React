@@ -1,5 +1,4 @@
 import React from 'react'
-// import Table from './Table'
 import { columns } from '../mocks/data';
 import {Table} from 'table-component-library';
 
