@@ -24,6 +24,10 @@
     list-style-type: none;
   }
 
+  // .address .box_state .selectState li {
+  //   padding: 10px 10px 10px 10px;
+  // }
+
   .sr-only {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px); /* masque le contenu, mais le rend accessible pour les lecteurs d'écran */
@@ -580,6 +584,10 @@
     height: 25px;
     margin: 10px; 
     padding:10px;
+  }
+
+  .box_startDate .MuiInputBase-root .MuiOutlinedInput-root .MuiInputBase-colorPrimary .MuiInputBase-formControl .MuiInputBase-adornedEnd .css-1bn53lx{
+    padding-bottom: 10px;
   }
 
   .inputSearchByProperty::placeholder{
