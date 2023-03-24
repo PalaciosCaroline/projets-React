@@ -235,13 +235,24 @@
     margin-left: 20px;
   }
   .box_startDate .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root, .box_dateOfBirth .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root{
-    padding-left: 10px;
+    padding-left: 20px;
+    padding-top:10px;
+    // margin-left:5px;
+    // padding-bottom:10px;
   }
 
   .box_startDate .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input, .box_dateOfBirth .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
     margin:10px;
-    // padding-left:30px;
+    // padding:10px;
     height:25px;
+  }
+
+  .box_startDate .css-1ralhbl-MuiFormControl-root-MuiTextField-root,.box_dateOfBirth .css-1ralhbl-MuiFormControl-root-MuiTextField-root{
+    vertical-align: middle;
+  }
+
+  .box_startDate .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root,.box_dateOfBirth .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+    margin:0 0 10px 0;
   }
 
   // .box_startDate .css-1jy569b-MuiFormLabel-root-MuiInputLabel-roo{
