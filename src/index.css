@@ -14,6 +14,16 @@
         display: flex;
         text-align: center;
     }
+
+    @media (max-width: 1000px) {
+        #wrapperapp  nav{
+           flex-direction: column;
+        }
+        #wrapperapp   h1{
+            text-align: center;
+        }
+    }
+
     #wrapperapp   a{
         color: #fff;
         text-decoration: none;
