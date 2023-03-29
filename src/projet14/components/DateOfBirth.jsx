@@ -1,9 +1,6 @@
 import React from 'react'
 import { useDispatch} from 'react-redux';
-import {setDateOfBirthEntree, setErrorDateOfBirthEntree} from './../store/newEmployeeEntreeSlice'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-//import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
-//import { InputLabel, TextField } from '@mui/material';
 import dayjs from 'dayjs';
 import {
     setField,

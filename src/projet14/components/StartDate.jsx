@@ -45,6 +45,7 @@ export default function StartDate({errorstartDate}) {
           '& .MuiInputBase-input': {
             height: '25px',
             width: '160px',
+            margin:'10px',
           },
         }}
         />

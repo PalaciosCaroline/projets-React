@@ -43,7 +43,7 @@ function Dropdown(props) {
         onClick={toggleDropdown}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
-        aria-labelledby="dropdown-label"
+        aria-labelledby={props.dropdownLabel}
         aria-label="Options de la liste déroulante"
       >
          {selectedOption || props.placeholder}
@@ -64,7 +64,7 @@ function Dropdown(props) {
           ))}
         </ul>
       )}
-      <span id="dropdown-label" className="sr-only">Options de la liste déroulante</span>
+      <span id={props.dropdownLabel} className="sr-only">Options de la liste déroulante</span>
     </div>
   );
 }

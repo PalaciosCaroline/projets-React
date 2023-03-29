@@ -3,10 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setError, setField } from './../store/newEmployeeEntreeSlice';
 
 export default function BoxName() {
-    const dispatch = useDispatch();
-    // const firstname = useSelector((state) => state.newEmployeeEntree.firstname);
+  const dispatch = useDispatch();
   const errorfirstname = useSelector((state) => state.newEmployeeEntree.errorfirstname);
-//   const lastname = useSelector((state) => state.newEmployeeEntree.lastname);
   const errorlastname = useSelector((state) => state.newEmployeeEntree.errorlastname);
 
     function handleInputNameChange(event) {

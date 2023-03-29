@@ -20,6 +20,7 @@ export default function DropdownState() {
     <div className='box_state'>
       <p className='p_label'>State</p>
     <Dropdown
+    dropdownLabel='dropdownLabelState'
     placeholder='select a state'
     options={stateOptions}
     // selectedOption={stateEntree}

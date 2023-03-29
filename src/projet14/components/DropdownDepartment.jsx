@@ -18,6 +18,7 @@ export default function DropdownDepartment() {
     <div className='box_department'>
       <p className='p_label'>Department</p>
       <Dropdown
+      dropdownLabel='dropdownLabelDepartment'
       placeholder='select a department'
       options={departmentOptions}
       onOptionClick={(option) => handleDepartmentSelect(option)}

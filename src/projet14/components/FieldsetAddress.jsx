@@ -5,7 +5,6 @@ import {
   setField
 } from './../store/newEmployeeEntreeSlice';
 
-
 export default function FieldsetAddress() {
   const dispatch = useDispatch();
 
