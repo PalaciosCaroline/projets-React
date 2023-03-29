@@ -721,6 +721,9 @@
   .main_newEmployee .boxDate input{
     height: 25px;
   }
+  .main_newEmployee .boxDate label{
+    margin-left: 10px;
+  }
 
   @media (max-width: 1000px) {
     img{
@@ -804,7 +807,7 @@
   }
 
   .box_startDate .css-1ralhbl-MuiFormControl-root-MuiTextField-root .MuiInputBase-input,.box_dateOfBirth .css-1ralhbl-MuiFormControl-root-MuiTextField-root .MuiInputBase-input{
-    height: 20px;
+    height: 25px;
   }
 
   @media (max-width: 1000px) {
