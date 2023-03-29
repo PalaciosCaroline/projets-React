@@ -43,6 +43,7 @@ export default function DateOfBirth({errordateOfBirth}) {
           '& .MuiInputBase-input': {
             height: '25px',
             width: '160px', // réduit la hauteur de l'entrée
+            margin:'10px',
           },
         }}
         />
