@@ -718,6 +718,10 @@
     outline:1px solid rgb(220, 239, 232);
   }
 
+  .main_newEmployee .boxDate input{
+    height: 25px;
+  }
+
   @media (max-width: 1000px) {
     img{
       margin:20px auto 0;
