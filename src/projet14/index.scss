@@ -1102,3 +1102,69 @@
   }
 
 }
+
+.main_newEmployee{
+  .box_state{
+    .dropdown {
+      z-index: 10;
+    }
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    /* z-index: 999; */
+    background-color: #f6f8f2;
+  }
+  
+  /* styles pour le bouton de déclenchement du dropdown */
+  .dropdownToggle {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border: 1px solid #adca76;
+    background-color: #f6f8f2;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+  }
+  
+  /* styles pour la flèche du dropdown */
+  .arrow {
+    margin-left: 8px;
+  }
+  
+  /* styles pour le menu déroulant */
+  .dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f6f8f2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* background-color: #fff; */
+    /* z-index: 999; */
+  }
+  
+  /* styles pour les options du menu déroulant */
+  .dropdownOption {
+    padding: 8px 12px;
+    cursor: pointer;
+    /* z-index: 999; */
+  }
+  
+  .dropdownOption:hover {
+    background-color: #f2f2f2;
+  }
+  
+  /* styles pour l'option sélectionnée */
+  .selected {
+    background-color: #b1c46c;
+    color: #fff;
+  }
+}

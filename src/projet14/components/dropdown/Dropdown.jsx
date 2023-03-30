@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaChevronUp,FaChevronDown } from 'react-icons/fa';
-import styles from './Dropdown.module.css';
+// import styles from './Dropdown.module.css';
 
 function Dropdown(props) {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,10 +36,10 @@ function Dropdown(props) {
   }, []);
 
   return (
-    <div className={styles.dropdown} ref={dropdownRef}>
+    <div className='dropdown' ref={dropdownRef}>
       <button
         type="button"
-        className={styles.dropdownToggle}
+        className='dropdownToggle'
         onClick={toggleDropdown}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
@@ -47,14 +47,14 @@ function Dropdown(props) {
         aria-label="Options de la liste déroulante"
       >
          {selectedOption || props.placeholder}
-        <span className={styles.arrow} onClick={handleChevronClick}>{isOpen ? <FaChevronUp/> : <FaChevronDown/>}</span>
+        <span className='arrow' onClick={handleChevronClick}>{isOpen ? <FaChevronUp/> : <FaChevronDown/>}</span>
       </button>
       {isOpen && (
-        <ul className={styles.dropdownMenu} role="listbox">
+        <ul className='dropdownMenu' role="listbox">
           {props.options.map((option) => (
             <li
               key={option}
-              className={`${styles.dropdownOption} ${option === selectedOption ? 'styles.selected selectedOption' : ''}`}
+              className={`dropdownOption ${option === selectedOption ? 'styles.selected selectedOption' : ''}`}
               onClick={() => handleOptionClick(option)}
               role="option"
               aria-selected={option === selectedOption}
