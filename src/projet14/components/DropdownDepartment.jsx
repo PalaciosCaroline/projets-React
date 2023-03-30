@@ -3,7 +3,7 @@ import {
   setField
 } from './../store/newEmployeeEntreeSlice';
 import { useDispatch} from 'react-redux';
-import Dropdown from './dropdown/Dropdown';
+import Dropdown from './Dropdown';
 
 export default function DropdownDepartment() {
   const dispatch = useDispatch();

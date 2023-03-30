@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaChevronUp,FaChevronDown } from 'react-icons/fa';
-// import styles from './Dropdown.module.css';
 
 function Dropdown(props) {
   const [isOpen, setIsOpen] = useState(false);

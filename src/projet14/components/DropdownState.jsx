@@ -4,7 +4,7 @@ import { states } from '../utils/states'
 import {
   setField
 } from './../store/newEmployeeEntreeSlice';
-import Dropdown from './dropdown/Dropdown';
+import Dropdown from './Dropdown';
 
 export default function DropdownState() {
   const dispatch = useDispatch();
