@@ -10,6 +10,9 @@ export default function HomeProjet14() {
     <main className='box_home'>
         <img src={logoHRnet} alt="" className="logoHome"/>
         <h1>HRnet</h1><br/>
+        <a href="https://palacioscaroline.github.io#projet14" className="link_CV14" rel="noopener noreferrer">
+            Retour web CV 
+              </a>
         <nav className="box_navHome">
           <NavLink to="/projet14/newemployee" className="linkNewEmployee">Add a new employee</NavLink>
           <NavLink to="/projet14/listemployees" className="linkNewEmployee linkListEmployee">View the employees's list</NavLink>

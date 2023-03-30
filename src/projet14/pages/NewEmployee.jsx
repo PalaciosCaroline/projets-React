@@ -14,6 +14,9 @@ export default function NewEmployee() {
         <img src={logoHRnet} alt="" />
         <p className="titleService">HRnet</p>
       </div>
+      <a href="https://palacioscaroline.github.io#projet14" className="link_CV14" rel="noopener noreferrer">
+            Retour web CV 
+              </a>
       <NavLink to="/projet14/listemployees" className="linkNewEmployee linkListEmployee">
         List of current employees</NavLink>    
     </header>
