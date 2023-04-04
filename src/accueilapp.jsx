@@ -5,11 +5,11 @@ export default function Accueil() {
   document.title = 'Projet react';
   return (
     <div id="wrapperapp">
-        <h1 >Choississer le projet à visiter</h1>
+        <h1 >Choose the project to visit</h1>
         <nav>
-            <NavLink to="/projet11" className="link-appWeb">Projet 11<br/> Site de Location d'appartements</NavLink>
-            <NavLink to="/projet12" className="link-appWeb">Projet 12<br/> Tableau analytique avec recharts</NavLink>
-            <NavLink to="/projet14" className="link-appWeb">Projet 14<br/> Gestion des nouveaux employées</NavLink>
+            <NavLink to="/projet11" className="link-appWeb">Projet 11<br/>Apartment rental website</NavLink>
+            <NavLink to="/projet12" className="link-appWeb">Projet 12<br/>Analytical table with recharts</NavLink>
+            <NavLink to="/projet14" className="link-appWeb">Projet 14<br/>Management of new employees</NavLink>
         </nav>
     </div>
   )
