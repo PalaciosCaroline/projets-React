@@ -1,5 +1,5 @@
-import React from 'react'
-import { useDispatch} from 'react-redux';
+import React,{useEffect} from 'react'
+import { useDispatch, useSelector} from 'react-redux';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import dayjs from 'dayjs';
 import {
@@ -10,8 +10,15 @@ import PropTypes from 'prop-types';
 
 export default function DateOfBirth({errordateOfBirth, initialValues, setInitialValues}) {
     const dispatch = useDispatch();
+    const dateOfBirth = useSelector((state) => state.newEmployeeEntree.dateOfBirth);
     const noBeforeDay = dayjs().subtract(90, 'year');
     const noAfterDay = dayjs().subtract(12, 'year');
+
+    useEffect(() => {
+      if (!dateOfBirth || !initialValues.dateOfBirthInput) {
+        dispatch(setError({ name: 'dateOfBirth' , message: '' }))
+        }
+    }, []);
 
     const handleDateChange = (date) => {
         setInitialValues({ ...initialValues, dateOfBirthInput: date }); 
