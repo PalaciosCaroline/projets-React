@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaChevronUp,FaChevronDown } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 
 function Dropdown(props) {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +54,7 @@ function Dropdown(props) {
           {props.options.map((option) => (
             <li
               key={option}
-              className={`dropdownOption ${option === selectedOption ? 'styles.selected selectedOption' : ''}`}
+              className={`dropdownOption ${option === selectedOption ? 'selected selectedOption' : ''}`}
               onClick={() => handleOptionClick(option)}
               role="option"
               aria-selected={option === selectedOption}
@@ -67,5 +68,12 @@ function Dropdown(props) {
     </div>
   );
 }
+
+Dropdown.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onOptionClick: PropTypes.func.isRequired,
+  placeholder: PropTypes.string,
+  dropdownLabel: PropTypes.string.isRequired,
+};
 
 export default Dropdown;

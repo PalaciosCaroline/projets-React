@@ -6,14 +6,15 @@ import {
     setField,
     setError
   } from './../store/newEmployeeEntreeSlice';
+import PropTypes from 'prop-types';
 
-
-export default function DateOfBirth({errordateOfBirth}) {
+export default function DateOfBirth({errordateOfBirth, initialValues, setInitialValues}) {
     const dispatch = useDispatch();
     const noBeforeDay = dayjs().subtract(90, 'year');
     const noAfterDay = dayjs().subtract(12, 'year');
 
     const handleDateChange = (date) => {
+        setInitialValues({ ...initialValues, dateOfBirthInput: date }); 
         dispatch(setError({name:'dateOfBirth', message:'' }))
         const isInvalid = noBeforeDay > date || date > noAfterDay;
         if(isInvalid){
@@ -34,15 +35,12 @@ export default function DateOfBirth({errordateOfBirth}) {
         minDate={noBeforeDay}
         maxDate={noAfterDay}
         views={['year', 'month', 'day']}
-        // value={dateOfBirth}
         onChange={handleDateChange}
-        InputLabelProps={{
-          shrink: true,
-        }}
+        value={initialValues.dateOfBirthInput}
         sx={{
           '& .MuiInputBase-input': {
-            height: '25px',
-            width: '160px', // réduit la hauteur de l'entrée
+            height: '20px',
+            width: '160px', 
             margin:'10px',
           },
         }}
@@ -52,3 +50,9 @@ export default function DateOfBirth({errordateOfBirth}) {
     </div>
   )
 }
+
+DateOfBirth.propTypes = {
+  dateOfBirth: PropTypes.instanceOf(Date),
+  errordateOfBirth: PropTypes.string
+};
+

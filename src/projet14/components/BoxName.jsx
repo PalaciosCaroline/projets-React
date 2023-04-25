@@ -9,7 +9,8 @@ export default function BoxName() {
 
     function handleInputNameChange(event) {
         const { name, value } = event.target;
-        dispatch(setField({ name, value: value }));
+        const formattedValue = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
+        dispatch(setField({ name, value: formattedValue }));
         dispatch(setError({ name, message:'' }))
     }
 
@@ -32,3 +33,4 @@ export default function BoxName() {
       </div>
   )
 }
+

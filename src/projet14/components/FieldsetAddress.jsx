@@ -5,12 +5,14 @@ import {
   setField
 } from './../store/newEmployeeEntreeSlice';
 
+
 export default function FieldsetAddress() {
   const dispatch = useDispatch();
 
   function handleInputChange(event) {
     const { name, value } = event.target;
-    dispatch(setField({ name, value }));
+    const newValue = name === 'city' ? value.toUpperCase() : value;
+    dispatch(setField({ name, value : newValue }));
   }
 
   return (
@@ -23,7 +25,7 @@ export default function FieldsetAddress() {
             <label htmlFor="city">City</label>
             <input id="city" type="text" name='city' onChange={handleInputChange}/>
 
-           <DropdownState/>
+            <DropdownState/>
 
             <label htmlFor="zip-code">Zip Code</label>
             <input id="zip-code" name='zipCode' type="number" onChange={handleInputChange}/>

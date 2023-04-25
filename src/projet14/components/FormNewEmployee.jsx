@@ -11,6 +11,7 @@ import StartDate from './StartDate';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import DateOfBirth from './DateOfBirth';
+import PropTypes from 'prop-types';
 
 export default function FormNewEmployee() {
   const [isModalOpen, setIsModalOpen] = useState(false); 
@@ -26,21 +27,26 @@ export default function FormNewEmployee() {
   const city = useSelector((state) => state.newEmployeeEntree.city);
   const state = useSelector((state) => state.newEmployeeEntree.state);
   const zipCode = useSelector((state) => state.newEmployeeEntree.zipCode);
+  const [initialValues, setInitialValues] = useState({ 
+    startDateInput: null,
+    dateOfBirthInput: null,
+  });
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
     const isNameValid = validateNames(firstname, lastname, setError, dispatch);
     if (!isNameValid) {
-      setError({ firstname, lastname });
-      return;
+        setError({ firstname, lastname });
+        return;
     } else if(errordateOfBirth || errorstartDate){ 
-      return;
+          return;
     } else {
-    const newEmployee = {firstname, lastname,startDate,department,dateOfBirth,street,city,state,zipCode};
-    dispatch(addEmployee(newEmployee))
+        const newEmployee = {firstname, lastname,startDate,department,dateOfBirth,street,city,state,zipCode};
+        dispatch(addEmployee(newEmployee))
+        setInitialValues({ startDateInput: null, dateOfBirthInput: null });
         dispatch(videInput());
         setIsModalOpen(true);
-      e.target.reset();
+        e.target.reset();
     };
   };
   
@@ -51,8 +57,14 @@ export default function FormNewEmployee() {
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <div className='boxDate'>
             <DateOfBirth className="form-group box-input" 
-              errordateOfBirth={errordateOfBirth}/>
-            <StartDate className='box-input' errorstartDate={errorstartDate} /> 
+              errordateOfBirth={errordateOfBirth}
+              setInitialValues={setInitialValues}
+              initialValues={initialValues}
+            />
+            <StartDate className='box-input' errorstartDate={errorstartDate}  
+              setInitialValues={setInitialValues}
+              initialValues={initialValues}
+            /> 
           </div>
         </LocalizationProvider>
         <FieldsetAddress/>
@@ -63,3 +75,40 @@ export default function FormNewEmployee() {
     </div>
   )
 }
+
+ConfirmationModal.propTypes = {
+  setIsModalOpen: PropTypes.func,
+  isModalOpen: PropTypes.bool
+};
+
+FieldsetAddress.propTypes = {
+  street: PropTypes.string,
+  city: PropTypes.string,
+  state: PropTypes.string,
+  zipCode: PropTypes.string,
+};
+
+DropdownDepartment.propTypes = {
+  department: PropTypes.string,
+};
+
+BoxName.propTypes = {
+  firstname: PropTypes.string,
+  lastname: PropTypes.string,
+};
+
+DateOfBirth.propTypes = {
+  dateOfBirth: PropTypes.any,
+  errordateOfBirth: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.bool
+  ])
+};
+
+StartDate.propTypes = {
+  startDate: PropTypes.string,
+  errorstartDate: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.bool
+  ])
+};

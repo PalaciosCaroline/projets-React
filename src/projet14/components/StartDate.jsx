@@ -1,28 +1,29 @@
 import React from 'react'
 import { useDispatch} from 'react-redux';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-//import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
-//import { InputLabel, TextField } from '@mui/material';
 import dayjs from 'dayjs';
 import {
     setField,
     setError
   } from './../store/newEmployeeEntreeSlice';
+import PropTypes from 'prop-types';
 
-export default function StartDate({errorstartDate}) {
+export default function StartDate({errorstartDate,initialValues, setInitialValues}) {
+// export default function StartDate({errorstartDate,startDate}) {
     const dispatch = useDispatch();
     const noBeforeDay = dayjs().subtract(1, 'year');
     const noAfterDay = dayjs().add(1, 'year');
 
     const handleDateChange = (date) => {
+      setInitialValues({ ...initialValues, startDateInput: date }); 
       dispatch(setError({name:'startDate', message:'' }))
       const isInvalid = noBeforeDay > date || date > noAfterDay;
       if(isInvalid){
         dispatch(setError({name:'startDate', message:'Please select a valid date ' }))
         return;
       }else {
-        dispatch(setError({name:'startDate', message:'' }))
-        dispatch(setField({ name:'startDate', value: dayjs(date).format('DD/MM/YYYY') }));        
+        dispatch(setError({name:'startDate', message:'' }))   
+        dispatch(setField({ name:'startDate', value: dayjs(date).format('DD/MM/YYYY') }));       
       }
     };
    
@@ -36,23 +37,30 @@ export default function StartDate({errorstartDate}) {
         minDate={noBeforeDay}
         maxDate={noAfterDay}
         views={['year', 'month', 'day']}
+        value={initialValues.startDateInput}
         // value={startDate}
         onChange={handleDateChange}   
-        InputLabelProps={{
-          shrink: true,
-        }}
         sx={{
           '& .MuiInputBase-input': {
-            height: '25px',
+            height: '20px',
             width: '160px',
             margin:'10px',
           },
         }}
         />
-        {errorstartDate ? <p className='errorMessage'>{errorstartDate}</p> : ''}
-        </div>   
-          
+        {errorstartDate  ? <p className='errorMessage'>{errorstartDate}</p> : ''}
+        </div>        
     </div>
     </>
   )
 }
+
+
+StartDate.propTypes = {
+  // initialValues: PropTypes.any,
+  startDate: PropTypes.string,
+  errorstartDate: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.bool
+  ])
+};

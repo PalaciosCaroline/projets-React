@@ -1,26 +1,13 @@
-// import React from 'react'
-// import { FaTimes} from 'react-icons/fa';
-
-// export default function ConfirmationModal({setIsModalOpen}) {
-  
-//     const closeModal = () => {
-//         setIsModalOpen(false)
-//     }
-
-//     return (   
-//         <div className='confirmationModal'>
-//             <button className='btn_closeModal' onClick={closeModal}  aria-label="Fermer la fenêtre"><FaTimes className='btn_closeModal_icon'/></button>
-//             <h2>Successful registration of the new Employee!</h2> 
-//         </div>
-//     )
-// }
-
 import React, { useRef, useEffect } from 'react'
 import { FaTimes} from 'react-icons/fa';
 import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 
 export default function ConfirmationModal({setIsModalOpen}) {
-    const firstname = useSelector((state) => state.newEmployeeEntree.firstname.firstname);
+    const employees = useSelector((state) => state.employees);
+    const lastEmployee = employees.slice(-1)[0];
+    const firstname = lastEmployee.firstname;
+    const lastname = lastEmployee.lastname;
 
     const closeModal = () => {
         setIsModalOpen(false)
@@ -51,7 +38,11 @@ export default function ConfirmationModal({setIsModalOpen}) {
         <div className='confirmationModal' role="dialog" aria-modal="true" aria-labelledby="modal-title" onKeyDown={handleKeyDown} ref={modalRef}>
             <button className='btn_closeModal' onClick={closeModal} aria-label="Fermer la fenêtre" tabIndex="0"><FaTimes className='btn_closeModal_icon'/></button>
             <h2 id="modal-title">Confirmation de l'enregistrement</h2>
-            <p tabIndex="0">Le nouvel employé {firstname} a été enregistré avec succès</p>
+            <p tabIndex="0">Le nouvel employé {firstname} {lastname} a été enregistré avec succès</p>
         </div>
     )
 }
+
+ConfirmationModal.propTypes = {
+  setIsModalOpen: PropTypes.func.isRequired,
+};
