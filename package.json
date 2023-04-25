@@ -1,8 +1,8 @@
 {
-  "name": "my-app",
+  "name": "projet-react",
   "version": "0.1.0",
   "homepage": "https://palacioscaroline.github.io",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
@@ -59,12 +59,12 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PalaciosCaroline/projet11.git"
+    "url": "git+https://github.com/PalaciosCaroline/projets-react.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Palacios Caroline",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/PalaciosCaroline/projet11/issues"
+    "url": "https://github.com/PalaciosCaroline/projets-react/issues"
   },
   "description": ""
 }
