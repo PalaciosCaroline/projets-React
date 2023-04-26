@@ -163,6 +163,19 @@
     box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
     outline:1px solid rgb(220, 239, 232);
   }
+
+  .main_newEmployee .boxDate .box_dateOfBirth input{
+    height: 20px;
+  }
+  .main_newEmployee .boxDate .box_startDate input{
+    height: 20px;
+  }
+  .main_newEmployee .boxDate .box_dateOfBirth label{
+    margin-left: 10px;
+  }
+  .main_newEmployee .boxDate .box_startDate label{
+    margin-left: 10px;
+  }
   
   @media (max-width: 1000px) {
     img{
