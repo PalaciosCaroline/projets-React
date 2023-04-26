@@ -244,6 +244,7 @@
   
   .box_startDate .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root,.box_dateOfBirth .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
     padding:5px 5px 5px 5px;
+    height: 60px;
   }
   
   .box_startDate .css-1ralhbl-MuiFormControl-root-MuiTextField-root .MuiInputBase-input,.box_dateOfBirth .css-1ralhbl-MuiFormControl-root-MuiTextField-root .MuiInputBase-input{
@@ -613,6 +614,13 @@
     
     .address{
       background-color: #f1f1f1;
+    }
+
+    .MuiInputBase-input MuiOutlinedInput-input .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+    height:25px;
+    }
+    #\:r27\:{
+      height: 20px;
     }
 }
 

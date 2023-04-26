@@ -9,23 +9,23 @@ export default function NewEmployee() {
   
   return (
     <div className='wrapper_projet14'>
-    <header className='header_ListEmployees'>
-      <div className='box_logoService'>
-        <img src={logoHRnet} alt="" />
-        <p className="titleService">HRnet</p>
-      </div>
-      <a href="https://palacioscaroline.github.io#projet14" className="link_CV14" rel="noopener noreferrer">
-            Retour web CV 
-              </a>
-      <NavLink to="/projet14/listemployees" className="linkNewEmployee linkListEmployee">
-        List of current employees</NavLink>    
-    </header>
-    <main className='main_newEmployee containerNewEmployee'> 
-      {/* <div className="containerNewEmployee"> */}
-          <h1>Create Employee</h1>
-          <FormNewEmployee />
-      {/* </div> */}
-    </main>
+      <header className='header_ListEmployees'>
+        <div className='box_logoService'>
+          <img src={logoHRnet} alt="" />
+          <p className="titleService">HRnet</p>
+        </div>
+        <a href="https://palacioscaroline.github.io#projet14" className="link_CV14" rel="noopener noreferrer">
+              Retour web CV 
+                </a>
+        <NavLink to="/projet14/listemployees" className="linkNewEmployee linkListEmployee">
+          List of current employees</NavLink>    
+      </header>
+      <main className='main_newEmployee containerNewEmployee'> 
+        {/* <div className="containerNewEmployee"> */}
+            <h1>Create Employee</h1>
+            <FormNewEmployee />
+        {/* </div> */}
+      </main>
     </div>
   )
 }
