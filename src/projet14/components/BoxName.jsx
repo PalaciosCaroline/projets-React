@@ -10,13 +10,9 @@ export default function BoxName() {
   const lastname = useSelector((state) => state.newEmployeeEntree.lastname);
 
   useEffect(() => {
-    if (!firstname) {
       dispatch(setError({ name: 'firstname' , message: '' }))
-      }
-    if (!lastname) {
       dispatch(setError({ name: 'lastname' , message: '' }))
-      }
-  }, []);
+  }, [firstname,lastname,dispatch]);
 
     function handleInputNameChange(event) {
         const { name, value } = event.target;

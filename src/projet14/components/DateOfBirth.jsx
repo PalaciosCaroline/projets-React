@@ -50,6 +50,11 @@ export default function DateOfBirth({errordateOfBirth, initialValues, setInitial
             width: '160px', 
             margin:'10px',
           },
+          '& .MuiOutlinedInput-input': {
+            height: '20px',
+            width: '160px', 
+            margin:'10px',
+          },
         }}
         />
          {errordateOfBirth ? <p className='errorMessage'>{errordateOfBirth}</p> : ''}
