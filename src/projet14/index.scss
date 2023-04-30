@@ -576,6 +576,9 @@
     .main_ListEmployees .btn_Reset {
       box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
     }
+    .main_ListEmployees .btn_Reset:hover {
+      box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+    }
     /* styles pour le bouton de déclenchement du dropdown */
     .main_newEmployee .dropdownToggle {
       padding: 8px 12px;
