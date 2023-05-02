@@ -15,7 +15,7 @@ export default function HomeProjet14() {
               </a>
         <nav className="box_navHome">
           <NavLink to="/projet14/newemployee" className="linkNewEmployee">Add a new employee</NavLink>
-          <NavLink to="/projet14/listemployees" className="linkNewEmployee linkListEmployee">View the employees's list</NavLink>
+          <NavLink to="/projet14/listemployees" className="linkNewEmployee linkListEmployee">View Current employees</NavLink>
         </nav>
     </main>
     </div>

@@ -10,25 +10,24 @@ export default function ListEmployees() {
   document.title = 'Projet 14';
 
   return (
- 
-  <div className='wrapper_projet14'>
+    <div className='wrapper_projet14'>
   
 
-<header className='header_ListEmployees' data-testid="header_ListEmployees">
-<div className='box_logoService'>
-    <img src={logoHRnet} alt="HRnet Logo" />
-    <p className="titleService">HRnet</p>
-</div>
-<a href="https://palacioscaroline.github.io#projet14" className="link_CV14" rel="noopener noreferrer">
-  Retour web CV 
-</a>
-<NavLink to="/projet14/newemployee" className="linkNewEmployee">Add New Employee</NavLink>
-</header>
-<main className='main_ListEmployees'>
-<TableEmployees employees={employees}/>
-</main>
+      <header className='header_ListEmployees' data-testid="header_ListEmployees">
+        <div className='box_logoService'>
+            <img src={logoHRnet} alt="HRnet Logo" />
+            <p className="titleService">HRnet</p>
+        </div>
+        <a href="https://palacioscaroline.github.io#projet14" className="link_CV14" rel="noopener noreferrer">
+          Retour web CV 
+        </a>
+        <NavLink to="/projet14/newemployee" className="linkNewEmployee">Add New Employee</NavLink>
+      </header>
+      <main className='main_ListEmployees'>
+        <TableEmployees employees={employees}/>
+      </main>
 
-</div>
+    </div>
 
   )
 }

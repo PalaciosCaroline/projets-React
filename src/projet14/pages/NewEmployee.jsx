@@ -18,13 +18,12 @@ export default function NewEmployee() {
               Retour web CV 
                 </a>
         <NavLink to="/projet14/listemployees" className="linkNewEmployee linkListEmployee">
-          List of current employees</NavLink>    
+          View Current employees
+        </NavLink>    
       </header>
       <main className='main_newEmployee containerNewEmployee'> 
-        {/* <div className="containerNewEmployee"> */}
             <h1>Create Employee</h1>
             <FormNewEmployee />
-        {/* </div> */}
       </main>
     </div>
   )
