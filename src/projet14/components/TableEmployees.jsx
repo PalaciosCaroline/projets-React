@@ -13,7 +13,8 @@ const EmployeeTable = React.memo(({ employees }) => {
         renderExportDataComponent={(filteredData,columnsManaged) => (
           <ExportDataComponent
             filteredData={filteredData} 
-            columnsManaged={columnsManaged}  
+            columnsManaged={columnsManaged} 
+            headerProperty='label'
             csvExport={true} 
             excelExport={true} 
             pdfExport={true} 
