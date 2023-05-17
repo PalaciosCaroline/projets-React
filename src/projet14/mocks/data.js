@@ -1,9 +1,9 @@
 export const columns = [
   { label: 'First Name', property: 'firstName' },
   { label: 'Last Name', property: 'lastName' },
-  { label: 'Start Date', property: 'startDate', formatDate: 'DD/MM/YYYY' },
+  { label: 'Start Date', property: 'startDate', dateFormat: 'DD/MM/YYYY' },
   { label: 'Department', property: 'department' },
-  { label: 'Date of Birth', property: 'dateOfBirth', formatDate: 'DD/MM/YYYY' },
+  { label: 'Date of Birth', property: 'dateOfBirth', dateFormat: 'DD/MM/YYYY' },
   { label: 'Street', property: 'street' },
   { label: 'City', property: 'city' },
   { label: 'State', property: 'state' },
