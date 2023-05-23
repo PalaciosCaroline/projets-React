@@ -2,41 +2,26 @@ import React, { useState, useEffect } from 'react'
 import Banner from './../components/Banner'
 import imageHome from './../assets/img_home.png'
 import Boxcards from '../components/Boxcards'
-import Loader from '../components/Loader'
 import './../styles/index.scss'
-
 
 export default function Home() {
   document.title = 'Projet 11';
   const [logements, setlogements] = useState([])
-  const [isDataLoading, setDataLoading] = useState(true)
-
-  useEffect(() => {
-    setTimeout(() => {
-      setDataLoading(false);
-    }, 300);
-  }, []);
-
 
   useEffect(() => {
     async function fetchDatas() {
-      //Mise en place d'un loader pour le chargement en cas d'appel API
-         // setDataLoading(true)
       try {
         const response = await fetch('data.json')
         const logementsData = await response.json()
         setlogements(logementsData)
       } catch (err) {
         console.log(err, "Il y a eu un problème avec l'opération fetch")
-      // } finally {
-      //     setDataLoading(false)
        }
     }
     fetchDatas()
   }, [])
 
   return (
-    isDataLoading ? <Loader /> : 
     <>
     <main className="box_home">
       <header className="bannerHome">

@@ -18,7 +18,7 @@ export default function DateOfBirth({errordateOfBirth, initialValues, setInitial
       if (!dateOfBirth || !initialValues.dateOfBirthInput) {
         dispatch(setError({ name: 'dateOfBirth' , message: '' }))
         }
-    }, []);
+    }, [dateOfBirth, dispatch, initialValues.dateOfBirthInput]);
 
     const handleDateChange = (date) => {
         setInitialValues({ ...initialValues, dateOfBirthInput: date }); 

@@ -1,33 +1,35 @@
+import React, { useEffect, useState, lazy } from 'react';
+import Footer from './components/Footer';
+import Menu from './components/Menu';
+import Loader from './components/Loader';
+import './styles/index.scss';
 
-import Footer from './components/Footer'
-// import Loader from './components/Loader'
-import Menu from './components/Menu'
-import Home from './pages/Home'
-import './styles/index.scss'
-// import Router1 from '../Router1'
-// import { useState, useEffect } from 'react'
+const LazyHome = lazy(() => import('./pages/Home'));
 
 export default function Appprojet11() {
-  //Mise en place d'un loader pour le chargement
-  // const [loader, setLoader] = useState(true);
+    const [isDataLoading, setDataLoading] = useState(true)
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoader(false);
-  //   }, 300);
-  // }, []);
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setDataLoading(false);
+      }, 1500); 
+      return () => clearTimeout(timer);
+    }, []);
 
   return (
-    // loader ? (
-    //   <div className="loader_appli">
-    //   <Loader />
-    //   </div>
-    // ) : (
     <>
       <Menu />
-      <Home/>
+      {isDataLoading ?
+      <Loader /> :
+        <LazyHome />}
       <Footer />
     </>
-    )
-  // )
+  );
 }
+
+
+
+
+
+
+

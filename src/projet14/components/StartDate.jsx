@@ -18,8 +18,7 @@ export default function StartDate({errorstartDate,initialValues, setInitialValue
       if (!startDate || !initialValues.startDateInput) {
         dispatch(setError({ name: 'startDate' , message: '' }))
         }
-    }, []);
-
+    }, [dispatch, initialValues.startDateInput, startDate]);
 
     const handleDateChange = (date) => {
       setInitialValues({ ...initialValues, startDateInput: date }); 

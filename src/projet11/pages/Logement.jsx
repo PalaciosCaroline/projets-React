@@ -43,7 +43,7 @@ export default function Logement() {
 
   return (
     <>
-    <Menu></Menu>
+    <Menu/>
       <main className="box_logementFiche">
         <SlideShow imgsLogement={logement.pictures} />
         <header className="logementFiche_header">
@@ -52,7 +52,7 @@ export default function Logement() {
         </header>
         <LogementFicheMain logement={logement} />
       </main> 
-      <Footer></Footer>
+      <Footer/>
       </> 
   )
 }
