@@ -96,12 +96,7 @@
       transform: rotate(360deg);
     }
   }
-  /* 
-  .errorEntree{
-    color: red;
-    font-size: 0.8rem;
-    margin-top : 0;
-  } */
+
   .linkNewEmployee, .linkListEmployee{
     margin: 20px 20px 20px 50px;
     border:none;
@@ -114,6 +109,7 @@
     font-weight: bold;
     background-color: #677e11;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    border-radius: 10px;
   }
   
   @media (max-width: 800px) {
@@ -278,6 +274,18 @@
       margin-right:0;
       margin-top:10px;
     }
+  }
+  @media (max-width: 400px) {
+    .box_startDate, .box_dateOfBirth{
+      justify-content: space-between;
+    }
+    .box_input{
+      justify-content: space-between;
+    }
+    .box_input input{
+      margin-right: 0;
+    }
+  
   }
   
   .errorMessage{
