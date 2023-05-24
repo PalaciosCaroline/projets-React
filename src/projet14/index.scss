@@ -31,9 +31,7 @@
     overflow: hidden;
     white-space: nowrap;
   }
-}
-.wrapper_projet14{
- 
+
   a{
     text-decoration: none;
   }
@@ -51,7 +49,12 @@
       flex-direction: column;
     }
   }
-  
+
+  .box_navHome{
+    display: flex;
+    justify-content: center;
+  }
+
   .box_home, .main_newEmployee {
     text-align:center;
     margin : 0 auto;
@@ -96,20 +99,31 @@
       transform: rotate(360deg);
     }
   }
-
+ 
   .linkNewEmployee, .linkListEmployee{
     margin: 20px 20px 20px 50px;
     border:none;
     color: black;
-    display:inline-block;
-    text-align:center;
-    width:300px;
+    display:flex;
+    // justify-content: center;
+    align-items: center;
+    width:310px;
     padding: 10px 20px;
     color: #fff;
     font-weight: bold;
     background-color: #677e11;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
     border-radius: 10px;
+  }
+
+  .iconLink{
+    display: block;
+    font-size: 1.5rem;
+    margin-right: 20px;
+  }
+  
+  .textLink{
+    margin: 0 auto;
   }
   
   @media (max-width: 800px) {
@@ -120,6 +134,10 @@
   @media (max-width: 500px) {
    .box_navHome .linkNewEmployee,.box_navHome .linkListEmployee{
       margin: 20px 0 20px 0;
+    }
+    .box_navHome{
+      flex-direction: column;
+      align-items: center;
     }
   }
   
@@ -157,19 +175,6 @@
     border-radius: 50px;
     box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
     outline:1px solid rgb(220, 239, 232);
-  }
-
-  .main_newEmployee .boxDate .box_dateOfBirth input{
-    height: 20px;
-  }
-  .main_newEmployee .boxDate .box_startDate input{
-    height: 20px;
-  }
-  .main_newEmployee .boxDate .box_dateOfBirth label{
-    margin-left: 10px;
-  }
-  .main_newEmployee .boxDate .box_startDate label{
-    margin-left: 10px;
   }
   
   @media (max-width: 1000px) {
@@ -252,7 +257,6 @@
   
   .box_startDate .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root,.box_dateOfBirth .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
     padding:5px 5px 5px 5px;
-    height: 60px;
   }
   
   .box_startDate .css-1ralhbl-MuiFormControl-root-MuiTextField-root .MuiInputBase-input,.box_dateOfBirth .css-1ralhbl-MuiFormControl-root-MuiTextField-root .MuiInputBase-input{
@@ -266,6 +270,7 @@
     .box_startDate, .box_dateOfBirth{
       margin-top:20px;
     }
+  
     .boxDate .box_startDate p{
       margin-left:0;
     }
@@ -275,22 +280,25 @@
       margin-top:10px;
     }
   }
-  @media (max-width: 400px) {
+  
+  @media (max-width: 500px) {
     .box_startDate, .box_dateOfBirth{
       justify-content: space-between;
     }
+  }
+  
+  @media (max-width: 400px) {
     .box_input{
       justify-content: space-between;
     }
     .box_input input{
       margin-right: 0;
     }
-  
   }
   
   .errorMessage{
     position: absolute;
-    margin:0;
+    margin:0 0 0 20px;
     bottom: -20px;
     left:0;
     color:red;
@@ -333,8 +341,15 @@
     background-color: #cee389;
   }
   
+  @media (max-width: 650px){
+    .boxName{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
   @media (max-width: 650px), (min-width: 900px) and (max-width: 1000px){
-    .boxName, .address{
+    .address{
       display: flex;
       flex-direction: column;
     }
@@ -356,16 +371,52 @@
     }
   }
   
+  .box_titleModal{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+  } 
+  
+  .iconCheckedModal{
+    display: block;
+    font-size: 2.5rem;
+    margin-right: 20px;
+  }
+  
+  .box_titleModal icon{
+    margin-right: 20px;
+  }
+  
+  .modal-title{
+    padding-right:20px;
+  }
+  
+  .bg_modalConfirm{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.1);
+      z-index: 9999;
+  }
+  
   .confirmationModal{
     width: 100%;
     height: 100%;
+    min-height: 400px;
     background-color: #b9d851 ;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     flex-direction: column;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
     padding: 20px 20px 20px 20px;
     position: absolute;
     top:0;
+    /* top:-90px;
+    margin-top:90px; */
     bottom:0;
     left:0;
     right: 0;
@@ -394,7 +445,10 @@
   }
   
   .btn_closeModal{
-    align-self: flex-end;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    /* align-self: flex-end; */
     background-color: #677e11;
     border: none;
     color: #fff;
@@ -463,8 +517,13 @@
   }
   
   .header_ListEmployees{
-    /* background-color: #9dba37; */
-    background-color: #e6e6e6; 
+    /* background-color: #e6e6e6;  */
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(226, 229, 229)
+      )
+      rgb(214, 219, 220);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: space-between;
@@ -484,24 +543,23 @@
     }
   }
   .header_ListEmployees img{
-    width: 80px;
     height: 70px;
     margin-left:20px;
   }
   
-  form{
+  #create-employee{
     padding: 0 20px 20px 20px;
   }
   
-  form input{
-    margin: 10px 10px 0;
+  #create-employee input{
+    margin: 10px 10px 10px;
   }
   
-  form select {
+  #create-employee select {
     margin: 20px 10px 10px;
   }
   
-  select{
+  #create-employee select{
     height: 30px;
   }
   
@@ -570,21 +628,13 @@
         z-index: 10;
       }
     
-      .main_newEmployee .dropdown {
+    .main_newEmployee .dropdown {
       position: relative;
       display: inline-block;
       /* z-index: 999; */
       background-color: #f6f8f2;
     }
-    .main_ListEmployees .box_table .buttonToggleRowPerPage, .main_ListEmployees .box_table .dropdownMenuTable {
-      box-shadow: 0px 5px 5px rgba(0,0,0,0.1);
-    }
-    .main_ListEmployees .btn_Reset {
-      box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
-    }
-    .main_ListEmployees .btn_Reset:hover {
-      box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
-    }
+    
     /* styles pour le bouton de déclenchement du dropdown */
     .main_newEmployee .dropdownToggle {
       padding: 8px 12px;
@@ -597,6 +647,7 @@
       align-items: center;
       width: 200px;
     }
+  
     .main_newEmployee .address .dropdownToggle {
       background-color: #f1f1f1;
     }
@@ -636,18 +687,666 @@
       background-color: #b1c46c;
       color: #fff;
     }
-    
+  
     .address{
-      background-color: #f1f1f1;
+      /* background-color: rgb(241, 241, 241); */
+      background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(241, 241, 241)
+    )
+    rgb(235, 235, 235);
     }
+  
+   .box_table .btn_Reset{
+    box-shadow: 1px 2px 6px rgb(0 0 0 / 40%);
+  }  
+   .box_table .btn_Reset:hover{
+    box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+  }  
 
-    .MuiInputBase-input MuiOutlinedInput-input .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
-    height:25px;
-    }
-    #\:r27\:{
-      height: 20px;
-    }
+  .iconLink{
+    display: block;
+    font-size: 1.5rem;
+    margin-right: 20px;
+  }
+  .modal-title{
+    font-size:1.5rem;
+  }
 }
+// .wrapper_projet14{
+//   ul, li{
+//     margin: 0;
+//     list-style-type: none;
+//   }
+
+//   .sr-only {
+//     position: absolute !important;
+//     clip: rect(1px 1px 1px 1px); /* masque le contenu, mais le rend accessible pour les lecteurs d'écran */
+//     padding: 0 !important;
+//     border: 0 !important;
+//     height: 1px !important;
+//     width: 1px !important;
+//     overflow: hidden;
+//     white-space: nowrap;
+//   }
+// }
+// .wrapper_projet14{
+ 
+//   a{
+//     text-decoration: none;
+//   }
+  
+//   button{
+//     cursor: pointer;
+//   }
+  
+//   .box_app{
+//     display: flex;
+//     text-align: center;
+//   }
+//   @media (max-width: 500px) {
+//     .box_app{
+//       flex-direction: column;
+//     }
+//   }
+  
+//   .box_home, .main_newEmployee {
+//     text-align:center;
+//     margin : 0 auto;
+//   }
+  
+//   h1, h2{
+//     font-size:3rem;
+//     color: #0d0d0d;
+//   }
+  
+//   @media (max-width: 1200px) {
+//       h1, h2{
+//       font-size: 2rem;
+//       }
+//   }
+  
+//   /* spinner */
+//   #containerSpinner {
+//     width: 100vw;
+//     height: 100vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+  
+//   #spinner {
+//     margin-top: -400px;
+//     margin-left: -75px;
+//   }
+  
+//   .spinner{
+//     height: 120px;
+//     width: 120px;
+//     border: 6px solid;
+//     border-color: #546a03 transparent #546a03 transparent;
+//     border-radius: 50%;
+//     animation: spin 1.4s linear infinite;
+//   }
+  
+//   @keyframes spin {
+//     to {
+//       transform: rotate(360deg);
+//     }
+//   }
+
+//   .linkNewEmployee, .linkListEmployee{
+//     margin: 20px 20px 20px 50px;
+//     border:none;
+//     color: black;
+//     display:inline-block;
+//     text-align:center;
+//     width:300px;
+//     padding: 10px 20px;
+//     color: #fff;
+//     font-weight: bold;
+//     background-color: #677e11;
+//     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+//     border-radius: 10px;
+//   }
+  
+//   @media (max-width: 800px) {
+//     .header_ListEmployees .linkNewEmployee,.header_ListEmployees .linkListEmployee{
+//       margin: 20px auto;
+//     }
+//   }
+//   @media (max-width: 500px) {
+//    .box_navHome .linkNewEmployee,.box_navHome .linkListEmployee{
+//       margin: 20px 0 20px 0;
+//     }
+//   }
+  
+//   .linkNewEmployee:hover, .linkListEmployee:hover{
+//     background-color: #7e9b16;
+//     box-shadow: 1px 1px 2px rgb(0 0 0 / 20%);
+//   }
+  
+//   .box_home{
+//     min-height: 100vh;
+//     /* background-color: #eff2e9; */
+//     background-color: #fff;
+//   }
+  
+//   .main_newEmployee {
+//     min-height: 100vh;
+//     min-width: 100%;
+//     display: flex;
+//   }
+  
+//   @media (max-width: 900px) {
+//     .main_newEmployee {
+//       flex-direction: column;
+//     }
+  
+//   }
+  
+//   .main_newEmployee input{
+//     background: #fff;
+//     padding: 10px;
+//     padding-left: 20px;
+//     border: none;
+//     height: 40px;
+//     font-size: 14px;
+//     border-radius: 50px;
+//     box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+//     outline:1px solid rgb(220, 239, 232);
+//   }
+
+//   .main_newEmployee .boxDate .box_dateOfBirth input{
+//     height: 20px;
+//   }
+//   .main_newEmployee .boxDate .box_startDate input{
+//     height: 20px;
+//   }
+//   .main_newEmployee .boxDate .box_dateOfBirth label{
+//     margin-left: 10px;
+//   }
+//   .main_newEmployee .boxDate .box_startDate label{
+//     margin-left: 10px;
+//   }
+  
+//   @media (max-width: 1000px) {
+//     img{
+//       margin:20px auto 0;
+//       width: 300px;
+//       height: 300px;
+//     }
+  
+//     .main_newEmployee header{
+//       width: 400px;
+//     }
+//   }
+//   @media (max-width: 900px) {
+//     img{
+//       margin:20px auto 0;
+//       width: 100px;
+//       height: 100px;
+//     }
+//     .main_newEmployee{
+//       flex-direction: column;
+//     }
+  
+//     .main_newEmployee header{
+//       width: 100%;
+//     }
+//   }
+  
+//   .boxName{
+//     display: flex;
+//     justify-content: center;
+//   }
+  
+//   .boxName .box_input{
+//     margin-bottom: 20px;
+//   }
+  
+//   .box_formEntree{
+//     position: relative;
+//   }
+  
+//   .boxDate{
+//     display: flex;
+//     justify-content: center;
+//   }
+  
+//   .box_dateOfBirth{
+//     margin-right: 20px;
+//   }
+  
+//   .box_startDate, .box_dateOfBirth{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin-top: 20px;
+//   }
+//   .box_startDate p ,.box_dateOfBirth p{
+//     margin-right: 10px;
+  
+//   }
+//   .box_startDate p{
+//     margin-left: 20px;
+//   }
+  
+//   .box_startDate .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root, .box_dateOfBirth .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root{
+//     padding-left: 20px;
+//     /* padding-top:10px; */
+//     padding-top:2px;
+//   }
+  
+//   .box_startDate .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input, .box_dateOfBirth .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
+//     margin:10px;
+//     /* padding:10px; */
+//     height:20px;
+//   }
+  
+//   .box_startDate .css-1ralhbl-MuiFormControl-root-MuiTextField-root,.box_dateOfBirth .css-1ralhbl-MuiFormControl-root-MuiTextField-root{
+//     vertical-align: middle;
+//   }
+  
+//   .box_startDate .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root,.box_dateOfBirth .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+//     padding:5px 5px 5px 5px;
+//     height: 60px;
+//   }
+  
+//   .box_startDate .css-1ralhbl-MuiFormControl-root-MuiTextField-root .MuiInputBase-input,.box_dateOfBirth .css-1ralhbl-MuiFormControl-root-MuiTextField-root .MuiInputBase-input{
+//     height: 20px;
+//   }
+  
+//   @media (max-width: 1000px) {
+//     .boxDate{
+//       flex-direction: column;
+//     }
+//     .box_startDate, .box_dateOfBirth{
+//       margin-top:20px;
+//     }
+//     .boxDate .box_startDate p{
+//       margin-left:0;
+//     }
+  
+//     .box_dateOfBirth{
+//       margin-right:0;
+//       margin-top:10px;
+//     }
+//   }
+//   @media (max-width: 400px) {
+//     .box_startDate, .box_dateOfBirth{
+//       justify-content: space-between;
+//     }
+//     .box_input{
+//       justify-content: space-between;
+//     }
+//     .box_input input{
+//       margin-right: 0;
+//     }
+  
+//   }
+  
+//   .errorMessage{
+//     position: absolute;
+//     margin:0;
+//     bottom: -20px;
+//     left:0;
+//     color:red;
+//   }
+  
+//   .errorBorder{
+//     border: 1px solid red;
+//   }
+  
+//   .address{
+//     margin:10px auto;
+//   } 
+  
+//   fieldset, select {
+//     border: 1px solid #57810b;
+//   }
+  
+//   .box_state, .box_department{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     margin-top: 10px;
+//     margin-bottom: 10px;
+//   }
+  
+//   .box_state .p_label, .box_department .p_label {
+//     display: inline-block;
+//     margin-right: 10px;
+//   }
+  
+//   .box_state li.selectedOption:hover, .box_department li.selectedOption:hover {
+//     background-color: #b1c46c;
+//   }
+  
+//   .box_state li.selectedOption, .box_department li.selectedOption{
+//     background-color:  #b1c46c;
+//   }
+  
+//   .box_state  .dropdownMenu li:hover, .box_department  .dropdownMenu li:hover{
+//     background-color: #cee389;
+//   }
+  
+//   @media (max-width: 650px), (min-width: 900px) and (max-width: 1000px){
+//     .boxName, .address{
+//       display: flex;
+//       flex-direction: column;
+//     }
+  
+//       .address{
+//         margin:20px auto 20px;
+//       } 
+//       #zip-code{
+//         margin-bottom:20px;
+//       }
+    
+//     .boxName{
+//       display: flex;
+//       justify-content: center;
+//     }
+  
+//     .address label{ 
+//       margin-top:10px;
+//     }
+//   }
+  
+//   .confirmationModal{
+//     width: 100%;
+//     height: 100%;
+//     background-color: #b9d851 ;
+//     display: flex;
+//     flex-direction: column;
+//     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+//     padding: 20px 20px 20px 20px;
+//     position: absolute;
+//     top:0;
+//     bottom:0;
+//     left:0;
+//     right: 0;
+//     z-index: 9999;
+//   }
+  
+//   .confirmationModal h2{
+//     font-size: 2.5rem;
+//   }
+  
+//   .confirmationModal p{
+//     font-size: 2rem;
+//   }
+  
+//   @media (max-width: 900px){
+//     .confirmationModal{
+//       bottom:inherit;
+//       height: auto;
+//     }
+//     .confirmationModal h2{
+//       font-size: 2rem;
+//     }
+//     .confirmationModal p{
+//       font-size: 1.6rem;
+//     }
+//   }
+  
+//   .btn_closeModal{
+//     align-self: flex-end;
+//     background-color: #677e11;
+//     border: none;
+//     color: #fff;
+//     border-radius: 50px;
+//     width: 50px;
+//     height: 50px;
+//   }
+  
+//   .btn_closeModal_icon{
+//     width: 30px;
+//     height: 30px;
+//   }
+  
+//   @media (max-width: 1200px) {
+//     a{
+//     font-size: 1.2rem;
+//     }
+  
+//     /* .confirmationModal{
+//       width: 400px;
+//     } */
+//   }
+  
+//   @media (max-width: 550px) {
+//     a{
+//     font-size: 1.2rem;
+//     }
+//   }
+  
+//   .containerNewEmployee{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     width: 100%;
+//     /* background-color: #fbfbfb; */
+//   }
+  
+//   .containerNewEmployee h1{
+//     margin-top:20px;
+//     margin-bottom: 10px;
+//     font-size: 2.4rem;
+//     color :#3f3f3f;
+//   }
+//   .main_ListEmployees h1 { 
+//     margin-top:20px;
+//     margin-bottom: 30px;
+//     font-size: 2.4rem;
+//     color :#2d2d2d;
+//     text-align: center;
+//   }
+//   .containerNewEmployee select{
+//     /* background-color: #f6f8f2; */
+//     background-color: #fbfbfb;
+//     text-align: center;
+//   }
+  
+//   .containerNewEmployee input{
+//     /* background-color: #f6f8f2; */
+//     background-color: #fbfbfb;
+//   }
+  
+//   .titleService{
+//     font-size: 2rem;
+//     font-weight: bold;
+//     margin:10px 0;
+//   }
+  
+//   .header_ListEmployees{
+//     /* background-color: #9dba37; */
+//     background-color: #e6e6e6; 
+//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
+  
+//   .box_logoService{
+//     display: flex;
+//     width:350px;
+//   }
+//   @media (max-width: 1000px) {
+//     .box_logoService{
+//       display: flex;
+//       width:150px;
+//       justify-content: center;
+//       align-items: center;
+//     }
+//   }
+//   .header_ListEmployees img{
+//     width: 80px;
+//     height: 70px;
+//     margin-left:20px;
+//   }
+  
+//   form{
+//     padding: 0 20px 20px 20px;
+//   }
+  
+//   form input{
+//     margin: 10px 10px 0;
+//   }
+  
+//   form select {
+//     margin: 20px 10px 10px;
+//   }
+  
+//   select{
+//     height: 30px;
+//   }
+  
+//   .btnFormSave{
+//     text-align:center;
+//     width:300px;
+//     padding: 10px 20px;
+//     color: #fff;
+//     border-radius: 25px;
+//     border: none;
+//     font-size: 1.2rem;
+//     margin: 20px auto 30px;
+//     background-color: #677e11;
+//     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+//   }
+  
+//   .btnFormSave:hover{
+//     background-color: #7e9b16;
+//     box-shadow: 1px 1px 2px rgb(0 0 0 / 20%);
+//   }
+  
+//   input::placeholder {
+//     color: gray;
+//   }
+  
+//   .title_newEmployee{
+//     font-size: 2rem;
+//     padding-top:40px;
+//     padding-bottom:40px;
+//     margin-top:0;
+//     margin-bottom:0;
+//   }
+  
+//   .box_startDate .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input, .box_dateOfBirth .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+//     margin: 10px; 
+//     padding:10px;
+//     height: 20px;
+//   }
+  
+//   .logoHome{
+//     width: 330px;
+//     height: 300px;
+//   }
+  
+//   @media (max-width: 800px) {
+//     .header_ListEmployees{
+//       flex-direction: column;
+//     }
+//   }
+  
+//   .main_ListEmployees .box_searchGlobal input{
+//     height: 45px;
+//   }
+  
+//   .main_ListEmployees{
+//   padding-bottom:30px;
+//   } 
+  
+//   .MuiInputBase-input .MuiOutlinedInput-input .css-1x5jdmq{
+//     margin:10px;
+//   }
+  
+  
+//     .main_newEmployee  .box_state
+//       .dropdown {
+//         z-index: 10;
+//       }
+    
+//       .main_newEmployee .dropdown {
+//       position: relative;
+//       display: inline-block;
+//       /* z-index: 999; */
+//       background-color: #f6f8f2;
+//     }
+//     .main_ListEmployees .box_table .buttonToggleRowPerPage, .main_ListEmployees .box_table .dropdownMenuTable {
+//       box-shadow: 0px 5px 5px rgba(0,0,0,0.1);
+//     }
+//     .main_ListEmployees .btn_Reset {
+//       box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
+//     }
+//     .main_ListEmployees .btn_Reset:hover {
+//       box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+//     }
+//     /* styles pour le bouton de déclenchement du dropdown */
+//     .main_newEmployee .dropdownToggle {
+//       padding: 8px 12px;
+//       border: 1px solid #adca76;
+//       background-color: #fbfbfb;
+//       border-radius: 4px;
+//       cursor: pointer;
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       width: 200px;
+//     }
+//     .main_newEmployee .address .dropdownToggle {
+//       background-color: #f1f1f1;
+//     }
+    
+//     /* styles pour la flèche du dropdown */
+//     .main_newEmployee .arrow {
+//       margin-left: 8px;
+//     }
+    
+//     /* styles pour le menu déroulant */
+//     .main_newEmployee .dropdownMenu {
+//       position: absolute;
+//       top: 100%;
+//       left: 0;
+//       width: 100%;
+//       list-style: none;
+//       padding: 0;
+//       margin: 0;
+//       background-color: #fbfbfb;
+//       border: 1px solid #ccc;
+//       border-radius: 4px;
+//     }
+    
+//     /* styles pour les options du menu déroulant */
+//     .main_newEmployee .dropdownOption {
+//       padding: 8px 12px;
+//       cursor: pointer;
+//       /* z-index: 999; */
+//     }
+    
+//     .main_newEmployee .dropdownOption:hover {
+//       background-color: #f2f2f2;
+//     }
+    
+//     /* styles pour l'option sélectionnée */
+//     .main_newEmployee .selected {
+//       background-color: #b1c46c;
+//       color: #fff;
+//     }
+    
+//     .address{
+//       background-color: #f1f1f1;
+//     }
+
+//     .MuiInputBase-input MuiOutlinedInput-input .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+//     height:25px;
+//     }
+//     #\:r27\:{
+//       height: 20px;
+//     }
+// }
 
 .box_home{
   .link_CV14{
