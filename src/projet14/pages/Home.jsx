@@ -10,7 +10,7 @@ export default function HomeProjet14() {
     <div className='wrapper_projet14'>
        <main className="box_home" data-testid="home">
       <img src={logoHRnet} alt="" className="logoHome" />
-      <h1 data-testid="title_home">Welcome to HRnet Service !</h1>
+      <h1 data-testid="title_home">Welcome to <br className='br'/>HRnet Service !</h1>
       <br />
       <a href="https://palacioscaroline.github.io#projet14" className="link_CV14" rel="noopener noreferrer">
             Retour web CV 
