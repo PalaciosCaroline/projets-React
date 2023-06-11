@@ -282,9 +282,19 @@ h2 {
   margin-right: 10px;
 }
 
+
 .box_endDate .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root,
 .box_startDate .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root,
 .box_dateOfBirth .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  padding-left: 20px;
+  padding-top: 2px;
+}
+
+.box_endDate .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root{
+  padding-top: 4px;
+}
+
+.box_table .box_endDate .editEmployeeModal label{
   padding-left: 20px;
   padding-top: 2px;
 }
@@ -892,6 +902,10 @@ input::placeholder {
 
 .box_changeModalName .box_input{
   padding-bottom:60px;
+}
+
+.box_endDate .box_endDate .MuiInputBase-formControl .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+  height: 20px;
 }
 
 @media (max-width: 900px) {
