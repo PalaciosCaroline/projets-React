@@ -485,6 +485,13 @@ select {
   z-index: 9999;
 }
 
+.confirmationModal {
+  z-index: 9999;
+}
+.editEmployeeModal {
+  z-index: 999;
+}
+
 .editEmployeeModal {
   background: linear-gradient(to bottom, transparent, rgb(245, 245, 245))
   rgb(214, 219, 220);
@@ -849,6 +856,10 @@ input::placeholder {
   height: 100%;
   background: rgba(5, 5, 5, 0.6);
   z-index: 9999;
+}
+
+.box_table .bg_modalConfirm {
+  z-index: 998;
 }
 
 .editEmployeeModal .address {
