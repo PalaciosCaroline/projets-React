@@ -70,6 +70,7 @@ h1,
 h2 {
   font-size: 3rem;
   color: #0d0d0d;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 1200px) {
@@ -194,6 +195,16 @@ h2 {
   border-radius: 50px;
   box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
   outline: 1px solid rgb(220, 239, 232);
+}
+.main_newEmployee .box_input .box_StartDate input{
+  height: 20px;
+}
+.main_newEmployee .css-pz50h7-MuiFormControl-root-MuiTextField-root .MuiInputBase-input input{
+  height: 20px;
+}
+
+.main_newEmployee .MuiInputBase-formControl .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+  height: 20px;
 }
 
 .main_newEmployee input {
@@ -888,7 +899,6 @@ input::placeholder {
   border: 2px solid #b6604f;
   border-radius: 20px;
   display: block;
-  // margin:0 auto 30px;
   align-self: center;
   width: 150px;
   color:#fff;
@@ -896,13 +906,14 @@ input::placeholder {
   box-shadow: 2px 2px 6px rgba(0,0,0,0.8);
   text-decoration: none;
   text-align: center;
+  margin: 0 auto 20px;
 }
 
 @media (max-width: 550px) {
   .link_CV14 {
     font-size: 0.7rem;
-    // margin: auto;
     padding:8px 8px 8px 8px;
+    margin: 0 auto 10px;
   }
 }
 
