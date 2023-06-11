@@ -1,14 +1,16 @@
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import newEmployeeEntreeSlice from "./newEmployeeEntreeSlice";
-import employeesSlice from "./employeesSlice";
-
-const rootReducer = combineReducers({
-  employees: employeesSlice.reducer,
-  newEmployeeEntree: newEmployeeEntreeSlice.reducer,
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var toolkit_1 = require("@reduxjs/toolkit");
+var employeeFormStateSlice_1 = __importDefault(require("./employeeFormStateSlice"));
+var employeesSlice_1 = __importDefault(require("./employeesSlice"));
+var rootReducer = (0, toolkit_1.combineReducers)({
+    employees: employeesSlice_1.default.reducer,
+    employeeFormState: employeeFormStateSlice_1.default.reducer,
 });
-
-const store = configureStore({
-  reducer: rootReducer,
+var store = (0, toolkit_1.configureStore)({
+    reducer: rootReducer,
 });
-
-export default store;
+exports.default = store;
