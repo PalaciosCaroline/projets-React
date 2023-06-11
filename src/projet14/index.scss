@@ -297,10 +297,12 @@ h2 {
 .box_table .editEmployeeModal .box_endDate input{
   height: 20px;
 }
-.main_newEmployee .box_formEntree .boxDate input{
+.main_newEmployee .box_formEntree .boxDate .box_dateOfBirth input,
+.main_newEmployee .box_formEntree .boxDate .box_startDate input{
   height: 20px;
 }
-.main_newEmployee .box_formEntree .boxDate label{
+.main_newEmployee .box_formEntree .boxDate .box_dateOfBirth label,
+.main_newEmployee .box_formEntree .boxDate .box_startDate label{
   padding-left: 20px;
   padding-top: 2px;
 }
