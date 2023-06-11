@@ -203,6 +203,10 @@ h2 {
   height: 20px;
 }
 
+.MuiInputBase-formControl .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+  height: 20px;
+}
+
 .main_newEmployee .MuiInputBase-formControl .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
   height: 20px;
 }
@@ -482,7 +486,7 @@ select {
 }
 
 .editEmployeeModal {
-  background: linear-gradient(to bottom, transparent, rgb(255, 255, 255))
+  background: linear-gradient(to bottom, transparent, rgb(245, 245, 245))
   rgb(214, 219, 220);
   display: flex;
   right: 50px;
