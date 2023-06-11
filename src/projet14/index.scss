@@ -294,7 +294,10 @@ h2 {
   padding-top: 4px;
 }
 
-.box_table .box_endDate .editEmployeeModal label{
+.box_table .editEmployeeModal .box_endDate input{
+  height: 20px;
+}
+.box_table .editEmployeeModal .box_endDate label{
   padding-left: 20px;
   padding-top: 2px;
 }
