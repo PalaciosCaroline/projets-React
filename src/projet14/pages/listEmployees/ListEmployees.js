@@ -21,6 +21,7 @@ require("./../../index.scss");
 //   );
 // }
 function ListEmployees() {
+    document.title = 'HRnet';
     var employees = (0, react_redux_1.useSelector)(function (state) { return state.employees.active; });
     return (react_1.default.createElement(react_1.default.Fragment, null,
         react_1.default.createElement("div", { className: 'wrapper_projet14' },

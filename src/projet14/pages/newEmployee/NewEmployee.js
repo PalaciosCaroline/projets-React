@@ -9,6 +9,7 @@ var linkData_1 = require("./../../utils/linkData");
 var FormNewEmployee_1 = require("../../components/FormNewEmployee");
 require("./../../index.scss");
 function NewEmployee() {
+    document.title = 'HRnet';
     return (react_1.default.createElement(react_1.default.Fragment, null,
         react_1.default.createElement("div", { className: 'wrapper_projet14' },
             react_1.default.createElement(Header_1.Header, { linkProps: linkData_1.linkCurrentEmployees }),

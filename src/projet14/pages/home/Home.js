@@ -20,6 +20,7 @@ var NavLinkComponent_1 = require("./../../components/NavLinkComponent");
 var linkData_1 = require("./../../utils/linkData");
 require("./../../index.scss");
 function Home() {
+    document.title = 'HRnet';
     return (react_1.default.createElement("div", { className: 'wrapper_projet14' },
         react_1.default.createElement("main", { className: "box_home", "data-testid": "home" },
             react_1.default.createElement("img", { src: logoHRnet_bg_png_1.default, alt: "", className: "logoHome" }),
