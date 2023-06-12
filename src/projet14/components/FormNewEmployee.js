@@ -52,17 +52,11 @@ var FormNewEmployee = function () {
     var newEmployeeErrors = (0, react_redux_1.useSelector)(function (state) { return state.employeeFormState.formErrors; });
     var firstname = newEmployeeEntree.firstname, lastname = newEmployeeEntree.lastname, startDate = newEmployeeEntree.startDate, department = newEmployeeEntree.department, dateOfBirth = newEmployeeEntree.dateOfBirth, street = newEmployeeEntree.street, city = newEmployeeEntree.city, state = newEmployeeEntree.state, zipCode = newEmployeeEntree.zipCode;
     var errordateOfBirth = newEmployeeErrors.errordateOfBirth, errorstartDate = newEmployeeErrors.errorstartDate;
-    (0, react_1.useEffect)(function () {
-        if (!firstname) {
-            dispatch((0, employeeFormStateSlice_1.setError)({ name: 'firstname', message: '' }));
-        }
-        if (!lastname) {
-            dispatch((0, employeeFormStateSlice_1.setError)({ name: 'lastname', message: '' }));
-        }
-    }, [dispatch, firstname, lastname]);
+    (0, react_1.useEffect)(function () { 
+            dispatch((0, employeeFormStateSlice_1.clearInput)());
+    }, []);
     var handleFormSubmit = function (e) {
         e.preventDefault();
-        // const isNameValid = validateNames(firstname, lastname, setError, dispatch);
         var isNameValid = (0, controlName_1.validateNames)(firstname, lastname, employeeFormStateSlice_1.setError, dispatch);
         if (!isNameValid) {
             return;
