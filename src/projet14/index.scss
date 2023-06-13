@@ -966,6 +966,41 @@
       font-size: 1.6rem;
     }
   }
+
+  .box_endDate .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root,
+.box_startDate .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root,
+.box_dateOfBirth .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  padding-left: 20px;
+  padding-top: 2px;
+}
+
+.box_endDate .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root{
+  padding-top: 4px;
+}
+
+.box_table .editEmployeeModal .box_endDate input{
+  height: 20px;
+}
+.main_newEmployee .box_formEntree .boxDate .box_dateOfBirth input,
+.main_newEmployee .box_formEntree .boxDate .box_startDate input{
+  height: 20px;
+}
+.main_newEmployee .box_formEntree .boxDate .box_dateOfBirth label,
+.main_newEmployee .box_formEntree .boxDate .box_startDate label{
+  padding-left: 20px;
+  padding-top: 4px;
+}
+.box_table .editEmployeeModal .box_endDate label{
+  padding-left: 20px;
+  padding-top: 4px;
+}
+
+.box_endDate .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input,
+.box_startDate .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input,
+.box_dateOfBirth .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
+  margin: 10px;
+  height: 20px;
+}
   
 }
 
