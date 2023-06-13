@@ -20,11 +20,10 @@ var logoHRnet_bg_png_1 = __importDefault(require("./../assets/logoHRnet_bg.png")
 var NavLinkComponent_1 = require("./NavLinkComponent");
 var Header = function (_a) {
     var linkProps = _a.linkProps;
-    return (react_1.default.createElement("header", { className: "header_ListEmployees", "data-testid": "header_ListEmployees" },
+    return (react_1.default.createElement("header", { className: "header_ListEmployees", "data-testid": "header_test" },
         react_1.default.createElement("div", { className: "box_logoService" },
             react_1.default.createElement("img", { src: logoHRnet_bg_png_1.default, alt: "HRnet Logo" }),
             react_1.default.createElement("p", { className: "titleService" }, "HRnet")),
-        react_1.default.createElement("a", { href: "https://palacioscaroline.github.io#projet14", className: "link_CV14", rel: "noopener noreferrer" }, "Retour web CV"),
         react_1.default.createElement(NavLinkComponent_1.NavLinkComponent, __assign({}, linkProps))));
 };
 exports.Header = Header;

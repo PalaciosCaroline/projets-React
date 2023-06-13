@@ -9,17 +9,7 @@ var TableEmployees_1 = __importDefault(require("../../components/TableEmployees"
 var Header_1 = require("../../components/Header");
 var linkData_1 = require("./../../utils/linkData");
 require("./../../index.scss");
-// export default function ListEmployees(): JSX.Element {
-//   const employees = useSelector((state: any) => state.employees);
-//   return (
-//     <>
-//       <Header linkProps={linkNewEmployee} />
-//       <main className="main_ListEmployees" data-testid="listEmployees">
-//         <TableEmployees employees={employees} />
-//       </main>
-//     </>
-//   );
-// }
+
 function ListEmployees() {
     document.title = 'HRnet';
     var employees = (0, react_redux_1.useSelector)(function (state) { return state.employees.active; });

@@ -50,23 +50,17 @@ var fi_1 = require("react-icons/fi");
 var EditEmployeeContent_1 = __importDefault(require("./EditEmployeeContent"));
 var ArchiveEmployeeContent_1 = __importDefault(require("./ArchiveEmployeeContent"));
 var DeleteEmployeeContent_1 = __importDefault(require("./DeleteEmployeeContent"));
+var controlDate_1 = __importDefault(require("../utils/controlDate"));
 var TableEmployees = (0, react_1.memo)(function (_a) {
     var employees = _a.employees;
     var dispatch = (0, react_redux_1.useDispatch)();
     var _b = (0, react_1.useState)('none'), modalType = _b[0], setModalType = _b[1];
     var _c = (0, react_1.useState)(false), isModalOpen = _c[0], setIsModalOpen = _c[1];
     var _d = (0, react_1.useState)({ x: 0, y: 0 }), modalPosition = _d[0], setModalPosition = _d[1];
-    var employeeFormEntree = (0, react_redux_1.useSelector)(function (state) { return state.employeeFormState.formValues; });
-    var employeeEntreeErrors = (0, react_redux_1.useSelector)(function (state) { return state.employeeFormState.formErrors; });
+    var employeeFormEntree = (0, react_redux_1.useSelector)(function (state) { var _a; return (_a = state.employeeFormState) === null || _a === void 0 ? void 0 : _a.formValues; });
+    var employeeEntreeErrors = (0, react_redux_1.useSelector)(function (state) { var _a; return (_a = state.employeeFormState) === null || _a === void 0 ? void 0 : _a.formErrors; });
     var _e = (0, react_1.useState)(null), selectedEmployeeId = _e[0], setSelectedEmployeeId = _e[1];
-    // const [isModalChangeOpen, setIsModalChangeOpen] = useState(false);
-    // const [isModalArchiveOpen, setIsModalArchiveOpen] = useState(false);
-    // const [isModalDeleteOpen, setIsModalDeleteOpen] = useState(false);
     var archivedEmployees = (0, react_redux_1.useSelector)(function (state) { return state.employees.archived; });
-    (0, react_1.useEffect)(function () {
-        console.log('active employees:', JSON.stringify(employees, null, 2));
-        console.log('archived employees:', JSON.stringify(archivedEmployees, null, 2));
-    }, [employees, archivedEmployees]);
     var handleEditRow = function (id, e) {
         e.persist();
         openModal(id, 'edit', e);
@@ -118,14 +112,10 @@ var TableEmployees = (0, react_1.memo)(function (_a) {
         e.preventDefault();
         console.log(employeeFormEntree.endDate);
         var endDate = employeeFormEntree.endDate;
-        if (!endDate) {
-            dispatch((0, employeeFormStateSlice_1.setError)({
-                name: 'endDate',
-                message: 'Veuillez sélectionner une date valide',
-            }));
+        if (employeeEntreeErrors.errorendDate) {
             return;
         }
-        else if (employeeEntreeErrors.errorendDate) {
+        if (!(0, controlDate_1.default)(endDate, employeeFormStateSlice_1.setError, 'end Date', dispatch)) {
             return;
         }
         else {
@@ -147,10 +137,10 @@ var TableEmployees = (0, react_1.memo)(function (_a) {
         react_1.default.createElement(typescript_table_1.Table, { data: employees, columns: data_1.dataColumnsMock, editRowColumnVisible: true, handleEditRow: handleEditRow, archiveRowColumnVisible: true, handleArchiveRow: handleArchiveRow, deleteRowColumnVisible: true, handleDeleteRow: handleDeleteRow, renderExportDataComponent: function (filteredData, columnsManaged) { return (react_1.default.createElement(typescript_exportdata_1.ExportDataComponent, { filteredData: filteredData, columnsManaged: columnsManaged, headerProperty: "label", csvExport: true, excelExport: true, pdfExport: true })); } }),
         isModalOpen && selectedEmployeeId && (react_1.default.createElement(Modal_1.default, { style: {
                 top: modalPosition.y,
-            }, setIsModalOpen: setIsModalOpen, isModalOpen: isModalOpen, closeModal: closeModal, className: "editEmployeeModal ".concat(modalType === 'delete' ? 'deleteEmployeeModal' : '') },
+            }, isModalOpen: isModalOpen, closeModal: closeModal, className: "editEmployeeModal ".concat(modalType === 'delete' ? 'deleteEmployeeModal' : ''), dataTestId: "modalAction" },
             react_1.default.createElement("div", { className: "box_titleModal" },
                 react_1.default.createElement(fi_1.FiEdit3, { className: "iconCheckedModal" }),
-                react_1.default.createElement("h2", { id: "modal-TitleChange" },
+                react_1.default.createElement("h2", { className: "modal-titleChange" },
                     ' ',
                     modalType === 'edit'
                         ? 'Change Employee Data'
@@ -159,28 +149,23 @@ var TableEmployees = (0, react_1.memo)(function (_a) {
                             : modalType === 'delete'
                                 ? 'Delete Employee'
                                 : '')),
-            react_1.default.createElement("div", { className: "box_changeModalName", style: { display: 'flex' } },
-                react_1.default.createElement("p", null,
-                    "First Name:",
-                    react_1.default.createElement("span", { className: "name" },
-                        " ",
-                        employeeFormEntree.firstname)),
-                react_1.default.createElement("p", null,
-                    "Last Name:",
-                    ' ',
-                    react_1.default.createElement("span", { className: "name" }, employeeFormEntree.lastname))),
-            react_1.default.createElement("div", { className: "box_changeModalName", style: { display: 'flex' } },
-                react_1.default.createElement("p", null,
-                    "Date of Birthday:",
-                    react_1.default.createElement("span", { className: "name" },
-                        " ",
-                        employeeFormEntree.dateOfBirth)),
-                react_1.default.createElement("p", null,
-                    "Start Date:",
-                    ' ',
-                    react_1.default.createElement("span", { className: "name" }, employeeFormEntree.startDate))),
-            modalType === 'edit' && (react_1.default.createElement(EditEmployeeContent_1.default, { handleChangeSubmit: handleChangeSubmit, selectedEmployeeId: selectedEmployeeId, employeeFormEntree: employeeFormEntree })),
-            modalType === 'archive' && (react_1.default.createElement(ArchiveEmployeeContent_1.default, { handleArchiveSubmit: handleArchiveSubmit, selectedEmployeeId: selectedEmployeeId, employeeFormEntree: employeeFormEntree })),
+            react_1.default.createElement("div", { className: "box_changeEmployeeData" },
+                react_1.default.createElement("div", { className: "box_changeModalName" },
+                    react_1.default.createElement("div", { className: "box_nameRight" },
+                        react_1.default.createElement("div", null, "First Name:"),
+                        react_1.default.createElement("div", { className: "name" }, employeeFormEntree.firstname)),
+                    react_1.default.createElement("div", { className: "box_nameLeft" },
+                        react_1.default.createElement("div", null, "Last Name:"),
+                        react_1.default.createElement("div", { className: "name" }, employeeFormEntree.lastname))),
+                react_1.default.createElement("div", { className: "box_changeModalDate" },
+                    react_1.default.createElement("div", { className: "box_nameRight" },
+                        react_1.default.createElement("div", null, "Date of Birthday:"),
+                        react_1.default.createElement("div", { className: "name" }, employeeFormEntree.dateOfBirth)),
+                    react_1.default.createElement("div", { className: "box_nameLeft" },
+                        react_1.default.createElement("div", null, "Start Date: "),
+                        react_1.default.createElement("div", { className: "name" }, employeeFormEntree.startDate)))),
+            modalType === 'edit' && (react_1.default.createElement(EditEmployeeContent_1.default, { handleChangeSubmit: handleChangeSubmit, selectedEmployeeId: selectedEmployeeId })),
+            modalType === 'archive' && (react_1.default.createElement(ArchiveEmployeeContent_1.default, { handleArchiveSubmit: handleArchiveSubmit, selectedEmployeeId: selectedEmployeeId })),
             modalType === 'delete' && (react_1.default.createElement(DeleteEmployeeContent_1.default, { handleDeleteSubmit: handleDeleteSubmit, selectedEmployeeId: selectedEmployeeId, handleCancel: handleCancel }))))));
 }, function (prevProps, nextProps) {
     return prevProps.employees === nextProps.employees;

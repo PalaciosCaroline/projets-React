@@ -49,7 +49,6 @@ function DatePickerComponent(_a) {
         }
     }, []);
     var handleDateChange = function (date) {
-        // Convert the date to Dayjs
         var selectedDate = (0, dayjs_1.default)(date);
         var isValidDate = selectedDate.isValid() &&
             !(noBeforeDay > selectedDate || selectedDate > noAfterDay);
@@ -64,25 +63,10 @@ function DatePickerComponent(_a) {
             }));
         }
     };
-    if (typeof dateInput === 'string') {
-        var dateAsDayjs = (0, dayjs_1.default)(dateInput, 'DD/MM/YYYY');
-    }
-    else {
-        var dateAsDayjs = dateInput;
-    }
     return (react_1.default.createElement("div", { className: "form-group box_".concat(nameDate) },
         react_1.default.createElement("p", { className: "text_".concat(nameDate) }, label),
         react_1.default.createElement("div", { className: "box_Input ", style: { display: 'flex', position: 'relative' } },
-            react_1.default.createElement(DatePicker_1.DatePicker, { label: "".concat(label, " Select"), 
-                // minDate={noBeforeDay.format('DD/MM/YYYY')}
-                // maxDate={noAfterDay.format('DD/MM/YYYY')}
-                //           minDate={noBeforeDay.toDate()}
-                // maxDate={noAfterDay.toDate()}
-                minDate: noBeforeDay, maxDate: noAfterDay, 
-                // value={typeof dateInput === 'string' && dateInput ? dayjs(dateInput).format('DD/MM/YYYY') : null}
-                // value={typeof dateInput === 'string' && dateInput ? dayjs(dateInput, 'DD/MM/YYYY').toDate() : null}
-                // value={typeof dateInput === 'string' ? dayjs(dateInput, 'DD/MM/YYYY') : dateInput}
-                value: dateInput
+            react_1.default.createElement(DatePicker_1.DatePicker, { label: "".concat(label, " Select"), minDate: noBeforeDay, maxDate: noAfterDay, value: dateInput
                     ? typeof dateInput === 'string'
                         ? (0, dayjs_1.default)(dateInput, 'DD/MM/YYYY')
                         : dateInput

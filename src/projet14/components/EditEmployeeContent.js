@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(require("react"));
 var AddressAndDepartmentForm_1 = __importDefault(require("./AddressAndDepartmentForm"));
 var EditEmployeeContent = function (_a) {
-    var handleChangeSubmit = _a.handleChangeSubmit, selectedEmployeeId = _a.selectedEmployeeId, employeeFormEntree = _a.employeeFormEntree;
+    var handleChangeSubmit = _a.handleChangeSubmit, selectedEmployeeId = _a.selectedEmployeeId;
     return (react_1.default.createElement(react_1.default.Fragment, null,
         react_1.default.createElement("form", { className: "formChangeEmployee", action: "#", id: "edit-employee", onSubmit: handleChangeSubmit(selectedEmployeeId), "data-testid": "form" },
             react_1.default.createElement(AddressAndDepartmentForm_1.default, null),

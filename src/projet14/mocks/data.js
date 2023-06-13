@@ -1,28 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.dataEmployeesMock = exports.dataColumnsMock = void 0;
-// export interface Employee {
-//   id:number;
-//   firstname: string;
-//   lastname: string;
-//   dateOfBirth: string;
-//   startDate: string;
-//   department: string;
-//   street: string;
-//   city: string;
-//   state: string;
-//   zipCode: string;
-// }
+
 exports.dataColumnsMock = [
     { label: 'First Name', property: 'firstname' },
     { label: 'Last Name', property: 'lastname' },
     { label: 'Start Date', property: 'startDate', dateFormat: 'DD/MM/YYYY' },
     { label: 'Department', property: 'department' },
     { label: 'Date of Birth', property: 'dateOfBirth', dateFormat: 'DD/MM/YYYY' },
-    { label: 'Street', property: 'street' },
-    { label: 'City', property: 'city' },
-    { label: 'State', property: 'state' },
-    { label: 'Zip Code', property: 'zipCode' },
+    { label: 'Street', property: 'street',disableSort: true, disableFilter: true },
+    { label: 'City', property: 'city',disableSort: true, disableFilter: true },
+    { label: 'State', property: 'state',disableSort: true },
+    { label: 'Zip Code', property: 'zipCode',disableSort: true, disableFilter: true },
 ];
 exports.dataEmployeesMock = [
     {

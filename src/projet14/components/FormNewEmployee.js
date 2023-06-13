@@ -35,6 +35,7 @@ var Modal_1 = __importDefault(require("./Modal"));
 var InputField_1 = require("./InputField");
 var AddressAndDepartmentForm_1 = __importDefault(require("./AddressAndDepartmentForm"));
 var controlName_1 = require("../utils/controlName");
+var controlDate_1 = require("../utils/controlDate");
 var x_date_pickers_1 = require("@mui/x-date-pickers");
 var AdapterDayjs_1 = require("@mui/x-date-pickers/AdapterDayjs");
 var DatePickerComponent_1 = __importDefault(require("./DatePickerComponent"));
@@ -44,21 +45,23 @@ var FormNewEmployee = function () {
     var employees = (0, react_redux_1.useSelector)(function (state) { return state.employees.active; });
     // const selectedEmployee = employees.find((employee: any) => employee.id === employeeId);
     var _a = (0, react_1.useState)(false), isModalOpen = _a[0], setIsModalOpen = _a[1];
-    var _b = (0, react_1.useState)({
+    var _b = (0, react_1.useState)(null), errorEmployeeExist = _b[0], setErrorEmployeeExist = _b[1];
+    var _c = (0, react_1.useState)({
         firstname: '',
         lastname: '',
-    }), employeeName = _b[0], setEmployeeName = _b[1];
-    var newEmployeeEntree = (0, react_redux_1.useSelector)(function (state) { return state.employeeFormState.formValues; });
-    var newEmployeeErrors = (0, react_redux_1.useSelector)(function (state) { return state.employeeFormState.formErrors; });
+    }), employeeName = _c[0], setEmployeeName = _c[1];
+    var newEmployeeEntree = (0, react_redux_1.useSelector)(function (state) { var _a; return (_a = state.employeeFormState) === null || _a === void 0 ? void 0 : _a.formValues; });
+    var newEmployeeErrors = (0, react_redux_1.useSelector)(function (state) { var _a; return (_a = state.employeeFormState) === null || _a === void 0 ? void 0 : _a.formErrors; });
     var firstname = newEmployeeEntree.firstname, lastname = newEmployeeEntree.lastname, startDate = newEmployeeEntree.startDate, department = newEmployeeEntree.department, dateOfBirth = newEmployeeEntree.dateOfBirth, street = newEmployeeEntree.street, city = newEmployeeEntree.city, state = newEmployeeEntree.state, zipCode = newEmployeeEntree.zipCode;
     var errordateOfBirth = newEmployeeErrors.errordateOfBirth, errorstartDate = newEmployeeErrors.errorstartDate;
-    (0, react_1.useEffect)(function () { 
-            dispatch((0, employeeFormStateSlice_1.clearInput)());
+    (0, react_1.useEffect)(function () {
+        dispatch((0, employeeFormStateSlice_1.clearInput)());
     }, []);
     var handleFormSubmit = function (e) {
         e.preventDefault();
+        var isDateValid = (0, controlDate_1.validateDates)(dateOfBirth, startDate, employeeFormStateSlice_1.setError, dispatch);
         var isNameValid = (0, controlName_1.validateNames)(firstname, lastname, employeeFormStateSlice_1.setError, dispatch);
-        if (!isNameValid) {
+        if (!isNameValid || !isDateValid) {
             return;
         }
         else if (errordateOfBirth || errorstartDate) {
@@ -77,13 +80,45 @@ var FormNewEmployee = function () {
                 zipCode: zipCode,
             };
             dispatch((0, employeesSlice_1.addEmployee)(newEmployee));
-            // setEmployeeName({ firstname, lastname });
             setEmployeeName({ firstname: firstname, lastname: lastname });
             setIsModalOpen(true);
             dispatch((0, employeeFormStateSlice_1.clearInput)());
             e.target.reset();
         }
     };
+    // const handleFormSubmit =  async (e: any) => {
+    //   e.preventDefault();
+    //   const isDateValid = validateDates(dateOfBirth, startDate, setError, dispatch)
+    //   const isNameValid = validateNames(firstname, lastname, setError, dispatch);
+    //   if (!isNameValid || !isDateValid) {
+    //     return;
+    //   } else if (errordateOfBirth || errorstartDate) {
+    //     return;
+    //   } else {
+    //     const newEmployee = {
+    //       firstname,
+    //       lastname,
+    //       startDate,
+    //       department,
+    //       dateOfBirth,
+    //       street,
+    //       city,
+    //       state,
+    //       zipCode,
+    //     };
+    //     const exists = await dispatch(checkEmployeeExistence(newEmployee));
+    //     if (exists) {
+    //       // Si l'employé existe déjà, on affiche une erreur
+    //       setErrorEmployeeExist(`Employee ${newEmployee.firstname} ${newEmployee.lastname} already exists.`);
+    //     } else {
+    //       dispatch(addEmployee(newEmployee));
+    //       setEmployeeName({ firstname: firstname, lastname: lastname });
+    //       setIsModalOpen(true);
+    //       dispatch(clearInput());
+    //       e.target.reset();
+    //     }
+    //   }
+    // };
     var inputFieldsName = [
         { name: 'firstname', label: 'First Name' },
         { name: 'lastname', label: 'Last Name' },
@@ -100,7 +135,7 @@ var FormNewEmployee = function () {
                     react_1.default.createElement(DatePickerComponent_1.default, { nameDate: "startDate", label: "Start Date", minDate: 1, maxDate: 1, dateOperation: "add" }))),
             react_1.default.createElement(AddressAndDepartmentForm_1.default, null),
             react_1.default.createElement("button", { className: "btnFormSave", type: "submit", "data-testid": "btn_form" }, "Save the new employee")),
-        isModalOpen && (react_1.default.createElement(Modal_1.default, { setIsModalOpen: setIsModalOpen, isModalOpen: isModalOpen, closeModal: function () { return setIsModalOpen(false); }, className: "confirmationModal" },
+        isModalOpen && (react_1.default.createElement(Modal_1.default, { isModalOpen: isModalOpen, closeModal: function () { return setIsModalOpen(false); }, className: "confirmationModal", dataTestId: 'modalConfirm' },
             react_1.default.createElement("div", { className: "box_titleModal" },
                 react_1.default.createElement(fa_1.FaUserCheck, { className: "iconCheckedModal" }),
                 react_1.default.createElement("h2", { id: "modal-title" }, "Confirmation")),

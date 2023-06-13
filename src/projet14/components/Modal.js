@@ -26,8 +26,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importStar(require("react"));
 var fa_1 = require("react-icons/fa");
 var Modal = function (_a) {
-    var setIsModalOpen = _a.setIsModalOpen, isModalOpen = _a.isModalOpen, closeModal = _a.closeModal, children = _a.children, className = _a.className, style = _a.style;
+    var isModalOpen = _a.isModalOpen, closeModal = _a.closeModal, children = _a.children, className = _a.className, style = _a.style, dataTestId = _a.dataTestId;
     var modalRef = (0, react_1.useRef)(null);
+    (0, react_1.useEffect)(function () {
+        var handleEscKeyDown = function (event) {
+            if (isModalOpen && event.key === 'Escape') {
+                closeModal();
+            }
+        };
+        window.addEventListener('keydown', handleEscKeyDown);
+        return function () {
+            window.removeEventListener('keydown', handleEscKeyDown);
+        };
+    }, [closeModal]);
     (0, react_1.useEffect)(function () {
         if (isModalOpen && modalRef.current) {
             modalRef.current.focus();
@@ -53,7 +64,7 @@ var Modal = function (_a) {
     };
     return (react_1.default.createElement(react_1.default.Fragment, null,
         isModalOpen && react_1.default.createElement("div", { className: "bg_modalConfirm" }),
-        react_1.default.createElement("div", { className: className, role: "dialog", "aria-modal": "true", "aria-labelledby": "modal-title", "aria-describedby": "confirmation-text", onKeyDown: handleKeyDown, ref: modalRef, style: style },
+        react_1.default.createElement("div", { className: className, role: "dialog", "aria-modal": "true", "aria-labelledby": "modal-title", "aria-describedby": "confirmation-text", onKeyDown: handleKeyDown, ref: modalRef, style: style, "data-testid": dataTestId },
             react_1.default.createElement("button", { className: "btn_closeModal", onClick: closeModal, "aria-label": "Fermer la fen\u00EAtre", tabIndex: 0 },
                 react_1.default.createElement(fa_1.FaTimes, { className: "btn_closeModal_icon" })),
             children)));
