@@ -209,6 +209,7 @@
   .main_newEmployee input {
     background: #fff;
   }
+  
   .formChangeEmployee input {
     background: linear-gradient(to bottom, transparent, rgb(255, 255, 255))
     rgb(214, 219, 220);
@@ -430,6 +431,7 @@
     .address {
       display: flex;
       flex-direction: column;
+      align-items: center;
     }
   
     .address {
@@ -1001,6 +1003,16 @@
   margin: 10px;
   height: 20px;
 }
+
+.editEmployeeModal, .confirmationModal {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.editEmployeeModal.open , .confirmationModal.open{
+  opacity: 1;
+}
+
   
 }
 

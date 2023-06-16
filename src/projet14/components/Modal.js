@@ -64,7 +64,7 @@ var Modal = function (_a) {
     };
     return (react_1.default.createElement(react_1.default.Fragment, null,
         isModalOpen && react_1.default.createElement("div", { className: "bg_modalConfirm" }),
-        react_1.default.createElement("div", { className: className, role: "dialog", "aria-modal": "true", "aria-labelledby": "modal-title", "aria-describedby": "confirmation-text", onKeyDown: handleKeyDown, ref: modalRef, style: style, "data-testid": dataTestId },
+        react_1.default.createElement("div", { className: className.concat(isModalOpen === true ? ' open' : ''), role: "dialog", "aria-modal": "true", "aria-labelledby": "modal-title", "aria-describedby": "confirmation-text", onKeyDown: handleKeyDown, ref: modalRef, style: style, "data-testid": dataTestId },
             react_1.default.createElement("button", { className: "btn_closeModal", onClick: closeModal, "aria-label": "Fermer la fen\u00EAtre", tabIndex: 0 },
                 react_1.default.createElement(fa_1.FaTimes, { className: "btn_closeModal_icon" })),
             children)));

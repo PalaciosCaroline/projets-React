@@ -86,8 +86,8 @@ var TableEmployees = (0, react_1.memo)(function (_a) {
             var employeeData = __assign({}, selectedEmployee);
             dispatch((0, employeeFormStateSlice_1.setEmployeeData)(employeeData));
             setModalType(type);
-            setModalPosition({ x: e.clientX, y: e.clientY });
-            console.log({ x: e.clientX, y: e.clientY });
+            setModalPosition({ x: e.pageX, y: e.pageY });
+            // setModalPosition({ x: e.clientX, y: e.clientY });
             setIsModalOpen(true);
             console.log('delete: ' + id);
         }
