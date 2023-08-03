@@ -9,7 +9,6 @@ export default function Accueil() {
         <nav>
             <NavLink to="/projet11" className="link-appWeb">Projet 11<br/>Apartment rental website</NavLink>
             <NavLink to="/projet12" className="link-appWeb">Projet 12<br/>Analytical table with recharts</NavLink>
-            <NavLink to="/projet14" className="link-appWeb">Projet 14<br/>Management of new employees</NavLink>
         </nav>
     </div>
   )

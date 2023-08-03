@@ -20,9 +20,6 @@ export default function Router() {
       <Route path="/projet11/logement/:id" element={<Logement />} />
       <Route path="/projet12/" element={<Choiceuser />} />
       <Route path="/projet12/user/:id" element={<Dashboard />} />
-      <Route index path="/projet14" element={<Home />} />
-      <Route path="/projet14/newemployee" element={<NewEmployee />} />
-      <Route path="projet14/listemployees" element={<ListEmployees />} />
       <Route path="*" element={<Erreur404 />} />
     </Routes>
   )
