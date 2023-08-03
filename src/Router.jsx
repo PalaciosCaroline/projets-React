@@ -22,5 +22,6 @@ export default function Router() {
       <Route path="/projet12/user/:id" element={<Dashboard />} />
       <Route path="*" element={<Erreur404 />} />
     </Routes>
+    
   )
 }
