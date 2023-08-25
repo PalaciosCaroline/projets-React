@@ -2,7 +2,9 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 export default function Accueil() {
+
   document.title = 'Projet react';
+  
   return (
     <div id="wrapperapp">
         <h1 >Choose the project to visit</h1>
